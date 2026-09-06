@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fragility Gap | Quanta Analytica Process&trade; | 04 SEP 2026</title>
+<meta name="description" content="Multi-index data story on West and Central African state fragility, security apparatus fragmentation and conflict intensity.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7-12-7V9z' fill='none' stroke='%23c8a96e' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   QAP WEB REPORT - CANONICAL STYLESHEET
+   Quanta Analytica Process™ | MNS Consulting
+   quanta-analytica.com/reports/
+   Version: 2.0 | Design System Reference
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. ROOT VARIABLES - Color, Typography, Spacing
+   ------------------------------------------------------------ */
+:root {
+  /* Core Palette */
+  --obsidian:         #0a0c10;
+  --obsidian-mid:     #10131a;
+  --obsidian-card:    #13161f;
+  --obsidian-border:  #1c2030;
+  --obsidian-surface: #181b26;
+  --obsidian-lift:    #1e2235;
+
+  /* Gold Scale */
+  --gold:             #c8a96e;
+  --gold-light:       #dfc28e;
+  --gold-pale:        #e8d5aa;
+  --gold-dim:         #9a7f52;
+  --gold-muted:       #6b5838;
+  --gold-glow:        rgba(200, 169, 110, 0.12);
+  --gold-glow-strong: rgba(200, 169, 110, 0.22);
+
+  /* Alert / Status Colors */
+  --red:              #c0392b;
+  --red-light:        #e74c3c;
+  --red-bg:           rgba(192, 57, 43, 0.12);
+  --amber:            #d4820a;
+  --amber-light:      #f39c12;
+  --amber-bg:         rgba(212, 130, 10, 0.12);
+  --green:            #27ae60;
+  --green-light:      #2ecc71;
+  --green-bg:         rgba(39, 174, 96, 0.12);
+  --blue:             #2980b9;
+  --blue-light:       #3498db;
+  --blue-bg:          rgba(41, 128, 185, 0.12);
+  --yellow:           #f1c40f;
+  --yellow-bg:        rgba(241, 196, 15, 0.12);
+  --slate:            #5d7a9a;
+  --slate-light:      #7f9ab8;
+
+  /* Text Scale */
+  --text-primary:     #e8e4dc;
+  --text-secondary:   #b8b0a0;
+  --text-muted:       #7a7264;
+  --text-faint:       #4a4640;
+
+  /* Typography */
+  --font-display:     'Libre Baskerville', Georgia, serif;
+  --font-body:        'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:        'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --space-xs:         0.25rem;
+  --space-sm:         0.5rem;
+  --space-md:         1rem;
+  --space-lg:         1.5rem;
+  --space-xl:         2rem;
+  --space-2xl:        3rem;
+  --space-3xl:        4rem;
+
+  /* Borders & Radius */
+  --radius-sm:        3px;
+  --radius-md:        6px;
+  --radius-lg:        10px;
+  --border-default:   1px solid var(--obsidian-border);
+  --border-gold:      1px solid var(--gold-dim);
+
+  /* Transitions */
+  --transition-fast:  0.15s ease;
+  --transition-base:  0.25s ease;
+  --transition-slow:  0.4s ease;
+
+  /* Shadows */
+  --shadow-card:      0 2px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lift:      0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------------------------------------------------
+   2. RESET & BASE
+   ------------------------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--obsidian);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong, b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+em, i {
+  color: var(--slate-light);
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+  color: var(--gold-dim);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ------------------------------------------------------------
+   3. SCROLL PROGRESS BAR
+   ------------------------------------------------------------ */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-light));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px var(--gold-glow-strong);
+}
+
+/* ------------------------------------------------------------
+   4. NAVIGATION
+   ------------------------------------------------------------ */
+nav {
+  position: fixed;
+  top: 3px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 12, 16, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--obsidian-border);
+  padding: 0 var(--space-xl);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.nav-brand span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-classify {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--amber-bg);
+}
+
+/* ------------------------------------------------------------
+   5. HERO BLOCK
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 140px var(--space-xl) var(--space-3xl);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 20% 60%, rgba(200, 169, 110, 0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(41, 128, 185, 0.04) 0%, transparent 50%),
+              var(--obsidian);
+}
+
+/* Animated background grid */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200, 169, 110, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 169, 110, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridDrift 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridDrift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-running-head {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--obsidian-border);
+  padding-bottom: var(--space-sm);
+}
+
+.hero-container {
+  display: flex;          /* Enables side-by-side layout */
+  align-items: center;    /* Vertically centers the image with the text */
+  gap: 30px;              /* Creates space between the image and the text */
+  margin: 20px 0;
+}
+/* ----------------------------------------------------------------------
+   DEFAULT HERO IMG URL TO BE USED 'https://quanta-analytica.com/logo.PNG
+   -------Place image to the left of h1 title in hero section--------- */
+
+.hero-image {
+  max-width: 200px;       /* Adjust this size to fit your design */
+  height: auto;           /* Maintains aspect ratio */
+  border-radius: 8px;     /* Optional: rounds the corners of your image */
+}
+
+.hero-text {
+  flex: 1;                /* Allows text to take up remaining space */
+}
+
+/* Optional: Mobile Responsiveness */
+@media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column; /* Stacks image on top of text on small screens */
+    text-align: center;
+  }
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 .title-gold {
+  color: var(--gold); 
+  display: block;      /* Ensures it starts on a new line */
+  margin-top: 0.5rem;  /* Optional: adds a small gap between lines */
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* Hero Metadata Row */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  align-items: center;
+}
+
+.meta-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-cell .label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.meta-cell .value {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--gold-dim);
+  align-self: center;
+}
+
+/* Threat Badge */
+.threat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.threat-badge.critical  { color: var(--red-light);   border-color: var(--red);   background: var(--red-bg);   }
+.threat-badge.high      { color: var(--amber-light);  border-color: var(--amber); background: var(--amber-bg); }
+.threat-badge.elevated  { color: var(--yellow);       border-color: var(--yellow);background: var(--yellow-bg);}
+.threat-badge.moderate  { color: var(--blue-light);   border-color: var(--blue);  background: var(--blue-bg);  }
+.threat-badge.low       { color: var(--green-light);  border-color: var(--green); background: var(--green-bg); }
+
+.threat-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+/* Analytic Scope Boundary */
+.scope-boundary {
+  border-left: 3px solid var(--slate);
+  padding: var(--space-sm) var(--space-lg);
+  background: rgba(93, 122, 154, 0.08);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: var(--space-lg);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--slate-light);
+  line-height: 1.6;
+}
+
+/* Key Metrics Strip */
+.metrics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--obsidian-border);
+}
+
+.metric-block {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-top: 2px solid var(--gold-dim);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  min-width: 140px;
+}
+
+.metric-block .metric-value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.metric-block .metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------
+   6. MAIN CONTENT WRAPPER
+   ------------------------------------------------------------ */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+/* ------------------------------------------------------------
+   7. SECTION WRAPPER & SCROLL REVEAL
+   ------------------------------------------------------------ */
+.section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  margin-bottom: var(--space-3xl);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--obsidian-border);
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-muted);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Sub-section divider */
+.sub-section {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+}
+
+.sub-section::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-muted), transparent);
+  margin-bottom: var(--space-lg);
+}
+
+.sub-section h3 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ------------------------------------------------------------
+   8. BLUF - Bottom Line Up Front
+   ------------------------------------------------------------ */
+.bluf-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.bluf-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: var(--radius-md);
+}
+
+.bluf-index {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-pale);
+  opacity: 0.4;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.bluf-text .bluf-claim {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.bluf-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   9. SNAPSHOT GRID - Who / What / Where / When / Why / How
+   ------------------------------------------------------------ */
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.snapshot-cell {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.snapshot-cell .snap-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.snapshot-cell .snap-content {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------
+   10. KEY JUDGMENTS
+   ------------------------------------------------------------ */
+.kj-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.kj-item {
+  padding: var(--space-lg);
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  position: relative;
+}
+
+.kj-item.high     { border-left-color: var(--red);   }
+.kj-item.moderate { border-left-color: var(--amber);  }
+.kj-item.low      { border-left-color: var(--blue);   }
+.kj-item.watch    { border-left-color: var(--yellow);  }
+
+.kj-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.kj-id {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.kj-conf {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.kj-item.high     .kj-conf { color: var(--red-light);   border-color: var(--red);   background: var(--red-bg);   }
+.kj-item.moderate .kj-conf { color: var(--amber-light);  border-color: var(--amber); background: var(--amber-bg); }
+.kj-item.low      .kj-conf { color: var(--blue-light);   border-color: var(--blue);  background: var(--blue-bg);  }
+.kj-item.watch    .kj-conf { color: var(--yellow);        border-color: var(--yellow);background: var(--yellow-bg);}
+
+.kj-text {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: var(--space-sm);
+}
+
+.kj-mapping {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ------------------------------------------------------------
+   11. EVIDENCE GRID - Know / Assess / Gap
+   ------------------------------------------------------------ */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.evidence-box {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.evidence-box-header {
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.evidence-box-header.know   { background: var(--green-bg);  color: var(--green-light);  border-bottom: 1px solid var(--green);  }
+.evidence-box-header.assess { background: var(--amber-bg);  color: var(--amber-light);  border-bottom: 1px solid var(--amber);  }
+.evidence-box-header.gap    { background: var(--red-bg);    color: var(--red-light);    border-bottom: 1px solid var(--red);    }
+
+.evidence-box-body {
+  padding: var(--space-lg);
+}
+
+.evidence-box-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.evidence-box-body li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--obsidian-border);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.evidence-box-body li::before {
+  content: '//';
+  position: absolute;
+  left: 0;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.evidence-box-body li:last-child {
+  border-bottom: none;
+}
+
+/* WSI Source Independence Note */
+.wsi-note {
+  background: rgba(93, 122, 154, 0.1);
+  border: 1px solid rgba(93, 122, 154, 0.3);
+  border-left: 3px solid var(--slate);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.83rem;
+  color: var(--slate-light);
+  font-style: italic;
+  margin-top: var(--space-lg);
+}
+
+.wsi-note strong {
+  color: var(--slate-light);
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------
+   12. TABLES - Assumption, ACH, IW, KIQ, Risk, PIGs
+   ------------------------------------------------------------ */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: var(--border-default);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+thead th {
+  background: var(--obsidian-surface);
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  border-bottom: 1px solid var(--obsidian-border);
+  white-space: nowrap;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--obsidian-border);
+  transition: background var(--transition-fast);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: var(--obsidian-lift);
+}
+
+tbody td {
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-secondary);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+tbody td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Assumption Table */
+.assumption-table { }
+
+/* ACH Table */
+.ach-table thead th:nth-child(4) { text-align: center; }
+.ach-table tbody td:nth-child(4) { text-align: center; font-family: var(--font-mono); }
+
+/* IW Table - Indicators & Warnings */
+.iw-table { }
+
+/* Risk Matrix - high-score rows */
+.risk-matrix tbody tr.risk-high {
+  background: var(--red-bg);
+}
+
+.risk-matrix tbody tr.risk-high td {
+  color: var(--text-primary);
+}
+
+.risk-score {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.risk-score.score-high   { color: var(--red-light);   }
+.risk-score.score-medium { color: var(--amber-light);  }
+.risk-score.score-low    { color: var(--green-light);  }
+
+/* KIQ Table */
+.kiq-table { }
+
+/* Priority Intelligence Gaps Table */
+.pig-table { }
+
+/* KPI Table (optional - fragility reports) */
+.kpi-table { }
+
+.pillar-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--obsidian-border);
+  color: var(--text-muted);
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+/* ------------------------------------------------------------
+   13. SCENARIO CARDS
+   ------------------------------------------------------------ */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.scenario-card {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-top: 3px solid;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.scenario-card.best  { border-top-color: var(--green);  }
+.scenario-card.base  { border-top-color: var(--amber);  }
+.scenario-card.worst { border-top-color: var(--red);    }
+
+.scenario-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.scenario-card.best  .scenario-label { color: var(--green-light);  }
+.scenario-card.base  .scenario-label { color: var(--amber-light);  }
+.scenario-card.worst .scenario-label { color: var(--red-light);    }
+
+.scenario-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.scenario-card p {
+  font-size: 0.87rem;
+}
+
+.scenario-prob {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  display: block;
+  letter-spacing: 0.06em;
+}
+
+/* ------------------------------------------------------------
+   14. BEHAVIORAL GRID
+   ------------------------------------------------------------ */
+.behavioral-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.behavioral-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.behavioral-rank {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-pale);
+  opacity: 0.25;
+  line-height: 1;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.behavioral-content h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.behavioral-content p {
+  font-size: 0.88rem;
+  margin-bottom: var(--space-xs);
+}
+
+.behavioral-inference {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--slate-light);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   15. RECOMMENDATION TIMELINE
+   ------------------------------------------------------------ */
+.rec-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 2px solid var(--obsidian-border);
+  margin-left: var(--space-md);
+  padding-left: var(--space-xl);
+}
+
+.rec-block {
+  position: relative;
+  margin-bottom: var(--space-xl);
+}
+
+.rec-block::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-xl) - 1px);
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--obsidian-border);
+  border: 2px solid;
+}
+
+.rec-block.immediate  ::before { border-color: var(--red);   background: var(--red-bg);   }
+.rec-block.near-term  ::before { border-color: var(--amber); background: var(--amber-bg); }
+.rec-block.medium-term::before { border-color: var(--green); background: var(--green-bg); }
+
+.rec-time {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+.rec-block.immediate   .rec-time { color: var(--red-light);  border: 1px solid var(--red);   background: var(--red-bg);   }
+.rec-block.near-term   .rec-time { color: var(--amber-light);border: 1px solid var(--amber); background: var(--amber-bg); }
+.rec-block.medium-term .rec-time { color: var(--green-light);border: 1px solid var(--green); background: var(--green-bg); }
+
+.rec-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.rec-content p {
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------------------------------
+   16. CONFIDENCE PANEL
+   ------------------------------------------------------------ */
+.conf-panel {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.conf-header {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  border-bottom: 1px solid var(--obsidian-border);
+}
+
+.conf-band {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.conf-band.high     { color: var(--green-light);  border-color: var(--green);  background: var(--green-bg);  }
+.conf-band.moderate { color: var(--amber-light);  border-color: var(--amber);  background: var(--amber-bg);  }
+.conf-band.low      { color: var(--red-light);    border-color: var(--red);    background: var(--red-bg);    }
+
+.conf-header-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.conf-body {
+  padding: var(--space-lg);
+}
+
+.conf-body p {
+  font-size: 0.9rem;
+}
+
+/* Uncertainty / Flip Risk List */
+.uncertainty-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.uncertainty-item {
+  background: var(--red-bg);
+  border: 1px solid var(--red);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.uncertainty-item .u-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red-light);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.uncertainty-item p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   17. THRESHOLD GRID - Green / Amber / Red Zones
+   ------------------------------------------------------------ */
+.threshold-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.threshold-cell {
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  overflow: hidden;
+}
+
+.threshold-cell.green-zone { border-color: var(--green);  background: var(--green-bg);  }
+.threshold-cell.amber-zone { border-color: var(--amber);  background: var(--amber-bg);  }
+.threshold-cell.red-zone   { border-color: var(--red);    background: var(--red-bg);    }
+
+.threshold-header {
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+.threshold-cell.green-zone .threshold-header { color: var(--green-light);  border-color: var(--green);  background: rgba(39, 174, 96, 0.18);  }
+.threshold-cell.amber-zone .threshold-header { color: var(--amber-light);  border-color: var(--amber);  background: rgba(212, 130, 10, 0.18);  }
+.threshold-cell.red-zone   .threshold-header { color: var(--red-light);    border-color: var(--red);    background: rgba(192, 57, 43, 0.18);    }
+
+.threshold-body {
+  padding: var(--space-md);
+}
+
+.threshold-body p {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-sm);
+}
+
+.threshold-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.threshold-body li {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 3px 0;
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.threshold-body li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--text-faint);
+}
+
+/* ------------------------------------------------------------
+   18. STATUS & BAND PILLS (inline)
+   ------------------------------------------------------------ */
+.status-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.status-pill.red    { color: var(--red-light);   border-color: var(--red);   background: var(--red-bg);    }
+.status-pill.amber  { color: var(--amber-light);  border-color: var(--amber); background: var(--amber-bg);  }
+.status-pill.green  { color: var(--green-light);  border-color: var(--green); background: var(--green-bg);  }
+.status-pill.blue   { color: var(--blue-light);   border-color: var(--blue);  background: var(--blue-bg);   }
+.status-pill.yellow { color: var(--yellow);        border-color: var(--yellow);background: var(--yellow-bg); }
+.status-pill.gold   { color: var(--gold);          border-color: var(--gold-dim); background: var(--gold-glow); }
+
+/* Band Pills (source register table) */
+.band-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.band-pill.green { color: var(--green-light);  border-color: var(--green);  background: var(--green-bg);  }
+.band-pill.amber { color: var(--amber-light);  border-color: var(--amber);  background: var(--amber-bg);  }
+.band-pill.red   { color: var(--red-light);    border-color: var(--red);    background: var(--red-bg);    }
+
+/* Inline fact/inference labels */
+.label-fact {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--blue-light);
+  border: 1px solid var(--blue);
+  background: var(--blue-bg);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-right: 6px;
+}
+
+.label-inference {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  background: var(--gold-glow);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-right: 6px;
+}
+
+/* Structural constraint labels */
+.label-structural { color: var(--red-light);    }
+.label-political  { color: var(--amber-light);  }
+.label-resource   { color: var(--blue-light);   }
+.label-temporal   { color: var(--green-light);  }
+
+/* Analytic technique declaration block */
+.technique-declaration {
+  background: var(--obsidian-surface);
+  border: var(--border-default);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.technique-declaration strong {
+  color: var(--gold-dim);
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------
+   19. FOOTER
+   ------------------------------------------------------------ */
+footer {
+  border-top: 1px solid var(--obsidian-border);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-doc-id {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------
+   20. RESPONSIVE BREAKPOINTS
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 100px var(--space-md) var(--space-2xl);
+  }
+
+  main {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .snapshot-grid,
+  .evidence-grid,
+  .scenario-grid,
+  .threshold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bluf-item {
+    grid-template-columns: 28px 1fr;
+    gap: var(--space-md);
+  }
+
+  .behavioral-item {
+    grid-template-columns: 1fr;
+  }
+
+  .behavioral-rank {
+    font-size: 1rem;
+    text-align: left;
+    padding-top: 0;
+    opacity: 0.35;
+  }
+
+  .hero-running-head {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .hero-meta {
+    gap: var(--space-sm);
+  }
+
+  .metrics-strip {
+    gap: var(--space-sm);
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+  }
+}
+
+
+/* ===== QAP LATAM V2 COMPATIBILITY + HARDENING ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.12) 0px, transparent 1px, transparent 3px);
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.28;
+}
+.hero.no-image { min-height: 100vh; }
+.provenance {
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.86rem;
+}
+.section-header { display:flex; align-items:baseline; gap:var(--space-md); margin-bottom:var(--space-xl); padding-bottom:var(--space-md); border-bottom:1px solid var(--obsidian-border); }
+.section > .section-num, .section > .section-title, .section > .annex-header { display:none; }
+.sub-title { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-md); }
+.prose, .bluf-text, .snapshot-cell p, .kj-text, .evidence-box-body li, .behavioral-body p, .threshold-body, .conf-body li, .uncertainty-item, footer div { color: var(--text-secondary); font-family: var(--font-body); }
+.section-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+.section {
+  background: transparent;
+}
+.bluf-item, .snapshot-cell, .kj-item, .evidence-box, .behavioral-item, .conf-panel, .uncertainty-item, .threshold-cell, .scenario-card, .metric-block {
+  box-shadow: var(--shadow-card);
+}
+.evidence-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-md); }
+.evidence-box { background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.evidence-box-header { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.75rem 1rem; }
+.evidence-box-header.know { color: var(--green-light); background: var(--green-bg); border-bottom:1px solid rgba(39,174,96,0.2); }
+.evidence-box-header.assess { color: var(--amber-light); background: var(--amber-bg); border-bottom:1px solid rgba(212,130,10,0.2); }
+.evidence-box-header.gap { color: var(--red-light); background: var(--red-bg); border-bottom:1px solid rgba(192,57,43,0.2); }
+.evidence-box-body { padding: 1rem 1.1rem; }
+.evidence-box-body ul { padding-left: 1rem; }
+.evidence-box-body li { margin-bottom: 0.55rem; }
+.kj-kiq { font-family: var(--font-mono); font-size: 0.65rem; color: var(--slate-light); letter-spacing: 0.1em; }
+.status-pill, .band-pill {
+  display:inline-block; font-family:var(--font-mono); font-size:0.64rem; letter-spacing:0.1em; text-transform:uppercase; padding:2px 8px; border-radius:var(--radius-sm); border:1px solid;
+}
+.status-pill.green, .band-pill.green { color: var(--green-light); border-color: var(--green); background: var(--green-bg); }
+.status-pill.red, .band-pill.red { color: var(--red-light); border-color: var(--red); background: var(--red-bg); }
+.status-pill.amber, .band-pill.amber { color: var(--amber-light); border-color: var(--amber); background: var(--amber-bg); }
+.status-pill.blue { color: var(--blue-light); border-color: var(--blue); background: var(--blue-bg); }
+.status-pill.yellow { color: var(--yellow); border-color: var(--yellow); background: var(--yellow-bg); }
+.status-pill.green, .status-pill.red, .status-pill.amber, .band-pill.green, .band-pill.red, .band-pill.amber {}
+.status-pill:not(.green):not(.red):not(.amber):not(.blue):not(.yellow), .band-pill:not(.green):not(.red):not(.amber) { color: var(--text-secondary); border-color: var(--obsidian-border); background: var(--obsidian-surface); }
+.assumption-table, .ach-table, .iw-table, .risk-matrix, .ewi-table, table { width:100%; border-collapse:collapse; }
+table th { background: var(--obsidian-surface); color: var(--gold); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing:0.11em; text-transform:uppercase; padding: 0.75rem 0.8rem; border:1px solid var(--obsidian-border); }
+table td { background: var(--obsidian-card); color: var(--text-secondary); font-family: var(--font-body); font-size: 0.9rem; padding: 0.8rem; border:1px solid var(--obsidian-border); vertical-align: top; }
+table tbody tr:nth-child(even) td { background: #151925; }
+.td-mono { font-family: var(--font-mono); color: var(--gold-light); font-size: 0.76rem; }
+.td-label { font-family: var(--font-mono); color: var(--gold); font-size: 0.72rem; letter-spacing:0.08em; text-transform:uppercase; }
+.scenario-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-md); }
+.scenario-card { background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.scenario-card-head { font-family: var(--font-mono); padding: 0.75rem 1rem; font-size: 0.74rem; letter-spacing:0.1em; text-transform:uppercase; }
+.scenario-card.best .scenario-card-head { background: var(--green-bg); color: var(--green-light); }
+.scenario-card.base .scenario-card-head { background: var(--amber-bg); color: var(--amber-light); }
+.scenario-card.worst .scenario-card-head { background: var(--red-bg); color: var(--red-light); }
+.scenario-card-body { padding: 1rem; }
+.behavioral-grid { display:flex; flex-direction:column; gap:var(--space-md); }
+.behavioral-item { display:grid; grid-template-columns:44px 1fr; gap:var(--space-lg); padding: var(--space-lg); background: var(--obsidian-card); border: var(--border-default); border-left:3px solid var(--slate); border-radius: var(--radius-md); }
+.behavioral-rank { font-family: var(--font-mono); font-size:1.15rem; color: var(--gold-pale); opacity:0.55; }
+.rec-timeline { display:flex; flex-direction:column; gap:var(--space-md); }
+.rec-block { display:grid; grid-template-columns:155px 1fr; background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.rec-time { padding: 1rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing:0.11em; text-transform:uppercase; }
+.rec-content { padding: 1rem 1.15rem; }
+.rec-block.immediate .rec-time { background: var(--red-bg); color: var(--red-light); }
+.rec-block.near-term .rec-time { background: var(--amber-bg); color: var(--amber-light); }
+.rec-block.medium-term .rec-time { background: var(--green-bg); color: var(--green-light); }
+.conf-panel { background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.conf-header { display:flex; justify-content:space-between; padding: 0.85rem 1rem; font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--blue-light); background: var(--blue-bg); }
+.conf-body { padding: 1rem 1.15rem; }
+.conf-body ul { padding-left: 1rem; }
+.uncertainty-list { display:flex; flex-direction:column; gap:var(--space-md); }
+.uncertainty-item { background: var(--obsidian-card); border: var(--border-default); border-left:3px solid var(--amber); border-radius: var(--radius-md); padding: 1rem 1.1rem; }
+.threshold-grid { display:flex; flex-direction:column; gap: var(--space-md); }
+.threshold-cell { border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; background: var(--obsidian-card); }
+.threshold-label { font-family: var(--font-mono); padding: 0.8rem 1rem; font-size:0.74rem; letter-spacing:0.11em; text-transform:uppercase; }
+.green-zone .threshold-label { background: var(--green-bg); color: var(--green-light); }
+.amber-zone .threshold-label { background: var(--amber-bg); color: var(--amber-light); }
+.red-zone .threshold-label { background: var(--red-bg); color: var(--red-light); }
+.threshold-body { padding: 1rem 1.15rem; }
+.wsi-note, .rapitis-note { margin-top: 1rem; background: var(--obsidian-card); border: var(--border-default); border-left: 3px solid var(--slate); border-radius: var(--radius-md); padding: 0.9rem 1rem; color: var(--text-secondary); font-size: 0.88rem; }
+.inline-tag { display:inline-block; margin-right:0.45rem; font-family: var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; padding:2px 7px; border-radius:var(--radius-sm); border:1px solid; }
+.inline-tag.assess { color: var(--amber-light); border-color: var(--amber); background: var(--amber-bg); }
+.inline-tag.caveat { color: var(--red-light); border-color: var(--red); background: var(--red-bg); }
+.inline-tag.fact { color: var(--green-light); border-color: var(--green); background: var(--green-bg); }
+.ach-matrix { margin-top:1rem; }
+.ach-matrix td.center, .ach-matrix th.center { text-align:center; }
+.ach-hit { font-weight:700; color: var(--gold-light); }
+footer { margin: 0 auto; max-width: 1000px; padding: 0 2rem 3rem; color: var(--text-muted); font-family: var(--font-body); font-size: 0.84rem; text-align:center; }
+.footer-doc-id { font-family:var(--font-mono); color: var(--gold-dim); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem; }
+@media (max-width: 900px) {
+  .snapshot-grid, .evidence-grid, .scenario-grid { grid-template-columns: 1fr; }
+  .rec-block { grid-template-columns: 1fr; }
+}
+
+/* ---- Portfolio additions (charts, carousel, timeline) ---- */
+.chart-frame{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);padding:var(--space-lg);margin:var(--space-lg) 0;}
+.chart-title{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-xs);}
+.chart-sub{font-family:var(--font-body);font-size:0.8rem;color:var(--text-muted);margin-bottom:var(--space-md);}
+.chart-note{font-family:var(--font-mono);font-size:0.68rem;color:var(--text-faint);margin-top:var(--space-sm);letter-spacing:0.04em;line-height:1.6;}
+svg.viz{width:100%;height:auto;display:block;overflow:visible;}
+svg.viz text{font-family:'IBM Plex Mono',monospace;}
+.tip{position:fixed;pointer-events:none;z-index:9999;background:rgba(10,12,16,0.97);border:1px solid var(--gold-dim);border-radius:4px;padding:8px 11px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text-primary);line-height:1.6;opacity:0;transition:opacity .12s;box-shadow:0 4px 18px rgba(0,0,0,.6);max-width:280px;}
+.tip b{color:var(--gold-light);display:block;margin-bottom:3px;font-size:0.74rem;}
+.legend{display:flex;flex-wrap:wrap;gap:var(--space-md);margin-top:var(--space-md);font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px;}
+.ctrl-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:var(--space-md);}
+.ctrl{font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;border-radius:var(--radius-sm);border:1px solid var(--obsidian-border);background:var(--obsidian-surface);color:var(--text-muted);cursor:pointer;transition:all .18s;}
+.ctrl:hover{border-color:var(--gold-muted);color:var(--gold-light);}
+.ctrl.on{border-color:var(--gold-dim);background:var(--gold-glow);color:var(--gold);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-md);}
+@media(max-width:820px){.two-col{grid-template-columns:1fr;}}
+.mini-stat{background:var(--obsidian-surface);border:var(--border-default);border-left:3px solid var(--gold-dim);border-radius:var(--radius-md);padding:var(--space-md) var(--space-lg);}
+.mini-stat .v{font-family:var(--font-mono);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1.1;}
+.mini-stat .k{font-family:var(--font-mono);font-size:0.63rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-top:4px;}
+.mini-stat .d{font-size:0.8rem;color:var(--text-secondary);margin-top:8px;line-height:1.55;}
+
+</style>
+</head>
+
+<body>
+<div id="progress"></div>
+<nav>
+  <div class="nav-brand">QUANTA ANALYTICA <span>| MNS Consulting</span></div>
+  <ul class="nav-links">
+    <li><a href="#s0">Dataset</a></li>
+    <li><a href="#s1">BLUF</a></li>
+    <li><a href="#s2">Method</a></li>
+    <li><a href="#s3">Finding 1</a></li>
+    <li><a href="#s4">Finding 2</a></li>
+    <li><a href="#s5">Finding 3</a></li>
+    <li><a href="#s7">Limits</a></li>
+  </ul>
+  <div class="nav-classify">OSINT // Unclassified</div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-running-head">
+      <span>QUANTA ANALYTICA | MNS CONSULTING</span>
+      <span>FRAGILITY &amp; GOVERNANCE MODELING // DATA STORY</span>
+    </div>
+    <div class="hero-container">
+      <img src="https://quanta-analytica.com/logo.PNG" alt="Quanta Analytica" class="hero-image">
+      <div class="hero-text">
+        <h1>The Fragility Gap
+          <span class="title-gold">What 31 Indicators Across 22 West and Central African States Actually Say About Where Violence Comes From</span>
+        </h1>
+      </div>
+    </div>
+    <p class="hero-subtitle">A structured reading of five index families covering West and Central Africa. The headline result is uncomfortable for the standard governance narrative: across this sample, state legitimacy deficits show no independent statistical association with conflict intensity once fragmentation of the security apparatus is held constant.</p>
+    <div class="hero-meta">
+      <div class="meta-cell"><span class="label">Product</span><span class="value">DATA STORY</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Unit of Analysis</span><span class="value">STATE / YEAR</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Coverage</span><span class="value">22 STATES</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Analytic Sample</span><span class="value">n = 19</span></div>
+      <div class="meta-divider"></div>
+      <div class="threat-badge high"><span class="threat-dot"></span>REGIONAL RISK: HIGH</div>
+    </div>
+    <div class="scope-boundary">
+      <strong>Analytic scope boundary.</strong> This product analyses secondary composite indices only. It contains no event data, no incident reporting, and no primary collection. Index vintages run from 2023 to 2024 and therefore lag current conditions by twelve to thirty months. Findings describe structural association within a nineteen-country cross-section. They do not establish causation, and they do not forecast specific incidents. Confidence is stated per finding.
+    </div>
+    <div class="metrics-strip">
+      <div class="metric-block"><div class="metric-value">31</div><div class="metric-label">Indicators per state</div></div>
+      <div class="metric-block"><div class="metric-value">5</div><div class="metric-label">Index families</div></div>
+      <div class="metric-block"><div class="metric-value">+0.81</div><div class="metric-label">r: security fragmentation</div></div>
+      <div class="metric-block"><div class="metric-value">+0.39</div><div class="metric-label">r: state legitimacy (n.s.)</div></div>
+      <div class="metric-block"><div class="metric-value">83.1%</div><div class="metric-label">Variance in 2 components</div></div>
+    </div>
+    <p class="provenance">Sources: Institute for Economics and Peace (GPI 2024, PPI 2024); Fund for Peace (FSI 2023); Bertelsmann Stiftung (BTI 2024); UNDP Human Development Report (HDI 2023). Compiled by the analyst from the ARAC Global Stability Analytics Dashboard v1. All derived statistics computed for this product and reproducible from the attached dataset.</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="s0">
+  <div class="section-header"><span class="section-num">00 // DATASET</span><div class="section-title">What the Data Is</div></div>
+  <p>The dashboard behind this product assembles five independent index families into one country level table. Each family measures something different, and the differences matter more than the overlap.</p>
+  <div class="table-wrapper"><table>
+    <thead><tr><th>Family</th><th>Publisher</th><th>Vintage</th><th>Fields Used</th><th>Scale and Direction</th><th>What It Actually Measures</th></tr></thead>
+    <tbody>
+      <tr><td>GPI</td><td>Institute for Economics and Peace</td><td>2024</td><td>1</td><td>1 to 5, higher is worse</td><td>Negative peace. The observed absence of violence and militarisation right now.</td></tr>
+      <tr><td>PPI</td><td>Institute for Economics and Peace</td><td>2024</td><td>1</td><td>1 to 5, higher is worse</td><td>Positive peace. The attitudes, institutions and structures associated with sustaining peace.</td></tr>
+      <tr><td>FSI</td><td>Fund for Peace</td><td>2023</td><td>12 sub-indicators</td><td>0 to 10 each, higher is worse</td><td>Cohesion, economic, political and social pressures on the state. Totals recomputed as the sum of the twelve fields, range 0 to 120.</td></tr>
+      <tr><td>BTI</td><td>Bertelsmann Stiftung</td><td>2024</td><td>14 indicators plus regime coding</td><td>1 to 10, higher is better, except Q13.3 conflict intensity where higher is worse</td><td>Expert coded political and economic transformation quality, governance performance and conflict intensity.</td></tr>
+      <tr><td>HDI</td><td>UNDP</td><td>2023</td><td>2</td><td>0 to 1 and years, higher is better</td><td>Human development outcome and mean years of schooling.</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>Twenty-two states appear in the dashboard. Nineteen carry values across all five families and form the analytic sample. Gambia appears in the BTI table only. Cote d'Ivoire and Guinea-Bissau are absent from the FSI panel. Those three states are retained in the dataset and in the map product, and excluded from any statistic that requires the full indicator set. That exclusion is stated wherever it applies rather than silently absorbed.</p>
+
+  <div class="wsi-note"><strong>Direction normalisation.</strong> The five families do not share a sign convention. GPI, PPI and FSI increase with risk. BTI and HDI increase with performance, with the single exception of BTI Q13.3. Every derived statistic in this product operates on explicitly signed variables, and no composite score mixes directions without inversion. Getting this wrong is the most common failure mode in multi-index dashboards, and it is invisible in the output.</div>
+</section>
+
+<section class="section" id="s1">
+  <div class="section-header"><span class="section-num">01 // BLUF</span><div class="section-title">Bottom Line Up Front</div></div>
+  <div class="bluf-grid">
+    <div class="bluf-item"><div class="bluf-index">01</div><div class="bluf-text">
+      <span class="bluf-claim">Fragmentation of the coercive apparatus, not legitimacy deficit, tracks conflict intensity across this sample.</span>
+      <p><span class="inline-tag fact">Fact</span>FSI C1 security apparatus correlates with BTI conflict intensity at r = +0.81, p below 0.001, 95 percent bootstrap interval +0.62 to +0.94. FSI P1 state legitimacy correlates at r = +0.39, p = 0.10, with a bootstrap interval whose lower bound sits at +0.005. The legitimacy association is marginal on both readings, and in a two predictor regression its coefficient reverses sign and cannot be distinguished from noise.</p>
+    </div></div>
+    <div class="bluf-item"><div class="bluf-index">02</div><div class="bluf-text">
+      <span class="bluf-claim">Two clusters share an identical legitimacy deficit and differ by 3.5 points of conflict intensity.</span>
+      <p><span class="inline-tag fact">Fact</span>The seven state Contested Monopoly group and the five state Coercively Stable Rentier group both average 8.74 on FSI state legitimacy. Their mean conflict intensity is 8.14 and 4.60 respectively. <span class="inline-tag assess">Assessment</span>What separates them is intact coercive capacity, resource financed patronage, and lower external intervention, not popular consent.</p>
+    </div></div>
+    <div class="bluf-item"><div class="bluf-index">03</div><div class="bluf-text">
+      <span class="bluf-claim">Eight states in the sample carry structural deficits larger than their current violence levels imply.</span>
+      <p><span class="inline-tag assess">Assessment</span>Equatorial Guinea, Mauritania, Republic of the Congo, Liberia, Chad, Guinea, Sierra Leone and the Central African Republic sit above the parity line between standardised positive peace deficit and standardised current violence. <span class="inline-tag caveat">Caveat</span>This is a static positional statement about one year of data. It is not a prediction that these states will deteriorate.</p>
+    </div></div>
+    <div class="bluf-item"><div class="bluf-index">04</div><div class="bluf-text">
+      <span class="bluf-claim">Mali and Burkina Faso show the opposite signature.</span>
+      <p><span class="inline-tag assess">Assessment</span>Both record violence well above what their structural indicators alone would place them at, with gap scores of minus 1.45 and minus 1.78. The most parsimonious reading is that conflict in the central Sahel has become partly self-sustaining, driven by armed actor dynamics rather than by the underlying structural profile that produced it.</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="section" id="s2">
+  <div class="section-header"><span class="section-num">02 // METHOD</span><div class="section-title">How the Numbers Were Produced</div></div>
+  <div class="technique-declaration"><strong>Techniques applied:</strong> direction normalisation, z-standardisation, residual gap construction, Pearson correlation with non-parametric bootstrap intervals (8,000 resamples), ordinary least squares with two predictors, k-means partitioning (k = 4, 50 initialisations, fixed seed), and principal component analysis for two dimensional projection. All computation in Python using NumPy, SciPy, pandas and scikit-learn. <strong>Quality control:</strong> every value extracted from the source dashboard by coordinate parsing rather than manual transcription, then row checked against the rendered table.</div>
+
+  <div class="sub-section"><h3>The Fragility Gap Construction</h3>
+  <p>The gap is deliberately simple, because a simple statistic survives scrutiny better than a weighted composite whose weights nobody can defend. Both the Global Peace Index and the Positive Peace Index are standardised to zero mean and unit variance within the nineteen country sample. The gap is the standardised positive peace score minus the standardised negative peace score.</p>
+  <p>A positive gap means the state looks structurally weaker than its current level of violence would suggest. A negative gap means violence is running ahead of structure. The two indices correlate at r = +0.52 within this sample, which is high enough to be meaningful and low enough that the residual carries information.</p>
+  <p><span class="inline-tag caveat">Caveat</span>Standardising within a nineteen country regional sample means every score is relative to this region, not to the world. A gap of zero here describes a state that is typical for West and Central Africa. It does not describe a stable state.</p>
+  </div>
+</section>
+
+<section class="section" id="s3">
+  <div class="section-header"><span class="section-num">03 // FINDING 01</span><div class="section-title">Where Structure and Violence Come Apart</div></div>
+  <p>The scatter below places every state in the analytic sample on two axes. The horizontal axis is current violence and militarisation as measured by the Global Peace Index. The vertical axis is structural peace deficit as measured by the Positive Peace Index. Both are standardised within the sample. The diagonal is the parity line where the two are equal.</p>
+
+  <div class="chart-frame">
+    <div class="chart-title">Figure 1 // Structural Deficit Against Current Violence</div>
+    <div class="chart-sub">Standardised scores, n = 19. Points above the diagonal carry more structural deficit than present violence. Hover any point for detail.</div>
+    <svg class="viz" id="fig1" viewBox="0 0 760 560"></svg>
+    <div class="legend">
+      <span><i style="background:#c0392b"></i>Contested Monopoly</span>
+      <span><i style="background:#d4820a"></i>Post-Transition Low Capacity</span>
+      <span><i style="background:#8e44ad"></i>Coercively Stable Rentier</span>
+      <span><i style="background:#27ae60"></i>Comparatively Consolidated</span>
+    </div>
+    <div class="chart-note">Axes standardised within the 19 country sample. GPI and PPI are both inverted scales where higher values indicate worse conditions. Diagonal is the line of equality between standardised scores.</div>
+  </div>
+
+  <p>Read the upper left quadrant carefully. Equatorial Guinea, Mauritania and the Republic of the Congo sit there because they combine low observed violence with severe structural deficit. That combination is the classic profile of coercive stability. The state is quiet because it is capable of suppressing dissent and can pay for that capability, not because grievances have been resolved.</p>
+
+  <div class="chart-frame">
+    <div class="chart-title">Figure 2 // The Fragility Gap, Ranked</div>
+    <div class="chart-sub">Standardised positive peace deficit minus standardised current violence. Positive values indicate structural deficit running ahead of observed violence.</div>
+    <svg class="viz" id="fig2" viewBox="0 0 760 520"></svg>
+    <div class="chart-note">Derived statistic. Computed for this product from GPI 2024 and PPI 2024. Not published by the source institutions in this form.</div>
+  </div>
+
+  <p>The lower end of that ranking is as informative as the upper end. Burkina Faso and Mali record the most negative gaps in the sample. Their structural indicators are bad but not regionally exceptional. Their violence is regionally exceptional. <span class="inline-tag assess">Assessment</span>Where violence outruns structure by this margin, the conflict system has usually acquired its own drivers: armed actor competition, war economies, and retaliation cycles that no longer depend on the conditions that started them. That reading is consistent with the region's trajectory but it is inference from position, not from event data, and it is held at moderate confidence.</p>
+</section>
+
+<section class="section" id="s4">
+  <div class="section-header"><span class="section-num">04 // FINDING 02</span><div class="section-title">Legitimacy Is Not the Variable</div></div>
+  <p>A large share of humanitarian and security risk writing on this region, including work I have produced myself, leads with state legitimacy failure as the organising explanation for operational risk. This dataset does not support that ordering. It supports a different one.</p>
+
+  <div class="chart-frame">
+    <div class="chart-title">Figure 3 // Correlation With BTI Conflict Intensity</div>
+    <div class="chart-sub">Pearson r with 95 percent bootstrap confidence intervals, 8,000 resamples, n = 19. Slate markers indicate coefficients that are not distinguishable from zero at p below 0.05.</div>
+    <svg class="viz" id="fig3" viewBox="0 0 760 440"></svg>
+    <div class="chart-note">Bootstrap intervals are percentile intervals. With n = 19 they are wide by construction, which is exactly why they are shown rather than bare coefficients. Note the disagreement on P1 state legitimacy: the percentile interval clears zero by 0.005 while the parametric test returns p = 0.10. Where two defensible tests disagree at the margin the correct reading is that the evidence is weak, not that one test wins.</div>
+  </div>
+
+  <p>Security apparatus fragmentation and external intervention both correlate with conflict intensity above +0.80 with intervals that exclude zero comfortably. State legitimacy sits at +0.39 with a lower bound at zero. Rule of law sits at minus 0.34 with an interval that spans zero. Those two results should change how the causal story is written.</p>
+
+  <div class="sub-section"><h3>Holding Fragmentation Constant</h3>
+  <p>Correlation alone would leave the question open, because legitimacy and fragmentation are themselves related. A two predictor regression settles it within this sample.</p>
+  <div class="table-wrapper"><table>
+    <thead><tr><th>Model</th><th>Predictor</th><th>Coefficient</th><th>t</th><th>Model fit</th></tr></thead>
+    <tbody>
+      <tr><td>Model A</td><td>C1 security apparatus</td><td>+1.011</td><td>+5.04</td><td rowspan="2">R&sup2; = 0.671, adjusted 0.630</td></tr>
+      <tr><td></td><td>P1 state legitimacy</td><td>-0.197</td><td>-0.97</td></tr>
+      <tr><td>Model B</td><td>C1 security apparatus</td><td>+0.495</td><td>+2.47</td><td rowspan="2">R&sup2; = 0.760, adjusted 0.730</td></tr>
+      <tr><td></td><td>X1 external intervention</td><td>+0.598</td><td>+2.68</td></tr>
+    </tbody>
+  </table></div>
+  <p>In Model A the legitimacy coefficient reverses sign and cannot be distinguished from zero. In Model B, fragmentation of the coercive apparatus and the presence of external intervention together account for roughly three quarters of the variance in conflict intensity across the sample.</p>
+  <p><span class="inline-tag caveat">Caveat</span>Nineteen observations, one time slice, and two predictors chosen after inspecting correlations. This is a description of structure in one dataset. It is not a causal model, and the external intervention indicator is partly endogenous, since intervention follows conflict as well as accompanying it. The finding is held at moderate confidence and is offered as a reordering of priors, not as a settled result.</p>
+  </div>
+</section>
+
+<section class="section" id="s5">
+  <div class="section-header"><span class="section-num">05 // FINDING 03</span><div class="section-title">Four Operating Environments, Not One Region</div></div>
+  <p>Ten standardised indicators spanning all five families were partitioned with k-means at k = 4. Two principal components retain 83.1 percent of the variance, which makes a two dimensional projection an honest summary rather than a decorative one.</p>
+
+  <div class="chart-frame">
+    <div class="chart-title">Figure 4 // Principal Component Projection With Cluster Assignment</div>
+    <div class="chart-sub">PC1 61.9 percent of variance, PC2 21.2 percent. PC1 loads positively on fragility, violence and fragmentation. PC2 separates human development and state legitimacy from governance quality.</div>
+    <svg class="viz" id="fig4" viewBox="0 0 760 520"></svg>
+    <div class="legend">
+      <span><i style="background:#c0392b"></i>Contested Monopoly</span>
+      <span><i style="background:#d4820a"></i>Post-Transition Low Capacity</span>
+      <span><i style="background:#8e44ad"></i>Coercively Stable Rentier</span>
+      <span><i style="background:#27ae60"></i>Comparatively Consolidated</span>
+      <span>Diamond marker = cluster centroid</span>
+    </div>
+    <div class="chart-note">k-means, k = 4, 50 initialisations, fixed random seed for reproducibility. Cluster labels are analyst assigned after inspecting the group means. The algorithm produced the partition, not the names.</div>
+  </div>
+
+  <div class="table-wrapper"><table>
+    <thead><tr><th>Cluster</th><th>n</th><th>Members</th><th>C1 Fragmentation</th><th>P1 Legitimacy</th><th>Conflict Intensity</th><th>HDI</th><th>FSI Total</th><th>Mean Gap</th></tr></thead>
+    <tbody id="clustab"></tbody>
+  </table></div>
+
+  <div class="chart-frame">
+    <div class="chart-title">Figure 5 // Identical Legitimacy Deficit, Divergent Violence</div>
+    <div class="chart-sub">Contested Monopoly against Coercively Stable Rentier, cluster means across six indicators.</div>
+    <svg class="viz" id="fig5" viewBox="0 0 760 400"></svg>
+    <div class="chart-note">Both clusters average 8.74 on FSI state legitimacy. The divergence appears in coercive fragmentation, external intervention, conflict intensity and socioeconomic development.</div>
+  </div>
+
+  <p>This is the central visual argument of the product. Two groups of states, indistinguishable on the indicator that most analysis leads with, separated by three and a half points of conflict intensity. Legitimacy deficit is common to both. What varies is whether the state retains a coherent monopoly on force and whether it can finance patronage from rents.</p>
+
+  <div class="wsi-note"><strong>Analyst override on record.</strong> The algorithm placed Niger in the Post-Transition Low Capacity cluster alongside Liberia, Sierra Leone and Togo. That placement is driven by BTI governance scores drawn from a review window that closes before the July 2023 seizure of power, and by the resulting Democracy regime coding. On present conditions Niger belongs with the Contested Monopoly group. The clustering output is reported as computed and the override is recorded here rather than applied silently to the data.</div>
+</section>
+
+<section class="section" id="s6">
+  <div class="section-header"><span class="section-num">06 // DESIGN</span><div class="section-title">Why the Visualisations Are Built This Way</div></div>
+  <p>Three decisions shaped every figure in this product.</p>
+  <div class="two-col">
+    <div class="mini-stat"><div class="v">01</div><div class="k">Position over colour</div><div class="d">Every quantitative claim is encoded as position on a common scale. Colour carries category only. Readers decode position accurately and decode colour intensity poorly, and a choropleth of a composite index invites exactly the misreading this product is arguing against.</div></div>
+    <div class="mini-stat"><div class="v">02</div><div class="k">Uncertainty is drawn, not disclaimed</div><div class="d">Figure 3 shows bootstrap intervals rather than bare coefficients, because with nineteen observations the interval is the finding. A bar chart of correlation coefficients alone would have overstated the evidence by a wide margin.</div></div>
+    <div class="mini-stat"><div class="v">03</div><div class="k">The comparison is the argument</div><div class="d">Figure 5 exists because the strongest claim in this product is a comparison between two groups on one indicator. Building a figure whose only job is to carry the argument is more useful than a dashboard that shows everything and asserts nothing.</div></div>
+    <div class="mini-stat"><div class="v">04</div><div class="k">Derived values are labelled</div><div class="d">The fragility gap and the FSI totals are computed for this product. Neither is published by the source institutions in this form. Every figure note states whether a value is sourced or derived, so a reader can audit the chain without opening the code.</div></div>
+  </div>
+</section>
+
+<section class="section" id="s7">
+  <div class="section-header"><span class="section-num">07 // LIMITS</span><div class="section-title">Limitations and Falsifiability</div></div>
+  <div class="evidence-grid">
+    <div class="evidence-box"><div class="evidence-box-header know">What This Establishes</div><div class="evidence-box-body"><ul>
+      <li>The association between coercive fragmentation and conflict intensity is strong and robust to bootstrap resampling in this sample.</li>
+      <li>State legitimacy carries no independent association with conflict intensity once fragmentation is controlled.</li>
+      <li>Two clusters with identical legitimacy profiles differ sharply in violence output.</li>
+      <li>Positive peace deficit and current violence diverge systematically in eight states.</li>
+    </ul></div></div>
+    <div class="evidence-box"><div class="evidence-box-header assess">What It Suggests</div><div class="evidence-box-body"><ul>
+      <li>Operational risk models weighted toward governance quality may misrank rentier autocracies.</li>
+      <li>Coercively stable states carry deferred rather than absent risk.</li>
+      <li>Central Sahel violence has decoupled from its structural baseline.</li>
+      <li>Regime type coding is a weak operational discriminator relative to security sector coherence.</li>
+    </ul></div></div>
+    <div class="evidence-box"><div class="evidence-box-header gap">What It Cannot Support</div><div class="evidence-box-body"><ul>
+      <li>Any causal claim. This is one cross-section with nineteen observations.</li>
+      <li>Any forecast of onset, timing or location of violence.</li>
+      <li>Sub-national inference. Every value is a national aggregate.</li>
+      <li>Currency. The most recent input closes in 2024.</li>
+    </ul></div></div>
+  </div>
+
+  <div class="sub-section"><h3>What Would Falsify the Central Finding</h3>
+  <div class="table-wrapper"><table>
+    <thead><tr><th>ID</th><th>Test</th><th>Result That Would Overturn the Finding</th></tr></thead>
+    <tbody>
+      <tr><td>F1</td><td>Extend the panel to multiple years and regress change in conflict intensity on lagged C1 and lagged P1.</td><td>Lagged legitimacy predicts change and lagged fragmentation does not.</td></tr>
+      <tr><td>F2</td><td>Repeat the analysis on a global sample rather than one region.</td><td>The fragmentation coefficient collapses outside West and Central Africa, indicating a regional artefact.</td></tr>
+      <tr><td>F3</td><td>Substitute event based conflict measures for the BTI expert coded intensity score.</td><td>The association reverses or disappears, indicating the result reflects coder correlation rather than a real relationship.</td></tr>
+      <tr><td>F4</td><td>Track the eight positive gap states forward for thirty-six months.</td><td>Deterioration rates are no higher than in the negative gap group, indicating the gap carries no early warning content.</td></tr>
+    </tbody>
+  </table></div>
+  </div>
+</section>
+
+<section class="section" id="s8">
+  <div class="section-header"><span class="section-num">08 // SO WHAT</span><div class="section-title">Operational Consequence for Security Risk Management</div></div>
+  <p>For an NGO security risk manager, the practical consequence is a change in what gets monitored. If fragmentation of the coercive apparatus is the variable that tracks violence, then the indicators worth watching are the ones that describe that fragmentation directly.</p>
+  <div class="rec-timeline">
+    <div class="rec-block immediate"><span class="rec-time">Immediate</span><div class="rec-content">
+      <p>Re-weight country risk models away from composite governance scores and toward security sector coherence. Command chain integrity, parallel force structures, auxiliary and militia proliferation, and foreign force presence are the leading terms.</p>
+    </div></div>
+    <div class="rec-block near-term"><span class="rec-time">Near term</span><div class="rec-content">
+      <p>Treat the eight positive gap states as deferred risk rather than low risk. Acceptance strategies built on the current calm in Equatorial Guinea, the Republic of the Congo or Mauritania rest on coercive capacity that can change faster than any structural indicator will register.</p>
+    </div></div>
+    <div class="rec-block medium-term"><span class="rec-time">Medium term</span><div class="rec-content">
+      <p>Build the panel. A single cross-section cannot separate structural drivers from conflict feedback. Three or more index vintages would allow the lagged tests in F1 and turn a positional finding into a directional one.</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="section" id="s9">
+  <div class="section-header"><span class="section-num">09 // SOURCES</span><div class="section-title">Source Register</div></div>
+  <div class="table-wrapper"><table>
+    <thead><tr><th>#</th><th>Source</th><th>Type</th><th>Band</th><th>Independence Note</th><th>Locator</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Global Peace Index 2024, Institute for Economics and Peace</td><td>Composite index</td><td><span class="band-pill green">Green</span></td><td>Independent institute. Methodology published. Shares some input data with PPI, so GPI and PPI are not fully independent of one another.</td><td>visionofhumanity.org</td></tr>
+      <tr><td>2</td><td>Positive Peace Index 2024, Institute for Economics and Peace</td><td>Composite index</td><td><span class="band-pill green">Green</span></td><td>Same publisher as source 1. Treated as partially dependent for the gap statistic, which is why the gap is presented as a positional descriptor rather than as two independent measurements.</td><td>visionofhumanity.org</td></tr>
+      <tr><td>3</td><td>Fragile States Index 2023, Fund for Peace</td><td>Composite index</td><td><span class="band-pill green">Green</span></td><td>Independent publisher. Content analysis driven, so partially sensitive to media coverage volume.</td><td>fragilestatesindex.org</td></tr>
+      <tr><td>4</td><td>Bertelsmann Transformation Index 2024, Bertelsmann Stiftung</td><td>Expert coded index</td><td><span class="band-pill amber">Amber</span></td><td>Expert assessment rather than measurement. Two year review window closing before the 2023 coup sequence, which affects regime coding for Niger and Gabon.</td><td>bti-project.org</td></tr>
+      <tr><td>5</td><td>Human Development Report, UNDP, HDI 2023</td><td>Official statistic</td><td><span class="band-pill green">Green</span></td><td>Intergovernmental. Relies on national statistical reporting, which is weak in several sample states.</td><td>hdr.undp.org</td></tr>
+      <tr><td>6</td><td>ARAC Global Stability Analytics Dashboard v1</td><td>Analyst compiled</td><td><span class="band-pill amber">Amber</span></td><td>The compilation is the analyst's own. Values were re-extracted by coordinate parsing and checked against the rendered tables rather than accepted on trust.</td><td>Internal</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:0.82rem;color:var(--text-muted);margin-top:1rem;">Band key. Green: established methodology, published documentation, independent publisher. Amber: credible but with a structural limitation stated in the note. Red: not used in this product. Independence test: no key judgment in this product rests on a single source. The central finding in section 04 draws on FSI and BTI simultaneously, which are produced by different institutions using different methods.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Quanta Analytica Process&trade; | MNS Consulting | ARAC International Inc.</div>
+  <div class="footer-doc-id">QAP-FGM-WCA-2026-0904 // DATA STORY</div>
+  <div class="footer-legal">All claims traced to open-source composite indices or labelled as analyst inference. Derived statistics computed for this product and reproducible from the published dataset. No fabricated sources, quotes, or data.</div>
+</footer>
+
+<script>
+var P = {"countries":{"BEN":{"C1_security_apparatus":5.2,"C2_factionalized_elites":6.7,"C3_group_grievance":2.6,"E1_economy":6.8,"E2_economic_inequality":7.8,"E3_human_flight":6.1,"P1_state_legitimacy":5.3,"P2_public_services":8.3,"P3_human_rights":5.7,"S1_demographic_pressures":8.0,"S2_refugees_idps":5.9,"X1_external_intervention":4.9,"regime":"Autocracy","bti_failed_state":7.5,"bti_governance_index":5.802,"q12_sustainability":4.5,"q133_conflict_intensity":3.0,"q153_anticorruption":5.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":5.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":5.483,"gpi_2024":2.306,"ppi_2024":3.293,"mean_years_schooling":3.137,"hdi_2023":0.504,"fsi_total":73.3,"iso":"BEN","name":"Benin","cluster":3,"gap":-0.835,"z_gpi":-0.471,"z_ppi":-1.306,"pc1":-2.965,"pc2":-1.04},"BFA":{"C1_security_apparatus":9.3,"C2_factionalized_elites":8.2,"C3_group_grievance":5.8,"E1_economy":7.2,"E2_economic_inequality":8.3,"E3_human_flight":7.0,"P1_state_legitimacy":7.4,"P2_public_services":8.6,"P3_human_rights":7.0,"S1_demographic_pressures":8.3,"S2_refugees_idps":8.2,"X1_external_intervention":8.7,"regime":"Autocracy","bti_failed_state":3.5,"bti_governance_index":4.76,"q12_sustainability":3.0,"q133_conflict_intensity":9.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":4.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":3.0,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":3.883,"gpi_2024":2.969,"ppi_2024":3.516,"mean_years_schooling":2.319,"hdi_2023":0.438,"fsi_total":94.0,"iso":"BFA","name":"Burkina Faso","cluster":0,"gap":-1.781,"z_gpi":1.112,"z_ppi":-0.669,"pc1":1.688,"pc2":-1.598},"CMR":{"C1_security_apparatus":8.1,"C2_factionalized_elites":9.3,"C3_group_grievance":8.1,"E1_economy":6.0,"E2_economic_inequality":7.4,"E3_human_flight":6.9,"P1_state_legitimacy":8.8,"P2_public_services":8.3,"P3_human_rights":7.3,"S1_demographic_pressures":9.0,"S2_refugees_idps":8.4,"X1_external_intervention":6.4,"regime":"Autocracy","bti_failed_state":5.0,"bti_governance_index":3.93,"q12_sustainability":4.0,"q133_conflict_intensity":7.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":3.0,"q21_free_fair_elections":3.0,"q22_effective_power":2.0,"q3_rule_of_law":3.25,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":3.0,"q81_monetary_stability":8.0,"si_democracy_status":3.567,"gpi_2024":2.773,"ppi_2024":3.938,"mean_years_schooling":6.537,"hdi_2023":0.587,"fsi_total":94.0,"iso":"CMR","name":"Cameroon","cluster":2,"gap":-0.107,"z_gpi":0.644,"z_ppi":0.537,"pc1":0.962,"pc2":1.243},"CAF":{"C1_security_apparatus":8.0,"C2_factionalized_elites":9.4,"C3_group_grievance":8.1,"E1_economy":8.2,"E2_economic_inequality":9.6,"E3_human_flight":6.2,"P1_state_legitimacy":8.9,"P2_public_services":10.0,"P3_human_rights":9.1,"S1_demographic_pressures":9.3,"S2_refugees_idps":9.5,"X1_external_intervention":9.4,"regime":"Autocracy","bti_failed_state":2.5,"bti_governance_index":4.063,"q12_sustainability":2.5,"q133_conflict_intensity":9.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":3.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":2.5,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":7.0,"si_democracy_status":3.55,"gpi_2024":3.009,"ppi_2024":4.32,"mean_years_schooling":3.953,"hdi_2023":0.387,"fsi_total":105.7,"iso":"CAF","name":"Central African Republic","cluster":0,"gap":0.42,"z_gpi":1.208,"z_ppi":1.628,"pc1":3.103,"pc2":-0.918},"TCD":{"C1_security_apparatus":8.7,"C2_factionalized_elites":9.5,"C3_group_grievance":8.1,"E1_economy":8.4,"E2_economic_inequality":8.7,"E3_human_flight":7.7,"P1_state_legitimacy":9.1,"P2_public_services":9.6,"P3_human_rights":8.4,"S1_demographic_pressures":9.5,"S2_refugees_idps":9.0,"X1_external_intervention":7.9,"regime":"Autocracy","bti_failed_state":4.0,"bti_governance_index":2.308,"q12_sustainability":2.5,"q133_conflict_intensity":7.0,"q153_anticorruption":2.0,"q162_antidemocratic_actors":1.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":1.5,"q4_stability_dem_inst":1.0,"q42_commitment_dem_inst":1.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":7.0,"si_democracy_status":2.367,"gpi_2024":2.704,"ppi_2024":4.257,"mean_years_schooling":2.283,"hdi_2023":0.394,"fsi_total":104.6,"iso":"TCD","name":"Chad","cluster":0,"gap":0.969,"z_gpi":0.479,"z_ppi":1.448,"pc1":3.538,"pc2":0.548},"COD":{"C1_security_apparatus":8.8,"C2_factionalized_elites":9.6,"C3_group_grievance":9.4,"E1_economy":8.1,"E2_economic_inequality":8.4,"E3_human_flight":6.4,"P1_state_legitimacy":9.3,"P2_public_services":9.3,"P3_human_rights":9.3,"S1_demographic_pressures":9.7,"S2_refugees_idps":9.8,"X1_external_intervention":9.1,"regime":"Autocracy","bti_failed_state":2.5,"bti_governance_index":2.875,"q12_sustainability":2.0,"q133_conflict_intensity":8.0,"q153_anticorruption":2.0,"q162_antidemocratic_actors":2.0,"q21_free_fair_elections":4.0,"q22_effective_power":3.0,"q3_rule_of_law":2.75,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":5.0,"si_democracy_status":3.667,"gpi_2024":3.264,"ppi_2024":4.169,"mean_years_schooling":7.206,"hdi_2023":0.481,"fsi_total":107.2,"iso":"COD","name":"Democratic Republic of the Congo","cluster":0,"gap":-0.62,"z_gpi":1.817,"z_ppi":1.197,"pc1":3.516,"pc2":0.176},"GNQ":{"C1_security_apparatus":5.9,"C2_factionalized_elites":8.2,"C3_group_grievance":7.5,"E1_economy":6.7,"E2_economic_inequality":7.6,"E3_human_flight":3.7,"P1_state_legitimacy":9.9,"P2_public_services":8.5,"P3_human_rights":8.2,"S1_demographic_pressures":9.1,"S2_refugees_idps":5.5,"X1_external_intervention":3.6,"regime":"Autocracy","bti_failed_state":6.5,"bti_governance_index":3.516,"q12_sustainability":3.0,"q133_conflict_intensity":3.0,"q153_anticorruption":1.0,"q162_antidemocratic_actors":1.0,"q21_free_fair_elections":2.0,"q22_effective_power":2.0,"q3_rule_of_law":1.75,"q4_stability_dem_inst":1.0,"q42_commitment_dem_inst":1.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":2.883,"gpi_2024":2.132,"ppi_2024":4.085,"mean_years_schooling":8.281,"hdi_2023":0.65,"fsi_total":84.4,"iso":"GNQ","name":"Equatorial Guinea","cluster":2,"gap":1.844,"z_gpi":-0.887,"z_ppi":0.957,"pc1":0.023,"pc2":3.036},"GAB":{"C1_security_apparatus":4.2,"C2_factionalized_elites":7.7,"C3_group_grievance":3.1,"E1_economy":5.9,"E2_economic_inequality":5.8,"E3_human_flight":4.6,"P1_state_legitimacy":8.1,"P2_public_services":6.8,"P3_human_rights":6.1,"S1_demographic_pressures":6.7,"S2_refugees_idps":2.6,"X1_external_intervention":3.9,"regime":"Autocracy","bti_failed_state":8.0,"bti_governance_index":4.567,"q12_sustainability":6.0,"q133_conflict_intensity":2.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":4.0,"q21_free_fair_elections":4.0,"q22_effective_power":3.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":2.5,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":4.0,"q81_monetary_stability":8.0,"si_democracy_status":4.7,"gpi_2024":2.372,"ppi_2024":3.55,"mean_years_schooling":9.55,"hdi_2023":0.693,"fsi_total":65.5,"iso":"GAB","name":"Gabon","cluster":2,"gap":-0.258,"z_gpi":-0.314,"z_ppi":-0.572,"pc1":-2.947,"pc2":2.777},"GHA":{"C1_security_apparatus":4.0,"C2_factionalized_elites":5.9,"C3_group_grievance":3.0,"E1_economy":5.8,"E2_economic_inequality":6.6,"E3_human_flight":6.8,"P1_state_legitimacy":3.2,"P2_public_services":6.8,"P3_human_rights":3.8,"S1_demographic_pressures":7.4,"S2_refugees_idps":3.5,"X1_external_intervention":5.5,"regime":"Democracy","bti_failed_state":7.5,"bti_governance_index":6.337,"q12_sustainability":4.5,"q133_conflict_intensity":4.0,"q153_anticorruption":5.0,"q162_antidemocratic_actors":9.0,"q21_free_fair_elections":8.0,"q22_effective_power":9.0,"q3_rule_of_law":6.75,"q4_stability_dem_inst":8.5,"q42_commitment_dem_inst":8.0,"q6_socioeconomic_dev":4.0,"q81_monetary_stability":4.0,"si_democracy_status":7.85,"gpi_2024":1.938,"ppi_2024":3.053,"mean_years_schooling":6.432,"hdi_2023":0.602,"fsi_total":62.3,"iso":"GHA","name":"Ghana","cluster":3,"gap":-0.642,"z_gpi":-1.351,"z_ppi":-1.992,"pc1":-5.427,"pc2":-0.634},"GIN":{"C1_security_apparatus":8.7,"C2_factionalized_elites":10.0,"C3_group_grievance":9.4,"E1_economy":8.0,"E2_economic_inequality":7.5,"E3_human_flight":6.3,"P1_state_legitimacy":9.7,"P2_public_services":9.4,"P3_human_rights":7.3,"S1_demographic_pressures":8.8,"S2_refugees_idps":6.2,"X1_external_intervention":7.2,"regime":"Autocracy","bti_failed_state":6.5,"bti_governance_index":5.088,"q12_sustainability":2.5,"q133_conflict_intensity":6.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":3.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":6.0,"si_democracy_status":4.367,"gpi_2024":2.423,"ppi_2024":3.95,"mean_years_schooling":2.359,"hdi_2023":0.471,"fsi_total":98.5,"iso":"GIN","name":"Guinea","cluster":0,"gap":0.763,"z_gpi":-0.192,"z_ppi":0.571,"pc1":1.36,"pc2":-0.32},"LBR":{"C1_security_apparatus":6.8,"C2_factionalized_elites":8.9,"C3_group_grievance":4.6,"E1_economy":8.3,"E2_economic_inequality":7.5,"E3_human_flight":6.7,"P1_state_legitimacy":6.2,"P2_public_services":9.1,"P3_human_rights":7.5,"S1_demographic_pressures":8.4,"S2_refugees_idps":7.4,"X1_external_intervention":7.5,"regime":"Democracy","bti_failed_state":7.0,"bti_governance_index":4.93,"q12_sustainability":3.5,"q133_conflict_intensity":5.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":7.0,"q21_free_fair_elections":8.0,"q22_effective_power":7.0,"q3_rule_of_law":5.0,"q4_stability_dem_inst":6.0,"q42_commitment_dem_inst":7.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":6.0,"si_democracy_status":6.25,"gpi_2024":2.025,"ppi_2024":3.7,"mean_years_schooling":5.318,"hdi_2023":0.487,"fsi_total":88.9,"iso":"LBR","name":"Liberia","cluster":1,"gap":0.999,"z_gpi":-1.143,"z_ppi":-0.143,"pc1":-0.92,"pc2":-0.995},"MLI":{"C1_security_apparatus":9.6,"C2_factionalized_elites":7.2,"C3_group_grievance":8.5,"E1_economy":7.5,"E2_economic_inequality":7.2,"E3_human_flight":7.7,"P1_state_legitimacy":8.6,"P2_public_services":8.9,"P3_human_rights":7.5,"S1_demographic_pressures":8.8,"S2_refugees_idps":8.5,"X1_external_intervention":9.5,"regime":"Autocracy","bti_failed_state":4.0,"bti_governance_index":3.603,"q12_sustainability":2.5,"q133_conflict_intensity":9.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":2.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":2.5,"q4_stability_dem_inst":1.0,"q42_commitment_dem_inst":1.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":3.4,"gpi_2024":3.095,"ppi_2024":3.738,"mean_years_schooling":1.627,"hdi_2023":0.41,"fsi_total":99.5,"iso":"MLI","name":"Mali","cluster":0,"gap":-1.448,"z_gpi":1.413,"z_ppi":-0.035,"pc1":2.935,"pc2":-0.947},"MRT":{"C1_security_apparatus":5.7,"C2_factionalized_elites":8.8,"C3_group_grievance":7.6,"E1_economy":6.3,"E2_economic_inequality":7.2,"E3_human_flight":5.7,"P1_state_legitimacy":7.8,"P2_public_services":8.4,"P3_human_rights":6.4,"S1_demographic_pressures":8.6,"S2_refugees_idps":8.3,"X1_external_intervention":6.2,"regime":"Autocracy","bti_failed_state":6.5,"bti_governance_index":4.107,"q12_sustainability":3.5,"q133_conflict_intensity":5.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":4.0,"q21_free_fair_elections":4.0,"q22_effective_power":2.0,"q3_rule_of_law":4.25,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":3.0,"q81_monetary_stability":6.0,"si_democracy_status":4.417,"gpi_2024":2.136,"ppi_2024":3.844,"mean_years_schooling":4.754,"hdi_2023":0.54,"fsi_total":87.0,"iso":"MRT","name":"Mauritania","cluster":2,"gap":1.146,"z_gpi":-0.878,"z_ppi":0.268,"pc1":-0.914,"pc2":1.046},"NER":{"C1_security_apparatus":8.3,"C2_factionalized_elites":9.6,"C3_group_grievance":7.7,"E1_economy":6.4,"E2_economic_inequality":7.8,"E3_human_flight":6.6,"P1_state_legitimacy":6.6,"P2_public_services":9.5,"P3_human_rights":6.7,"S1_demographic_pressures":8.9,"S2_refugees_idps":7.9,"X1_external_intervention":7.4,"regime":"Democracy","bti_failed_state":4.5,"bti_governance_index":5.513,"q12_sustainability":3.0,"q133_conflict_intensity":6.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":7.0,"q21_free_fair_elections":6.0,"q22_effective_power":7.0,"q3_rule_of_law":5.0,"q4_stability_dem_inst":6.5,"q42_commitment_dem_inst":7.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":6.0,"gpi_2024":2.792,"ppi_2024":3.703,"mean_years_schooling":1.341,"hdi_2023":0.394,"fsi_total":93.4,"iso":"NER","name":"Niger","cluster":1,"gap":-0.824,"z_gpi":0.689,"z_ppi":-0.135,"pc1":0.403,"pc2":-2.181},"NGA":{"C1_security_apparatus":9.0,"C2_factionalized_elites":9.6,"C3_group_grievance":8.6,"E1_economy":8.8,"E2_economic_inequality":8.1,"E3_human_flight":6.7,"P1_state_legitimacy":8.2,"P2_public_services":8.8,"P3_human_rights":8.6,"S1_demographic_pressures":9.6,"S2_refugees_idps":6.4,"X1_external_intervention":5.6,"regime":"Autocracy","bti_failed_state":4.0,"bti_governance_index":4.129,"q12_sustainability":3.0,"q133_conflict_intensity":9.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":4.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":4.0,"si_democracy_status":4.2,"gpi_2024":2.907,"ppi_2024":3.913,"mean_years_schooling":7.586,"hdi_2023":0.548,"fsi_total":98.0,"iso":"NGA","name":"Nigeria","cluster":0,"gap":-0.499,"z_gpi":0.964,"z_ppi":0.465,"pc1":1.541,"pc2":-0.301},"COG":{"C1_security_apparatus":6.4,"C2_factionalized_elites":6.7,"C3_group_grievance":8.8,"E1_economy":9.3,"E2_economic_inequality":7.5,"E3_human_flight":6.2,"P1_state_legitimacy":9.1,"P2_public_services":8.7,"P3_human_rights":7.2,"S1_demographic_pressures":8.5,"S2_refugees_idps":6.5,"X1_external_intervention":5.8,"regime":"Autocracy","bti_failed_state":5.5,"bti_governance_index":2.906,"q12_sustainability":2.0,"q133_conflict_intensity":6.0,"q153_anticorruption":2.0,"q162_antidemocratic_actors":2.0,"q21_free_fair_elections":2.0,"q22_effective_power":2.0,"q3_rule_of_law":2.5,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":3.0,"q81_monetary_stability":7.0,"si_democracy_status":3.35,"gpi_2024":2.261,"ppi_2024":3.933,"mean_years_schooling":8.251,"hdi_2023":0.593,"fsi_total":90.7,"iso":"COG","name":"Republic of the Congo","cluster":2,"gap":1.101,"z_gpi":-0.579,"z_ppi":0.522,"pc1":0.471,"pc2":2.323},"SEN":{"C1_security_apparatus":4.5,"C2_factionalized_elites":7.0,"C3_group_grievance":5.0,"E1_economy":7.5,"E2_economic_inequality":6.3,"E3_human_flight":6.9,"P1_state_legitimacy":3.7,"P2_public_services":7.9,"P3_human_rights":4.6,"S1_demographic_pressures":7.4,"S2_refugees_idps":5.8,"X1_external_intervention":4.9,"regime":"Democracy","bti_failed_state":6.5,"bti_governance_index":6.557,"q12_sustainability":3.5,"q133_conflict_intensity":4.0,"q153_anticorruption":5.0,"q162_antidemocratic_actors":9.0,"q21_free_fair_elections":7.0,"q22_effective_power":8.0,"q3_rule_of_law":5.25,"q4_stability_dem_inst":8.0,"q42_commitment_dem_inst":9.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":6.9,"gpi_2024":2.084,"ppi_2024":3.187,"mean_years_schooling":2.887,"hdi_2023":0.517,"fsi_total":71.5,"iso":"SEN","name":"Senegal","cluster":3,"gap":-0.607,"z_gpi":-1.002,"z_ppi":-1.609,"pc1":-3.731,"pc2":-1.515},"SLE":{"C1_security_apparatus":3.6,"C2_factionalized_elites":7.8,"C3_group_grievance":5.4,"E1_economy":8.5,"E2_economic_inequality":7.5,"E3_human_flight":7.0,"P1_state_legitimacy":5.5,"P2_public_services":8.6,"P3_human_rights":5.6,"S1_demographic_pressures":8.4,"S2_refugees_idps":7.4,"X1_external_intervention":6.1,"regime":"Democracy","bti_failed_state":6.0,"bti_governance_index":4.666,"q12_sustainability":4.5,"q133_conflict_intensity":6.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":6.0,"q21_free_fair_elections":7.0,"q22_effective_power":7.0,"q3_rule_of_law":4.25,"q4_stability_dem_inst":6.0,"q42_commitment_dem_inst":6.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":5.0,"si_democracy_status":5.85,"gpi_2024":1.993,"ppi_2024":3.532,"mean_years_schooling":3.519,"hdi_2023":0.458,"fsi_total":81.4,"iso":"SLE","name":"Sierra Leone","cluster":1,"gap":0.596,"z_gpi":-1.219,"z_ppi":-0.623,"pc1":-1.577,"pc2":-0.949},"TGO":{"C1_security_apparatus":5.8,"C2_factionalized_elites":7.6,"C3_group_grievance":6.6,"E1_economy":7.0,"E2_economic_inequality":8.1,"E3_human_flight":6.5,"P1_state_legitimacy":7.6,"P2_public_services":8.1,"P3_human_rights":6.4,"S1_demographic_pressures":7.4,"S2_refugees_idps":5.7,"X1_external_intervention":5.3,"regime":"Autocracy","bti_failed_state":6.0,"bti_governance_index":5.009,"q12_sustainability":4.0,"q133_conflict_intensity":5.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":3.75,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":4.717,"gpi_2024":2.381,"ppi_2024":3.572,"mean_years_schooling":5.59,"hdi_2023":0.547,"fsi_total":82.1,"iso":"TGO","name":"Togo","cluster":1,"gap":-0.217,"z_gpi":-0.292,"z_ppi":-0.509,"pc1":-1.06,"pc2":0.248},"CIV":{"regime":"Autocracy","bti_failed_state":7.5,"bti_governance_index":5.604,"q12_sustainability":3.0,"q133_conflict_intensity":5.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":6.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":3.75,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":4.883,"gpi_2024":2.255,"ppi_2024":3.556,"mean_years_schooling":4.237,"hdi_2023":0.534,"iso":"CIV","name":"C\u00f4te d'Ivoire"},"GMB":{"regime":"Democracy","bti_failed_state":7.5,"bti_governance_index":5.896,"q12_sustainability":5.0,"q133_conflict_intensity":3.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":9.0,"q21_free_fair_elections":7.0,"q22_effective_power":7.0,"q3_rule_of_law":6.5,"q4_stability_dem_inst":7.5,"q42_commitment_dem_inst":8.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":7.2,"iso":"GMB","name":"Gambia"},"GNB":{"regime":"Autocracy","bti_failed_state":5.0,"bti_governance_index":3.949,"q12_sustainability":3.0,"q133_conflict_intensity":4.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":6.0,"q22_effective_power":6.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":5.15,"gpi_2024":2.085,"ppi_2024":3.875,"mean_years_schooling":3.673,"hdi_2023":0.483,"iso":"GNB","name":"Guinea-Bissau"}},"clusters":{"0":{"label":"Contested Monopoly","short":"CM","color":"#c0392b","n":7,"members":["BFA","CAF","TCD","COD","GIN","MLI","NGA"],"means":{"C1_security_apparatus":8.871,"P1_state_legitimacy":8.743,"X1_external_intervention":8.2,"q133_conflict_intensity":8.143,"hdi_2023":0.447,"q6_socioeconomic_dev":1.143,"fsi_total":101.071,"gpi_2024":2.91,"ppi_2024":3.98,"q3_rule_of_law":3.036,"bti_governance_index":3.832,"C2_factionalized_elites":9.071,"P2_public_services":9.229,"gap":-0.314}},"1":{"label":"Post-Transition Low Capacity","short":"PT","color":"#d4820a","n":4,"members":["LBR","NER","SLE","TGO"],"means":{"C1_security_apparatus":6.125,"P1_state_legitimacy":6.475,"X1_external_intervention":6.575,"q133_conflict_intensity":5.5,"hdi_2023":0.472,"q6_socioeconomic_dev":1.25,"fsi_total":86.45,"gpi_2024":2.298,"ppi_2024":3.627,"q3_rule_of_law":4.5,"bti_governance_index":5.03,"C2_factionalized_elites":8.475,"P2_public_services":8.825,"gap":0.139}},"2":{"label":"Coercively Stable Rentier","short":"CR","color":"#8e44ad","n":5,"members":["CMR","GNQ","GAB","MRT","COG"],"means":{"C1_security_apparatus":6.06,"P1_state_legitimacy":8.74,"X1_external_intervention":5.18,"q133_conflict_intensity":4.6,"hdi_2023":0.613,"q6_socioeconomic_dev":3.0,"fsi_total":84.32,"gpi_2024":2.335,"ppi_2024":3.87,"q3_rule_of_law":3.05,"bti_governance_index":3.805,"C2_factionalized_elites":8.14,"P2_public_services":8.14,"gap":0.745}},"3":{"label":"Comparatively Consolidated","short":"CC","color":"#27ae60","n":3,"members":["BEN","GHA","SEN"],"means":{"C1_security_apparatus":4.567,"P1_state_legitimacy":4.067,"X1_external_intervention":5.1,"q133_conflict_intensity":3.667,"hdi_2023":0.541,"q6_socioeconomic_dev":2.667,"fsi_total":69.033,"gpi_2024":2.109,"ppi_2024":3.178,"q3_rule_of_law":5.833,"bti_governance_index":6.232,"C2_factionalized_elites":6.533,"P2_public_services":7.667,"gap":-0.695}}},"corr":{"C1_security_apparatus":{"r":0.807,"p":0.0,"lo":0.623,"hi":0.936},"X1_external_intervention":{"r":0.817,"p":0.0,"lo":0.524,"hi":0.962},"fsi_total":{"r":0.826,"p":0.0,"lo":0.704,"hi":0.919},"P2_public_services":{"r":0.643,"p":0.003,"lo":0.355,"hi":0.83},"hdi_2023":{"r":-0.641,"p":0.0031,"lo":-0.86,"hi":-0.253},"q6_socioeconomic_dev":{"r":-0.557,"p":0.0132,"lo":-0.781,"hi":-0.21},"C2_factionalized_elites":{"r":0.472,"p":0.0415,"lo":0.121,"hi":0.755},"P1_state_legitimacy":{"r":0.386,"p":0.1024,"lo":0.005,"hi":0.742},"q3_rule_of_law":{"r":-0.342,"p":0.1521,"lo":-0.751,"hi":0.088},"mean_years_schooling":{"r":-0.321,"p":0.1808,"lo":-0.717,"hi":0.23}},"meta":{"n_core":19,"n_total":22,"pca_var":[0.619,0.212]}};
+
+var TIP=document.createElement('div');TIP.className='tip';document.body.appendChild(TIP);
+function tipOn(e,html){TIP.innerHTML=html;TIP.style.opacity=1;tipMove(e);}
+function tipMove(e){var x=e.clientX+14,y=e.clientY+14;var r=TIP.getBoundingClientRect();
+if(x+r.width>window.innerWidth-10)x=e.clientX-r.width-14;if(y+r.height>window.innerHeight-10)y=e.clientY-r.height-14;
+TIP.style.left=x+'px';TIP.style.top=y+'px';}
+function tipOff(){TIP.style.opacity=0;}
+function bindTip(el,html){el.addEventListener('mouseenter',function(e){tipOn(e,html);});el.addEventListener('mousemove',tipMove);el.addEventListener('mouseleave',tipOff);}
+function svgEl(t,a){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+
+
+var C = P.countries, CL = P.clusters;
+var SHORT={'Democratic Republic of the Congo':'DR Congo','Central African Republic':'Central African Rep.','Republic of the Congo':'Rep. of the Congo'};
+function sn(n){return SHORT[n]||n;}
+var core = Object.keys(C).map(function(k){return C[k];}).filter(function(d){return d.cluster!==undefined;});
+function col(d){return CL[d.cluster].color;}
+function ax(svg,x,y,w,h){
+  svg.appendChild(svgEl('rect',{x:x,y:y,width:w,height:h,fill:'none',stroke:'#1c2030','stroke-width':1}));
+}
+function txt(svg,x,y,s,o){o=o||{};var t=svgEl('text',{x:x,y:y,'font-size':o.size||11,fill:o.fill||'#7a7264','text-anchor':o.anchor||'start','font-weight':o.weight||400});
+  if(o.rotate)t.setAttribute('transform','rotate('+o.rotate+' '+x+' '+y+')');t.textContent=s;svg.appendChild(t);return t;}
+
+/* ---------- FIG 1 : quadrant scatter ---------- */
+(function(){
+  var svg=document.getElementById('fig1'); if(!svg)return;
+  var M={l:64,r:24,t:24,b:60},W=760,H=560,w=W-M.l-M.r,h=H-M.t-M.b;
+  var lim=2.3;
+  function X(v){return M.l+(v+lim)/(2*lim)*w;} function Y(v){return M.t+h-(v+lim)/(2*lim)*h;}
+  ax(svg,M.l,M.t,w,h);
+  for(var g=-2;g<=2;g++){
+    svg.appendChild(svgEl('line',{x1:X(g),y1:M.t,x2:X(g),y2:M.t+h,stroke:'#1c2030','stroke-width':g===0?1.4:0.6}));
+    svg.appendChild(svgEl('line',{x1:M.l,y1:Y(g),x2:M.l+w,y2:Y(g),stroke:'#1c2030','stroke-width':g===0?1.4:0.6}));
+    txt(svg,X(g),M.t+h+16,g>0?'+'+g:''+g,{anchor:'middle',size:10});
+    txt(svg,M.l-9,Y(g)+4,g>0?'+'+g:''+g,{anchor:'end',size:10});
+  }
+  svg.appendChild(svgEl('line',{x1:X(-lim),y1:Y(-lim),x2:X(lim),y2:Y(lim),stroke:'#c8a96e','stroke-width':1,'stroke-dasharray':'5 5',opacity:0.55}));
+  txt(svg,X(1.55),Y(1.9),'STRUCTURAL DEFICIT > VIOLENCE',{fill:'#9a7f52',size:9.5,anchor:'middle'});
+  txt(svg,X(1.0),Y(-2.05),'VIOLENCE > STRUCTURAL DEFICIT',{fill:'#9a7f52',size:9.5,anchor:'middle'});
+  txt(svg,M.l+w/2,H-14,'STANDARDISED CURRENT VIOLENCE  (GPI 2024, z)',{anchor:'middle',size:10.5,fill:'#b8b0a0'});
+  txt(svg,16,M.t+h/2,'STANDARDISED STRUCTURAL DEFICIT  (PPI 2024, z)',{anchor:'middle',size:10.5,fill:'#b8b0a0',rotate:-90});
+  core.forEach(function(d){
+    var cx=X(d.z_gpi),cy=Y(d.z_ppi);
+    var c=svgEl('circle',{cx:cx,cy:cy,r:7,fill:col(d),stroke:'#0a0c10','stroke-width':1.4,opacity:0.92,style:'cursor:pointer'});
+    bindTip(c,'<b>'+d.name+'</b>GPI 2024: '+d.gpi_2024.toFixed(3)+' (z '+d.z_gpi.toFixed(2)+')<br>PPI 2024: '+d.ppi_2024.toFixed(3)+' (z '+d.z_ppi.toFixed(2)+')<br>Gap: '+(d.gap>0?'+':'')+d.gap.toFixed(2)+'<br>Class: '+CL[d.cluster].label);
+    svg.appendChild(c);
+    txt(svg,cx+10,cy+3.5,d.iso,{size:9.5,fill:'#b8b0a0'});
+  });
+})();
+
+/* ---------- FIG 2 : diverging bars ---------- */
+(function(){
+  var svg=document.getElementById('fig2'); if(!svg)return;
+  var d=core.slice().sort(function(a,b){return b.gap-a.gap;});
+  var M={l:150,r:40,t:26,b:44},W=760,H=520,w=W-M.l-M.r,h=H-M.t-M.b;
+  var mx=2.0, bh=h/d.length, zero=M.l+w/2;
+  svg.appendChild(svgEl('line',{x1:zero,y1:M.t-6,x2:zero,y2:M.t+h+4,stroke:'#c8a96e','stroke-width':1.2,opacity:0.6}));
+  for(var v=-2;v<=2;v++){var x=zero+v/mx*(w/2);
+    svg.appendChild(svgEl('line',{x1:x,y1:M.t-6,x2:x,y2:M.t+h+4,stroke:'#1c2030','stroke-width':0.6}));
+    txt(svg,x,M.t+h+20,(v>0?'+':'')+v,{anchor:'middle',size:10});}
+  d.forEach(function(r,i){
+    var y=M.t+i*bh, len=Math.abs(r.gap)/mx*(w/2);
+    var x=r.gap>=0?zero:zero-len;
+    var b=svgEl('rect',{x:x,y:y+bh*0.16,width:Math.max(len,1),height:bh*0.68,fill:col(r),opacity:0.88,rx:2,style:'cursor:pointer'});
+    bindTip(b,'<b>'+r.name+'</b>Gap: '+(r.gap>0?'+':'')+r.gap.toFixed(2)+'<br>GPI z: '+r.z_gpi.toFixed(2)+' | PPI z: '+r.z_ppi.toFixed(2)+'<br>FSI total: '+(r.fsi_total||'n/a'));
+    svg.appendChild(b);
+    txt(svg,M.l-12,y+bh/2+3.5,sn(r.name),{anchor:'end',size:10.5,fill:'#b8b0a0'});
+    txt(svg,r.gap>=0?x+len+6:x-6,y+bh/2+3.5,(r.gap>0?'+':'')+r.gap.toFixed(2),{anchor:r.gap>=0?'start':'end',size:9.5,fill:'#7a7264'});
+  });
+  txt(svg,zero,M.t+h+38,'FRAGILITY GAP  (z PPI  minus  z GPI)',{anchor:'middle',size:10.5,fill:'#b8b0a0'});
+})();
+
+/* ---------- FIG 3 : correlation with CI ---------- */
+(function(){
+  var svg=document.getElementById('fig3'); if(!svg)return;
+  var names={C1_security_apparatus:'C1 Security apparatus fragmentation',X1_external_intervention:'X1 External intervention',
+    fsi_total:'FSI total (12 indicators)',P2_public_services:'P2 Public services deficit',
+    C2_factionalized_elites:'C2 Factionalized elites',P1_state_legitimacy:'P1 State legitimacy deficit',
+    q3_rule_of_law:'Q3 Rule of law',q6_socioeconomic_dev:'Q6 Socioeconomic development',
+    hdi_2023:'HDI 2023',mean_years_schooling:'Mean years of schooling'};
+  var keys=Object.keys(P.corr).sort(function(a,b){return P.corr[b].r-P.corr[a].r;});
+  var M={l:250,r:40,t:26,b:52},W=760,H=440,w=W-M.l-M.r,h=H-M.t-M.b,bh=h/keys.length;
+  function X(v){return M.l+(v+1)/2*w;}
+  for(var v=-1;v<=1;v+=0.5){
+    svg.appendChild(svgEl('line',{x1:X(v),y1:M.t-6,x2:X(v),y2:M.t+h+4,stroke:v===0?'#c8a96e':'#1c2030','stroke-width':v===0?1.2:0.6,opacity:v===0?0.6:1}));
+    txt(svg,X(v),M.t+h+20,(v>0?'+':'')+v.toFixed(1),{anchor:'middle',size:10});}
+  keys.forEach(function(k,i){
+    var c=P.corr[k],y=M.t+i*bh+bh/2, sig=(c.p<0.05);
+    var color=sig?(c.r>0?'#c0392b':'#27ae60'):'#5d7a9a';
+    svg.appendChild(svgEl('line',{x1:X(c.lo),y1:y,x2:X(c.hi),y2:y,stroke:color,'stroke-width':2,opacity:0.55}));
+    [c.lo,c.hi].forEach(function(e){svg.appendChild(svgEl('line',{x1:X(e),y1:y-5,x2:X(e),y2:y+5,stroke:color,'stroke-width':2,opacity:0.75}));});
+    var dot=svgEl('circle',{cx:X(c.r),cy:y,r:5.5,fill:color,stroke:'#0a0c10','stroke-width':1.2,style:'cursor:pointer'});
+    bindTip(dot,'<b>'+names[k]+'</b>r = '+(c.r>0?'+':'')+c.r.toFixed(3)+'<br>95% CI: '+c.lo.toFixed(2)+' to '+c.hi.toFixed(2)+'<br>p = '+c.p.toFixed(4)+'<br>'+(sig?'Distinguishable from zero at p &lt; 0.05':'Not distinguishable from zero at p &lt; 0.05'));
+    svg.appendChild(dot);
+    txt(svg,M.l-14,y+4,names[k],{anchor:'end',size:10.5,fill:sig?'#e8e4dc':'#7a7264'});
+  });
+  txt(svg,M.l+w/2,H-14,'PEARSON r  WITH  BTI Q13.3 CONFLICT INTENSITY   (slate = p \u2265 0.05)',{anchor:'middle',size:10.5,fill:'#b8b0a0'});
+})();
+
+/* ---------- FIG 4 : PCA scatter ---------- */
+(function(){
+  var svg=document.getElementById('fig4'); if(!svg)return;
+  var M={l:60,r:30,t:26,b:56},W=760,H=520,w=W-M.l-M.r,h=H-M.t-M.b;
+  var x1=Math.min.apply(null,core.map(function(d){return d.pc1;}))-0.7,x2=Math.max.apply(null,core.map(function(d){return d.pc1;}))+0.7;
+  var y1=Math.min.apply(null,core.map(function(d){return d.pc2;}))-0.7,y2=Math.max.apply(null,core.map(function(d){return d.pc2;}))+0.7;
+  function X(v){return M.l+(v-x1)/(x2-x1)*w;} function Y(v){return M.t+h-(v-y1)/(y2-y1)*h;}
+  ax(svg,M.l,M.t,w,h);
+  svg.appendChild(svgEl('line',{x1:X(0),y1:M.t,x2:X(0),y2:M.t+h,stroke:'#1c2030','stroke-width':1}));
+  svg.appendChild(svgEl('line',{x1:M.l,y1:Y(0),x2:M.l+w,y2:Y(0),stroke:'#1c2030','stroke-width':1}));
+  Object.keys(CL).forEach(function(ci){
+    var m=core.filter(function(d){return d.cluster==ci;});
+    var cx=m.reduce(function(a,d){return a+X(d.pc1);},0)/m.length, cy=m.reduce(function(a,d){return a+Y(d.pc2);},0)/m.length;
+    m.forEach(function(d){svg.appendChild(svgEl('line',{x1:cx,y1:cy,x2:X(d.pc1),y2:Y(d.pc2),stroke:CL[ci].color,'stroke-width':0.8,opacity:0.22}));});
+    svg.appendChild(svgEl('rect',{x:cx-4,y:cy-4,width:8,height:8,fill:'none',stroke:CL[ci].color,'stroke-width':1.4,opacity:0.7,transform:'rotate(45 '+cx+' '+cy+')'}));
+  });
+  var placed=[];
+  core.forEach(function(d){
+    var cx=X(d.pc1),cy=Y(d.pc2);
+    var c=svgEl('circle',{cx:cx,cy:cy,r:6.5,fill:col(d),stroke:'#0a0c10','stroke-width':1.3,style:'cursor:pointer'});
+    bindTip(c,'<b>'+d.name+'</b>Class: '+CL[d.cluster].label+'<br>PC1 '+d.pc1.toFixed(2)+' | PC2 '+d.pc2.toFixed(2)+'<br>Conflict intensity: '+d.q133_conflict_intensity+'<br>C1 fragmentation: '+d.C1_security_apparatus+'<br>P1 legitimacy: '+d.P1_state_legitimacy);
+    svg.appendChild(c);
+    var lx=cx+10, ly=cy+3.5, tries=0;
+    while(placed.some(function(p){return Math.abs(p[0]-lx)<30 && Math.abs(p[1]-ly)<11;}) && tries<8){ly+=12;tries++;}
+    placed.push([lx,ly]);
+    txt(svg,lx,ly,d.iso,{size:9.5,fill:'#b8b0a0'});
+  });
+  txt(svg,M.l+w/2,H-14,'PC1  (61.9% of variance)  fragility, violence, fragmentation  \u2192',{anchor:'middle',size:10.5,fill:'#b8b0a0'});
+  txt(svg,18,M.t+h/2,'PC2  (21.2%)  development and legitimacy',{anchor:'middle',size:10.5,fill:'#b8b0a0',rotate:-90});
+})();
+
+/* ---------- cluster table ---------- */
+(function(){
+  var tb=document.getElementById('clustab'); if(!tb)return;
+  Object.keys(CL).forEach(function(ci){
+    var c=CL[ci],m=c.means;
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><span class="status-pill" style="color:'+c.color+';border-color:'+c.color+';background:transparent">'+c.label+'</span></td>'+
+      '<td>'+c.n+'</td><td style="font-family:var(--font-mono);font-size:0.76rem">'+c.members.join(' ')+'</td>'+
+      '<td>'+m.C1_security_apparatus.toFixed(2)+'</td><td>'+m.P1_state_legitimacy.toFixed(2)+'</td>'+
+      '<td>'+m.q133_conflict_intensity.toFixed(2)+'</td><td>'+m.hdi_2023.toFixed(3)+'</td>'+
+      '<td>'+m.fsi_total.toFixed(1)+'</td><td>'+(m.gap>0?'+':'')+m.gap.toFixed(2)+'</td>';
+    tb.appendChild(tr);
+  });
+})();
+
+/* ---------- FIG 5 : twin cluster profile ---------- */
+(function(){
+  var svg=document.getElementById('fig5'); if(!svg)return;
+  var A=CL[0],B=CL[2];
+  var rows=[['P1_state_legitimacy','P1 State legitimacy deficit',10],['C1_security_apparatus','C1 Security fragmentation',10],
+    ['X1_external_intervention','X1 External intervention',10],['q133_conflict_intensity','Conflict intensity',10],
+    ['q6_socioeconomic_dev','Socioeconomic development',10],['hdi_2023','HDI (scaled x10)',1]];
+  var M={l:210,r:80,t:36,b:34},W=760,H=400,w=W-M.l-M.r,h=H-M.t-M.b,bh=h/rows.length;
+  txt(svg,M.l,20,'CONTESTED MONOPOLY (n=7)',{size:10,fill:A.color,weight:600});
+  txt(svg,M.l+230,20,'COERCIVELY STABLE RENTIER (n=5)',{size:10,fill:B.color,weight:600});
+  rows.forEach(function(r,i){
+    var y=M.t+i*bh, a=A.means[r[0]]*(r[2]===1?10:1), b=B.means[r[0]]*(r[2]===1?10:1);
+    txt(svg,M.l-14,y+bh/2+4,r[1],{anchor:'end',size:10.5,fill:'#b8b0a0'});
+    svg.appendChild(svgEl('rect',{x:M.l,y:y+bh*0.14,width:w,height:bh*0.72,fill:'#13161f',rx:2}));
+    var ra=svgEl('rect',{x:M.l,y:y+bh*0.14,width:a/10*w,height:bh*0.33,fill:A.color,opacity:0.85,rx:2});
+    var rb=svgEl('rect',{x:M.l,y:y+bh*0.14+bh*0.37,width:b/10*w,height:bh*0.33,fill:B.color,opacity:0.85,rx:2});
+    svg.appendChild(ra);svg.appendChild(rb);
+    var fa=(r[2]===1)?(a/10).toFixed(3):a.toFixed(2), fb=(r[2]===1)?(b/10).toFixed(3):b.toFixed(2);
+    txt(svg,M.l+w+8,y+bh*0.14+bh*0.26,fa,{size:9.5,fill:A.color});
+    txt(svg,M.l+w+8,y+bh*0.14+bh*0.63,fb,{size:9.5,fill:B.color});
+    if(r[0]==='P1_state_legitimacy'){
+      svg.appendChild(svgEl('line',{x1:M.l+a/10*w,y1:y+bh*0.05,x2:M.l+a/10*w,y2:y+bh*0.95,stroke:'#c8a96e','stroke-width':1.4,'stroke-dasharray':'3 3'}));
+      txt(svg,M.l+a/10*w-8,y-2,'IDENTICAL',{anchor:'end',size:9,fill:'#c8a96e'});
+    }
+  });
+  txt(svg,M.l+w/2,H-8,'INDICATOR VALUE, 0 TO 10 SCALE',{anchor:'middle',size:10,fill:'#7a7264'});
+})();
+</script>
+
+<script>
+window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;var p=h>0?(window.scrollY/h)*100:0;var el=document.getElementById('progress');if(el)el.style.width=p+'%';});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.section').forEach(function(s){obs.observe(s);});
+</script>
+
+</body>
+</html>

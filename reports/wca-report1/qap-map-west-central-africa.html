@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>West and Central Africa Stability Atlas | Quanta Analytica Process&trade; | 04 SEP 2026</title>
+<meta name="description" content="Interactive multi-layer stability atlas for twenty-two West and Central African states.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7-12-7V9z' fill='none' stroke='%23c8a96e' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   QAP WEB REPORT - CANONICAL STYLESHEET
+   Quanta Analytica Process™ | MNS Consulting
+   quanta-analytica.com/reports/
+   Version: 2.0 | Design System Reference
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. ROOT VARIABLES - Color, Typography, Spacing
+   ------------------------------------------------------------ */
+:root {
+  /* Core Palette */
+  --obsidian:         #0a0c10;
+  --obsidian-mid:     #10131a;
+  --obsidian-card:    #13161f;
+  --obsidian-border:  #1c2030;
+  --obsidian-surface: #181b26;
+  --obsidian-lift:    #1e2235;
+
+  /* Gold Scale */
+  --gold:             #c8a96e;
+  --gold-light:       #dfc28e;
+  --gold-pale:        #e8d5aa;
+  --gold-dim:         #9a7f52;
+  --gold-muted:       #6b5838;
+  --gold-glow:        rgba(200, 169, 110, 0.12);
+  --gold-glow-strong: rgba(200, 169, 110, 0.22);
+
+  /* Alert / Status Colors */
+  --red:              #c0392b;
+  --red-light:        #e74c3c;
+  --red-bg:           rgba(192, 57, 43, 0.12);
+  --amber:            #d4820a;
+  --amber-light:      #f39c12;
+  --amber-bg:         rgba(212, 130, 10, 0.12);
+  --green:            #27ae60;
+  --green-light:      #2ecc71;
+  --green-bg:         rgba(39, 174, 96, 0.12);
+  --blue:             #2980b9;
+  --blue-light:       #3498db;
+  --blue-bg:          rgba(41, 128, 185, 0.12);
+  --yellow:           #f1c40f;
+  --yellow-bg:        rgba(241, 196, 15, 0.12);
+  --slate:            #5d7a9a;
+  --slate-light:      #7f9ab8;
+
+  /* Text Scale */
+  --text-primary:     #e8e4dc;
+  --text-secondary:   #b8b0a0;
+  --text-muted:       #7a7264;
+  --text-faint:       #4a4640;
+
+  /* Typography */
+  --font-display:     'Libre Baskerville', Georgia, serif;
+  --font-body:        'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:        'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --space-xs:         0.25rem;
+  --space-sm:         0.5rem;
+  --space-md:         1rem;
+  --space-lg:         1.5rem;
+  --space-xl:         2rem;
+  --space-2xl:        3rem;
+  --space-3xl:        4rem;
+
+  /* Borders & Radius */
+  --radius-sm:        3px;
+  --radius-md:        6px;
+  --radius-lg:        10px;
+  --border-default:   1px solid var(--obsidian-border);
+  --border-gold:      1px solid var(--gold-dim);
+
+  /* Transitions */
+  --transition-fast:  0.15s ease;
+  --transition-base:  0.25s ease;
+  --transition-slow:  0.4s ease;
+
+  /* Shadows */
+  --shadow-card:      0 2px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lift:      0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ------------------------------------------------------------
+   2. RESET & BASE
+   ------------------------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--obsidian);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold-light);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong, b {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+em, i {
+  color: var(--slate-light);
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+  color: var(--gold-dim);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ------------------------------------------------------------
+   3. SCROLL PROGRESS BAR
+   ------------------------------------------------------------ */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-light));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px var(--gold-glow-strong);
+}
+
+/* ------------------------------------------------------------
+   4. NAVIGATION
+   ------------------------------------------------------------ */
+nav {
+  position: fixed;
+  top: 3px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 12, 16, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--obsidian-border);
+  padding: 0 var(--space-xl);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.nav-brand span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-classify {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--amber-bg);
+}
+
+/* ------------------------------------------------------------
+   5. HERO BLOCK
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 140px var(--space-xl) var(--space-3xl);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 20% 60%, rgba(200, 169, 110, 0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(41, 128, 185, 0.04) 0%, transparent 50%),
+              var(--obsidian);
+}
+
+/* Animated background grid */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200, 169, 110, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 169, 110, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridDrift 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridDrift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(40px, 40px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-running-head {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--obsidian-border);
+  padding-bottom: var(--space-sm);
+}
+
+.hero-container {
+  display: flex;          /* Enables side-by-side layout */
+  align-items: center;    /* Vertically centers the image with the text */
+  gap: 30px;              /* Creates space between the image and the text */
+  margin: 20px 0;
+}
+/* ----------------------------------------------------------------------
+   DEFAULT HERO IMG URL TO BE USED 'https://quanta-analytica.com/logo.PNG
+   -------Place image to the left of h1 title in hero section--------- */
+
+.hero-image {
+  max-width: 200px;       /* Adjust this size to fit your design */
+  height: auto;           /* Maintains aspect ratio */
+  border-radius: 8px;     /* Optional: rounds the corners of your image */
+}
+
+.hero-text {
+  flex: 1;                /* Allows text to take up remaining space */
+}
+
+/* Optional: Mobile Responsiveness */
+@media (max-width: 600px) {
+  .hero-container {
+    flex-direction: column; /* Stacks image on top of text on small screens */
+    text-align: center;
+  }
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 .title-gold {
+  color: var(--gold); 
+  display: block;      /* Ensures it starts on a new line */
+  margin-top: 0.5rem;  /* Optional: adds a small gap between lines */
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* Hero Metadata Row */
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  align-items: center;
+}
+
+.meta-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-cell .label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.meta-cell .value {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--gold-dim);
+  align-self: center;
+}
+
+/* Threat Badge */
+.threat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.threat-badge.critical  { color: var(--red-light);   border-color: var(--red);   background: var(--red-bg);   }
+.threat-badge.high      { color: var(--amber-light);  border-color: var(--amber); background: var(--amber-bg); }
+.threat-badge.elevated  { color: var(--yellow);       border-color: var(--yellow);background: var(--yellow-bg);}
+.threat-badge.moderate  { color: var(--blue-light);   border-color: var(--blue);  background: var(--blue-bg);  }
+.threat-badge.low       { color: var(--green-light);  border-color: var(--green); background: var(--green-bg); }
+
+.threat-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+/* Analytic Scope Boundary */
+.scope-boundary {
+  border-left: 3px solid var(--slate);
+  padding: var(--space-sm) var(--space-lg);
+  background: rgba(93, 122, 154, 0.08);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: var(--space-lg);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--slate-light);
+  line-height: 1.6;
+}
+
+/* Key Metrics Strip */
+.metrics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--obsidian-border);
+}
+
+.metric-block {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-top: 2px solid var(--gold-dim);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  min-width: 140px;
+}
+
+.metric-block .metric-value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.metric-block .metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------------------
+   6. MAIN CONTENT WRAPPER
+   ------------------------------------------------------------ */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+/* ------------------------------------------------------------
+   7. SECTION WRAPPER & SCROLL REVEAL
+   ------------------------------------------------------------ */
+.section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  margin-bottom: var(--space-3xl);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--obsidian-border);
+}
+
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-muted);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Sub-section divider */
+.sub-section {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+}
+
+.sub-section::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-muted), transparent);
+  margin-bottom: var(--space-lg);
+}
+
+.sub-section h3 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ------------------------------------------------------------
+   8. BLUF - Bottom Line Up Front
+   ------------------------------------------------------------ */
+.bluf-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.bluf-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: var(--radius-md);
+}
+
+.bluf-index {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-pale);
+  opacity: 0.4;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.bluf-text .bluf-claim {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.bluf-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   9. SNAPSHOT GRID - Who / What / Where / When / Why / How
+   ------------------------------------------------------------ */
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.snapshot-cell {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.snapshot-cell .snap-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.snapshot-cell .snap-content {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------
+   10. KEY JUDGMENTS
+   ------------------------------------------------------------ */
+.kj-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.kj-item {
+  padding: var(--space-lg);
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  position: relative;
+}
+
+.kj-item.high     { border-left-color: var(--red);   }
+.kj-item.moderate { border-left-color: var(--amber);  }
+.kj-item.low      { border-left-color: var(--blue);   }
+.kj-item.watch    { border-left-color: var(--yellow);  }
+
+.kj-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.kj-id {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.kj-conf {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.kj-item.high     .kj-conf { color: var(--red-light);   border-color: var(--red);   background: var(--red-bg);   }
+.kj-item.moderate .kj-conf { color: var(--amber-light);  border-color: var(--amber); background: var(--amber-bg); }
+.kj-item.low      .kj-conf { color: var(--blue-light);   border-color: var(--blue);  background: var(--blue-bg);  }
+.kj-item.watch    .kj-conf { color: var(--yellow);        border-color: var(--yellow);background: var(--yellow-bg);}
+
+.kj-text {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: var(--space-sm);
+}
+
+.kj-mapping {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ------------------------------------------------------------
+   11. EVIDENCE GRID - Know / Assess / Gap
+   ------------------------------------------------------------ */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.evidence-box {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.evidence-box-header {
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.evidence-box-header.know   { background: var(--green-bg);  color: var(--green-light);  border-bottom: 1px solid var(--green);  }
+.evidence-box-header.assess { background: var(--amber-bg);  color: var(--amber-light);  border-bottom: 1px solid var(--amber);  }
+.evidence-box-header.gap    { background: var(--red-bg);    color: var(--red-light);    border-bottom: 1px solid var(--red);    }
+
+.evidence-box-body {
+  padding: var(--space-lg);
+}
+
+.evidence-box-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.evidence-box-body li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--obsidian-border);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.evidence-box-body li::before {
+  content: '//';
+  position: absolute;
+  left: 0;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.evidence-box-body li:last-child {
+  border-bottom: none;
+}
+
+/* WSI Source Independence Note */
+.wsi-note {
+  background: rgba(93, 122, 154, 0.1);
+  border: 1px solid rgba(93, 122, 154, 0.3);
+  border-left: 3px solid var(--slate);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.83rem;
+  color: var(--slate-light);
+  font-style: italic;
+  margin-top: var(--space-lg);
+}
+
+.wsi-note strong {
+  color: var(--slate-light);
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------
+   12. TABLES - Assumption, ACH, IW, KIQ, Risk, PIGs
+   ------------------------------------------------------------ */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: var(--border-default);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+thead th {
+  background: var(--obsidian-surface);
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  border-bottom: 1px solid var(--obsidian-border);
+  white-space: nowrap;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--obsidian-border);
+  transition: background var(--transition-fast);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: var(--obsidian-lift);
+}
+
+tbody td {
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-secondary);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+tbody td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Assumption Table */
+.assumption-table { }
+
+/* ACH Table */
+.ach-table thead th:nth-child(4) { text-align: center; }
+.ach-table tbody td:nth-child(4) { text-align: center; font-family: var(--font-mono); }
+
+/* IW Table - Indicators & Warnings */
+.iw-table { }
+
+/* Risk Matrix - high-score rows */
+.risk-matrix tbody tr.risk-high {
+  background: var(--red-bg);
+}
+
+.risk-matrix tbody tr.risk-high td {
+  color: var(--text-primary);
+}
+
+.risk-score {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.risk-score.score-high   { color: var(--red-light);   }
+.risk-score.score-medium { color: var(--amber-light);  }
+.risk-score.score-low    { color: var(--green-light);  }
+
+/* KIQ Table */
+.kiq-table { }
+
+/* Priority Intelligence Gaps Table */
+.pig-table { }
+
+/* KPI Table (optional - fragility reports) */
+.kpi-table { }
+
+.pillar-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--obsidian-border);
+  color: var(--text-muted);
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+/* ------------------------------------------------------------
+   13. SCENARIO CARDS
+   ------------------------------------------------------------ */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.scenario-card {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-top: 3px solid;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.scenario-card.best  { border-top-color: var(--green);  }
+.scenario-card.base  { border-top-color: var(--amber);  }
+.scenario-card.worst { border-top-color: var(--red);    }
+
+.scenario-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.scenario-card.best  .scenario-label { color: var(--green-light);  }
+.scenario-card.base  .scenario-label { color: var(--amber-light);  }
+.scenario-card.worst .scenario-label { color: var(--red-light);    }
+
+.scenario-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.scenario-card p {
+  font-size: 0.87rem;
+}
+
+.scenario-prob {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  display: block;
+  letter-spacing: 0.06em;
+}
+
+/* ------------------------------------------------------------
+   14. BEHAVIORAL GRID
+   ------------------------------------------------------------ */
+.behavioral-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.behavioral-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.behavioral-rank {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-pale);
+  opacity: 0.25;
+  line-height: 1;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.behavioral-content h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.behavioral-content p {
+  font-size: 0.88rem;
+  margin-bottom: var(--space-xs);
+}
+
+.behavioral-inference {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--slate-light);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  display: block;
+}
+
+/* ------------------------------------------------------------
+   15. RECOMMENDATION TIMELINE
+   ------------------------------------------------------------ */
+.rec-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 2px solid var(--obsidian-border);
+  margin-left: var(--space-md);
+  padding-left: var(--space-xl);
+}
+
+.rec-block {
+  position: relative;
+  margin-bottom: var(--space-xl);
+}
+
+.rec-block::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-xl) - 1px);
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--obsidian-border);
+  border: 2px solid;
+}
+
+.rec-block.immediate  ::before { border-color: var(--red);   background: var(--red-bg);   }
+.rec-block.near-term  ::before { border-color: var(--amber); background: var(--amber-bg); }
+.rec-block.medium-term::before { border-color: var(--green); background: var(--green-bg); }
+
+.rec-time {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
+
+.rec-block.immediate   .rec-time { color: var(--red-light);  border: 1px solid var(--red);   background: var(--red-bg);   }
+.rec-block.near-term   .rec-time { color: var(--amber-light);border: 1px solid var(--amber); background: var(--amber-bg); }
+.rec-block.medium-term .rec-time { color: var(--green-light);border: 1px solid var(--green); background: var(--green-bg); }
+
+.rec-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.rec-content p {
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------------------------------
+   16. CONFIDENCE PANEL
+   ------------------------------------------------------------ */
+.conf-panel {
+  background: var(--obsidian-card);
+  border: var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.conf-header {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  border-bottom: 1px solid var(--obsidian-border);
+}
+
+.conf-band {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.conf-band.high     { color: var(--green-light);  border-color: var(--green);  background: var(--green-bg);  }
+.conf-band.moderate { color: var(--amber-light);  border-color: var(--amber);  background: var(--amber-bg);  }
+.conf-band.low      { color: var(--red-light);    border-color: var(--red);    background: var(--red-bg);    }
+
+.conf-header-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.conf-body {
+  padding: var(--space-lg);
+}
+
+.conf-body p {
+  font-size: 0.9rem;
+}
+
+/* Uncertainty / Flip Risk List */
+.uncertainty-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.uncertainty-item {
+  background: var(--red-bg);
+  border: 1px solid var(--red);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.uncertainty-item .u-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red-light);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.uncertainty-item p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   17. THRESHOLD GRID - Green / Amber / Red Zones
+   ------------------------------------------------------------ */
+.threshold-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.threshold-cell {
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  overflow: hidden;
+}
+
+.threshold-cell.green-zone { border-color: var(--green);  background: var(--green-bg);  }
+.threshold-cell.amber-zone { border-color: var(--amber);  background: var(--amber-bg);  }
+.threshold-cell.red-zone   { border-color: var(--red);    background: var(--red-bg);    }
+
+.threshold-header {
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+
+.threshold-cell.green-zone .threshold-header { color: var(--green-light);  border-color: var(--green);  background: rgba(39, 174, 96, 0.18);  }
+.threshold-cell.amber-zone .threshold-header { color: var(--amber-light);  border-color: var(--amber);  background: rgba(212, 130, 10, 0.18);  }
+.threshold-cell.red-zone   .threshold-header { color: var(--red-light);    border-color: var(--red);    background: rgba(192, 57, 43, 0.18);    }
+
+.threshold-body {
+  padding: var(--space-md);
+}
+
+.threshold-body p {
+  font-size: 0.85rem;
+  margin-bottom: var(--space-sm);
+}
+
+.threshold-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.threshold-body li {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 3px 0;
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.threshold-body li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--text-faint);
+}
+
+/* ------------------------------------------------------------
+   18. STATUS & BAND PILLS (inline)
+   ------------------------------------------------------------ */
+.status-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.status-pill.red    { color: var(--red-light);   border-color: var(--red);   background: var(--red-bg);    }
+.status-pill.amber  { color: var(--amber-light);  border-color: var(--amber); background: var(--amber-bg);  }
+.status-pill.green  { color: var(--green-light);  border-color: var(--green); background: var(--green-bg);  }
+.status-pill.blue   { color: var(--blue-light);   border-color: var(--blue);  background: var(--blue-bg);   }
+.status-pill.yellow { color: var(--yellow);        border-color: var(--yellow);background: var(--yellow-bg); }
+.status-pill.gold   { color: var(--gold);          border-color: var(--gold-dim); background: var(--gold-glow); }
+
+/* Band Pills (source register table) */
+.band-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.band-pill.green { color: var(--green-light);  border-color: var(--green);  background: var(--green-bg);  }
+.band-pill.amber { color: var(--amber-light);  border-color: var(--amber);  background: var(--amber-bg);  }
+.band-pill.red   { color: var(--red-light);    border-color: var(--red);    background: var(--red-bg);    }
+
+/* Inline fact/inference labels */
+.label-fact {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--blue-light);
+  border: 1px solid var(--blue);
+  background: var(--blue-bg);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-right: 6px;
+}
+
+.label-inference {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  background: var(--gold-glow);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-right: 6px;
+}
+
+/* Structural constraint labels */
+.label-structural { color: var(--red-light);    }
+.label-political  { color: var(--amber-light);  }
+.label-resource   { color: var(--blue-light);   }
+.label-temporal   { color: var(--green-light);  }
+
+/* Analytic technique declaration block */
+.technique-declaration {
+  background: var(--obsidian-surface);
+  border: var(--border-default);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.technique-declaration strong {
+  color: var(--gold-dim);
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------
+   19. FOOTER
+   ------------------------------------------------------------ */
+footer {
+  border-top: 1px solid var(--obsidian-border);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-doc-id {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-bottom: var(--space-sm);
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------------------
+   20. RESPONSIVE BREAKPOINTS
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 100px var(--space-md) var(--space-2xl);
+  }
+
+  main {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .snapshot-grid,
+  .evidence-grid,
+  .scenario-grid,
+  .threshold-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bluf-item {
+    grid-template-columns: 28px 1fr;
+    gap: var(--space-md);
+  }
+
+  .behavioral-item {
+    grid-template-columns: 1fr;
+  }
+
+  .behavioral-rank {
+    font-size: 1rem;
+    text-align: left;
+    padding-top: 0;
+    opacity: 0.35;
+  }
+
+  .hero-running-head {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .hero-meta {
+    gap: var(--space-sm);
+  }
+
+  .metrics-strip {
+    gap: var(--space-sm);
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+  }
+}
+
+
+/* ===== QAP LATAM V2 COMPATIBILITY + HARDENING ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.12) 0px, transparent 1px, transparent 3px);
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.28;
+}
+.hero.no-image { min-height: 100vh; }
+.provenance {
+  margin-top: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.86rem;
+}
+.section-header { display:flex; align-items:baseline; gap:var(--space-md); margin-bottom:var(--space-xl); padding-bottom:var(--space-md); border-bottom:1px solid var(--obsidian-border); }
+.section > .section-num, .section > .section-title, .section > .annex-header { display:none; }
+.sub-title { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-md); }
+.prose, .bluf-text, .snapshot-cell p, .kj-text, .evidence-box-body li, .behavioral-body p, .threshold-body, .conf-body li, .uncertainty-item, footer div { color: var(--text-secondary); font-family: var(--font-body); }
+.section-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
+.section {
+  background: transparent;
+}
+.bluf-item, .snapshot-cell, .kj-item, .evidence-box, .behavioral-item, .conf-panel, .uncertainty-item, .threshold-cell, .scenario-card, .metric-block {
+  box-shadow: var(--shadow-card);
+}
+.evidence-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-md); }
+.evidence-box { background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.evidence-box-header { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.75rem 1rem; }
+.evidence-box-header.know { color: var(--green-light); background: var(--green-bg); border-bottom:1px solid rgba(39,174,96,0.2); }
+.evidence-box-header.assess { color: var(--amber-light); background: var(--amber-bg); border-bottom:1px solid rgba(212,130,10,0.2); }
+.evidence-box-header.gap { color: var(--red-light); background: var(--red-bg); border-bottom:1px solid rgba(192,57,43,0.2); }
+.evidence-box-body { padding: 1rem 1.1rem; }
+.evidence-box-body ul { padding-left: 1rem; }
+.evidence-box-body li { margin-bottom: 0.55rem; }
+.kj-kiq { font-family: var(--font-mono); font-size: 0.65rem; color: var(--slate-light); letter-spacing: 0.1em; }
+.status-pill, .band-pill {
+  display:inline-block; font-family:var(--font-mono); font-size:0.64rem; letter-spacing:0.1em; text-transform:uppercase; padding:2px 8px; border-radius:var(--radius-sm); border:1px solid;
+}
+.status-pill.green, .band-pill.green { color: var(--green-light); border-color: var(--green); background: var(--green-bg); }
+.status-pill.red, .band-pill.red { color: var(--red-light); border-color: var(--red); background: var(--red-bg); }
+.status-pill.amber, .band-pill.amber { color: var(--amber-light); border-color: var(--amber); background: var(--amber-bg); }
+.status-pill.blue { color: var(--blue-light); border-color: var(--blue); background: var(--blue-bg); }
+.status-pill.yellow { color: var(--yellow); border-color: var(--yellow); background: var(--yellow-bg); }
+.status-pill.green, .status-pill.red, .status-pill.amber, .band-pill.green, .band-pill.red, .band-pill.amber {}
+.status-pill:not(.green):not(.red):not(.amber):not(.blue):not(.yellow), .band-pill:not(.green):not(.red):not(.amber) { color: var(--text-secondary); border-color: var(--obsidian-border); background: var(--obsidian-surface); }
+.assumption-table, .ach-table, .iw-table, .risk-matrix, .ewi-table, table { width:100%; border-collapse:collapse; }
+table th { background: var(--obsidian-surface); color: var(--gold); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing:0.11em; text-transform:uppercase; padding: 0.75rem 0.8rem; border:1px solid var(--obsidian-border); }
+table td { background: var(--obsidian-card); color: var(--text-secondary); font-family: var(--font-body); font-size: 0.9rem; padding: 0.8rem; border:1px solid var(--obsidian-border); vertical-align: top; }
+table tbody tr:nth-child(even) td { background: #151925; }
+.td-mono { font-family: var(--font-mono); color: var(--gold-light); font-size: 0.76rem; }
+.td-label { font-family: var(--font-mono); color: var(--gold); font-size: 0.72rem; letter-spacing:0.08em; text-transform:uppercase; }
+.scenario-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-md); }
+.scenario-card { background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.scenario-card-head { font-family: var(--font-mono); padding: 0.75rem 1rem; font-size: 0.74rem; letter-spacing:0.1em; text-transform:uppercase; }
+.scenario-card.best .scenario-card-head { background: var(--green-bg); color: var(--green-light); }
+.scenario-card.base .scenario-card-head { background: var(--amber-bg); color: var(--amber-light); }
+.scenario-card.worst .scenario-card-head { background: var(--red-bg); color: var(--red-light); }
+.scenario-card-body { padding: 1rem; }
+.behavioral-grid { display:flex; flex-direction:column; gap:var(--space-md); }
+.behavioral-item { display:grid; grid-template-columns:44px 1fr; gap:var(--space-lg); padding: var(--space-lg); background: var(--obsidian-card); border: var(--border-default); border-left:3px solid var(--slate); border-radius: var(--radius-md); }
+.behavioral-rank { font-family: var(--font-mono); font-size:1.15rem; color: var(--gold-pale); opacity:0.55; }
+.rec-timeline { display:flex; flex-direction:column; gap:var(--space-md); }
+.rec-block { display:grid; grid-template-columns:155px 1fr; background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.rec-time { padding: 1rem; font-family: var(--font-mono); font-size: 0.78rem; letter-spacing:0.11em; text-transform:uppercase; }
+.rec-content { padding: 1rem 1.15rem; }
+.rec-block.immediate .rec-time { background: var(--red-bg); color: var(--red-light); }
+.rec-block.near-term .rec-time { background: var(--amber-bg); color: var(--amber-light); }
+.rec-block.medium-term .rec-time { background: var(--green-bg); color: var(--green-light); }
+.conf-panel { background: var(--obsidian-card); border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; }
+.conf-header { display:flex; justify-content:space-between; padding: 0.85rem 1rem; font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--blue-light); background: var(--blue-bg); }
+.conf-body { padding: 1rem 1.15rem; }
+.conf-body ul { padding-left: 1rem; }
+.uncertainty-list { display:flex; flex-direction:column; gap:var(--space-md); }
+.uncertainty-item { background: var(--obsidian-card); border: var(--border-default); border-left:3px solid var(--amber); border-radius: var(--radius-md); padding: 1rem 1.1rem; }
+.threshold-grid { display:flex; flex-direction:column; gap: var(--space-md); }
+.threshold-cell { border: var(--border-default); border-radius: var(--radius-md); overflow:hidden; background: var(--obsidian-card); }
+.threshold-label { font-family: var(--font-mono); padding: 0.8rem 1rem; font-size:0.74rem; letter-spacing:0.11em; text-transform:uppercase; }
+.green-zone .threshold-label { background: var(--green-bg); color: var(--green-light); }
+.amber-zone .threshold-label { background: var(--amber-bg); color: var(--amber-light); }
+.red-zone .threshold-label { background: var(--red-bg); color: var(--red-light); }
+.threshold-body { padding: 1rem 1.15rem; }
+.wsi-note, .rapitis-note { margin-top: 1rem; background: var(--obsidian-card); border: var(--border-default); border-left: 3px solid var(--slate); border-radius: var(--radius-md); padding: 0.9rem 1rem; color: var(--text-secondary); font-size: 0.88rem; }
+.inline-tag { display:inline-block; margin-right:0.45rem; font-family: var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; padding:2px 7px; border-radius:var(--radius-sm); border:1px solid; }
+.inline-tag.assess { color: var(--amber-light); border-color: var(--amber); background: var(--amber-bg); }
+.inline-tag.caveat { color: var(--red-light); border-color: var(--red); background: var(--red-bg); }
+.inline-tag.fact { color: var(--green-light); border-color: var(--green); background: var(--green-bg); }
+.ach-matrix { margin-top:1rem; }
+.ach-matrix td.center, .ach-matrix th.center { text-align:center; }
+.ach-hit { font-weight:700; color: var(--gold-light); }
+footer { margin: 0 auto; max-width: 1000px; padding: 0 2rem 3rem; color: var(--text-muted); font-family: var(--font-body); font-size: 0.84rem; text-align:center; }
+.footer-doc-id { font-family:var(--font-mono); color: var(--gold-dim); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem; }
+@media (max-width: 900px) {
+  .snapshot-grid, .evidence-grid, .scenario-grid { grid-template-columns: 1fr; }
+  .rec-block { grid-template-columns: 1fr; }
+}
+
+/* ---- Portfolio additions (charts, carousel, timeline) ---- */
+.chart-frame{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);padding:var(--space-lg);margin:var(--space-lg) 0;}
+.chart-title{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-xs);}
+.chart-sub{font-family:var(--font-body);font-size:0.8rem;color:var(--text-muted);margin-bottom:var(--space-md);}
+.chart-note{font-family:var(--font-mono);font-size:0.68rem;color:var(--text-faint);margin-top:var(--space-sm);letter-spacing:0.04em;line-height:1.6;}
+svg.viz{width:100%;height:auto;display:block;overflow:visible;}
+svg.viz text{font-family:'IBM Plex Mono',monospace;}
+.tip{position:fixed;pointer-events:none;z-index:9999;background:rgba(10,12,16,0.97);border:1px solid var(--gold-dim);border-radius:4px;padding:8px 11px;font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--text-primary);line-height:1.6;opacity:0;transition:opacity .12s;box-shadow:0 4px 18px rgba(0,0,0,.6);max-width:280px;}
+.tip b{color:var(--gold-light);display:block;margin-bottom:3px;font-size:0.74rem;}
+.legend{display:flex;flex-wrap:wrap;gap:var(--space-md);margin-top:var(--space-md);font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:-1px;}
+.ctrl-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:var(--space-md);}
+.ctrl{font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;border-radius:var(--radius-sm);border:1px solid var(--obsidian-border);background:var(--obsidian-surface);color:var(--text-muted);cursor:pointer;transition:all .18s;}
+.ctrl:hover{border-color:var(--gold-muted);color:var(--gold-light);}
+.ctrl.on{border-color:var(--gold-dim);background:var(--gold-glow);color:var(--gold);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-md);}
+@media(max-width:820px){.two-col{grid-template-columns:1fr;}}
+.mini-stat{background:var(--obsidian-surface);border:var(--border-default);border-left:3px solid var(--gold-dim);border-radius:var(--radius-md);padding:var(--space-md) var(--space-lg);}
+.mini-stat .v{font-family:var(--font-mono);font-size:1.5rem;font-weight:700;color:var(--gold);line-height:1.1;}
+.mini-stat .k{font-family:var(--font-mono);font-size:0.63rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-top:4px;}
+.mini-stat .d{font-size:0.8rem;color:var(--text-secondary);margin-top:8px;line-height:1.55;}
+
+</style>
+</head>
+
+<style>
+.map-wrap{display:grid;grid-template-columns:1fr 300px;gap:var(--space-md);align-items:start;}
+@media(max-width:900px){.map-wrap{grid-template-columns:1fr;}}
+#map{background:#0c0f15;border:var(--border-default);border-radius:var(--radius-md);width:100%;height:auto;display:block;}
+#map path{stroke:#0a0c10;stroke-width:0.8;cursor:pointer;transition:opacity .15s;}
+#map path:hover{stroke:#e8d5aa;stroke-width:1.8;}
+#map path.sel{stroke:#c8a96e;stroke-width:2.2;}
+.rankbox{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);padding:var(--space-md);max-height:660px;overflow-y:auto;}
+.rankbox h4{font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--space-sm);}
+.rankrow{display:grid;grid-template-columns:14px 1fr auto;gap:8px;align-items:center;padding:4px 6px;border-radius:3px;cursor:pointer;font-size:0.78rem;color:var(--text-secondary);}
+.rankrow:hover,.rankrow.on{background:var(--obsidian-lift);color:var(--text-primary);}
+.rankrow i{width:11px;height:11px;border-radius:2px;display:block;}
+.rankrow span.v{font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);}
+.scalebar{display:flex;align-items:center;gap:10px;margin-top:var(--space-md);flex-wrap:wrap;}
+.ramp{display:flex;height:13px;border-radius:2px;overflow:hidden;min-width:230px;}
+.ramp div{flex:1;}
+.scalebar .lab{font-family:var(--font-mono);font-size:0.64rem;letter-spacing:0.08em;color:var(--text-muted);}
+#detail{background:var(--obsidian-surface);border:var(--border-default);border-left:3px solid var(--gold-dim);border-radius:var(--radius-md);padding:var(--space-md) var(--space-lg);margin-top:var(--space-md);min-height:96px;}
+#detail .dn{font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);margin-bottom:2px;}
+#detail .dc{font-family:var(--font-mono);font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:10px;}
+#detail table{font-size:0.78rem;}
+#detail td{padding:2px 10px 2px 0;border:none;}
+#detail td:first-child{color:var(--text-muted);font-family:var(--font-mono);font-size:0.7rem;white-space:normal;}
+.bivkey{display:grid;grid-template-columns:repeat(3,26px);grid-template-rows:repeat(3,26px);gap:2px;}
+.bivkey div{border-radius:2px;}
+</style>
+
+<body>
+<div id="progress"></div>
+<nav>
+  <div class="nav-brand">QUANTA ANALYTICA <span>| MNS Consulting</span></div>
+  <ul class="nav-links">
+    <li><a href="#s1">Atlas</a></li>
+    <li><a href="#s2">Reading</a></li>
+    <li><a href="#s3">Method</a></li>
+    <li><a href="#s4">Limits</a></li>
+  </ul>
+  <div class="nav-classify">OSINT // Unclassified</div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-running-head">
+      <span>QUANTA ANALYTICA | MNS CONSULTING</span>
+      <span>FRAGILITY &amp; GOVERNANCE MODELING // GEOSPATIAL</span>
+    </div>
+    <div class="hero-container">
+      <img src="https://quanta-analytica.com/logo.PNG" alt="Quanta Analytica" class="hero-image">
+      <div class="hero-text">
+        <h1>West and Central Africa Stability Atlas
+          <span class="title-gold">Eight Switchable Layers Across Twenty-Two States, Including a Bivariate Read of Coercive Fragmentation Against Conflict Intensity</span>
+        </h1>
+      </div>
+    </div>
+    <p class="hero-subtitle">A single page geospatial interface over five composite index families. The atlas is built to make one point structurally: the layer you choose determines the risk picture you see, and the states that look calm on one layer are rarely the states that look calm on the next.</p>
+    <div class="hero-meta">
+      <div class="meta-cell"><span class="label">Product</span><span class="value">MAP VISUALISATION</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Geometry</span><span class="value">22 NATIONAL POLYGONS</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Projection</span><span class="value">WEB MERCATOR</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Layers</span><span class="value">8</span></div>
+      <div class="meta-divider"></div>
+      <div class="threat-badge high"><span class="threat-dot"></span>REGIONAL RISK: HIGH</div>
+    </div>
+    <div class="scope-boundary">
+      <strong>Analytic scope boundary.</strong> National aggregates only. Every polygon is filled with a single country level value, which necessarily conceals the sub-national variation that governs actual field operations. Nothing on this map should be read as a statement about a specific province, corridor or municipality. Index vintages run 2023 to 2024.
+    </div>
+    <p class="provenance">Geometry derived from open country boundary data, reprojected and simplified for this product. Attribute data from IEP, Fund for Peace, Bertelsmann Stiftung and UNDP as listed in the source register. Boundary depiction carries no political endorsement.</p>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="s1">
+  <div class="section-header"><span class="section-num">01 // ATLAS</span><div class="section-title">Interactive Layer Map</div></div>
+  <div class="ctrl-row" id="ctrls"></div>
+  <div class="map-wrap">
+    <div>
+      <svg id="map" viewBox="0 0 920 720"></svg>
+      <div class="scalebar" id="scale"></div>
+      <div id="detail"><div class="dn">Select a state</div><div class="dc" style="color:var(--text-muted)">Hover for a summary, click to pin the full indicator card</div></div>
+    </div>
+    <div class="rankbox"><h4 id="ranktitle">Ranking</h4><div id="ranks"></div></div>
+  </div>
+  <div class="chart-note">Hatched fill indicates no value for the selected layer. Gambia carries BTI data only. Cote d'Ivoire and Guinea-Bissau are absent from the FSI panel of the source dashboard. Missing data is drawn as missing rather than imputed.</div>
+</section>
+
+<section class="section" id="s2">
+  <div class="section-header"><span class="section-num">02 // READING</span><div class="section-title">How to Read the Layers Against Each Other</div></div>
+  <p>Switching layers is the analytic exercise, not a convenience feature. Three comparisons carry most of the value.</p>
+  <div class="two-col">
+    <div class="mini-stat"><div class="v">A</div><div class="k">Conflict intensity against fragility total</div><div class="d">The FSI total layer paints a broad band of severity from Mauritania to the Democratic Republic of the Congo. The conflict intensity layer collapses that band into a much narrower core. Fragility is regional. Violence is concentrated.</div></div>
+    <div class="mini-stat"><div class="v">B</div><div class="k">State legitimacy against conflict intensity</div><div class="d">Equatorial Guinea, the Republic of the Congo and Cameroon sit at the severe end of the legitimacy layer and the moderate end of the conflict layer. That divergence is the empirical basis for the central finding in the companion data story.</div></div>
+    <div class="mini-stat"><div class="v">C</div><div class="k">The bivariate layer</div><div class="d">The bivariate mode crosses coercive fragmentation with conflict intensity in a three by three key. The diagnostic cells are the off-diagonals: high fragmentation with low recorded violence is the profile that precedes rapid deterioration.</div></div>
+    <div class="mini-stat"><div class="v">D</div><div class="k">The gap layer</div><div class="d">The fragility gap layer is the only derived layer on the map. It is included because the states it highlights, notably Equatorial Guinea and Mauritania, are invisible on every conventional risk layer and are precisely the states where acceptance strategies rest on coercive capacity rather than consent.</div></div>
+  </div>
+</section>
+
+<section class="section" id="s3">
+  <div class="section-header"><span class="section-num">03 // METHOD</span><div class="section-title">Cartographic and Technical Method</div></div>
+  <div class="technique-declaration"><strong>Pipeline:</strong> country boundary polygons filtered to the twenty-two study states, reprojected to Web Mercator, fitted to the viewport, and simplified with a distance threshold in screen space rather than in geographic space, so simplification error stays below one pixel at the rendered scale. Paths and centroids are precomputed and embedded. <strong>Rendering:</strong> vanilla SVG and JavaScript with no external library and no network dependency at run time, so the artefact remains functional offline and archivable. <strong>Total attribute payload:</strong> under 40 kilobytes.</div>
+  <div class="table-wrapper"><table>
+    <thead><tr><th>Decision</th><th>Choice</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Classification</td><td>Continuous ramp, five labelled break points</td><td>Quantile classing would have manufactured contrast inside a sample that is genuinely severe across the board. A continuous ramp keeps the reader aware that the low end of this region is not a low risk value in absolute terms.</td></tr>
+      <tr><td>Palette</td><td>Sequential gold to red for risk layers, diverging blue to red for the gap layer</td><td>Diverging palettes on a non-diverging variable imply a meaningful midpoint that does not exist. The gap layer is the only variable here with a true zero point, so it is the only diverging ramp.</td></tr>
+      <tr><td>Missing data</td><td>Hatched, never imputed</td><td>Three states lack values on some layers. Imputing them would put fabricated numbers on a map that a reader will treat as measurement.</td></tr>
+      <tr><td>Projection</td><td>Web Mercator</td><td>Chosen for shape recognisability at regional scale. Area distortion is modest across this latitude band and no area based inference is drawn from the map.</td></tr>
+      <tr><td>Interaction</td><td>Hover summary, click to pin</td><td>The map answers where. The pinned card answers how much and on what. Separating those two functions prevents the map from carrying quantitative claims that colour cannot support.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="section" id="s4">
+  <div class="section-header"><span class="section-num">04 // LIMITS</span><div class="section-title">What This Map Cannot Tell You</div></div>
+  <div class="evidence-grid">
+    <div class="evidence-box"><div class="evidence-box-header know">Supported</div><div class="evidence-box-body"><ul>
+      <li>Relative position of each state on each published index for the stated vintage.</li>
+      <li>Visual comparison between layers for the same set of states.</li>
+      <li>Identification of states whose profile changes rank sharply between layers.</li>
+    </ul></div></div>
+    <div class="evidence-box"><div class="evidence-box-header assess">Handle With Care</div><div class="evidence-box-body"><ul>
+      <li>The bivariate reading is a descriptive cross-tabulation, not a model output.</li>
+      <li>The fragility gap layer is derived by the analyst and is not published in this form by any source institution.</li>
+      <li>Colour encodes magnitude poorly. Read the pinned card for values.</li>
+    </ul></div></div>
+    <div class="evidence-box"><div class="evidence-box-header gap">Not Supported</div><div class="evidence-box-body"><ul>
+      <li>Any sub-national or corridor level inference.</li>
+      <li>Any statement about current conditions. The newest input closes in 2024.</li>
+      <li>Any claim about border alignment or territorial control. Boundaries are cartographic only.</li>
+    </ul></div></div>
+  </div>
+</section>
+
+<section class="section" id="s5">
+  <div class="section-header"><span class="section-num">05 // SOURCES</span><div class="section-title">Source Register</div></div>
+  <div class="table-wrapper"><table>
+    <thead><tr><th>#</th><th>Source</th><th>Type</th><th>Band</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Global Peace Index 2024 and Positive Peace Index 2024, Institute for Economics and Peace</td><td>Composite index</td><td><span class="band-pill green">Green</span></td><td>Same publisher for both, treated as partially dependent.</td></tr>
+      <tr><td>2</td><td>Fragile States Index 2023, Fund for Peace</td><td>Composite index</td><td><span class="band-pill green">Green</span></td><td>Twelve sub-indicators used. Totals recomputed as their sum.</td></tr>
+      <tr><td>3</td><td>Bertelsmann Transformation Index 2024, Bertelsmann Stiftung</td><td>Expert coded index</td><td><span class="band-pill amber">Amber</span></td><td>Review window closes before the 2023 coup sequence in Niger and Gabon.</td></tr>
+      <tr><td>4</td><td>Human Development Report, UNDP, HDI 2023</td><td>Official statistic</td><td><span class="band-pill green">Green</span></td><td>Dependent on national statistical capacity.</td></tr>
+      <tr><td>5</td><td>Open country boundary polygons, public domain derived</td><td>Geospatial</td><td><span class="band-pill amber">Amber</span></td><td>Simplified for rendering. Not suitable for any operational or legal boundary use.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Quanta Analytica Process&trade; | MNS Consulting | ARAC International Inc.</div>
+  <div class="footer-doc-id">QAP-FGM-WCA-2026-0904 // GEOSPATIAL</div>
+  <div class="footer-legal">Boundaries are cartographic and carry no political endorsement. Derived layers are labelled as derived. No fabricated sources, quotes, or data.</div>
+</footer>
+
+<script>
+var P={"countries":{"BEN":{"C1_security_apparatus":5.2,"C2_factionalized_elites":6.7,"C3_group_grievance":2.6,"E1_economy":6.8,"E2_economic_inequality":7.8,"E3_human_flight":6.1,"P1_state_legitimacy":5.3,"P2_public_services":8.3,"P3_human_rights":5.7,"S1_demographic_pressures":8.0,"S2_refugees_idps":5.9,"X1_external_intervention":4.9,"regime":"Autocracy","bti_failed_state":7.5,"bti_governance_index":5.802,"q12_sustainability":4.5,"q133_conflict_intensity":3.0,"q153_anticorruption":5.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":5.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":5.483,"gpi_2024":2.306,"ppi_2024":3.293,"mean_years_schooling":3.137,"hdi_2023":0.504,"fsi_total":73.3,"iso":"BEN","name":"Benin","cluster":3,"gap":-0.835,"z_gpi":-0.471,"z_ppi":-1.306,"pc1":-2.965,"pc2":-1.04},"BFA":{"C1_security_apparatus":9.3,"C2_factionalized_elites":8.2,"C3_group_grievance":5.8,"E1_economy":7.2,"E2_economic_inequality":8.3,"E3_human_flight":7.0,"P1_state_legitimacy":7.4,"P2_public_services":8.6,"P3_human_rights":7.0,"S1_demographic_pressures":8.3,"S2_refugees_idps":8.2,"X1_external_intervention":8.7,"regime":"Autocracy","bti_failed_state":3.5,"bti_governance_index":4.76,"q12_sustainability":3.0,"q133_conflict_intensity":9.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":4.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":3.0,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":3.883,"gpi_2024":2.969,"ppi_2024":3.516,"mean_years_schooling":2.319,"hdi_2023":0.438,"fsi_total":94.0,"iso":"BFA","name":"Burkina Faso","cluster":0,"gap":-1.781,"z_gpi":1.112,"z_ppi":-0.669,"pc1":1.688,"pc2":-1.598},"CMR":{"C1_security_apparatus":8.1,"C2_factionalized_elites":9.3,"C3_group_grievance":8.1,"E1_economy":6.0,"E2_economic_inequality":7.4,"E3_human_flight":6.9,"P1_state_legitimacy":8.8,"P2_public_services":8.3,"P3_human_rights":7.3,"S1_demographic_pressures":9.0,"S2_refugees_idps":8.4,"X1_external_intervention":6.4,"regime":"Autocracy","bti_failed_state":5.0,"bti_governance_index":3.93,"q12_sustainability":4.0,"q133_conflict_intensity":7.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":3.0,"q21_free_fair_elections":3.0,"q22_effective_power":2.0,"q3_rule_of_law":3.25,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":3.0,"q81_monetary_stability":8.0,"si_democracy_status":3.567,"gpi_2024":2.773,"ppi_2024":3.938,"mean_years_schooling":6.537,"hdi_2023":0.587,"fsi_total":94.0,"iso":"CMR","name":"Cameroon","cluster":2,"gap":-0.107,"z_gpi":0.644,"z_ppi":0.537,"pc1":0.962,"pc2":1.243},"CAF":{"C1_security_apparatus":8.0,"C2_factionalized_elites":9.4,"C3_group_grievance":8.1,"E1_economy":8.2,"E2_economic_inequality":9.6,"E3_human_flight":6.2,"P1_state_legitimacy":8.9,"P2_public_services":10.0,"P3_human_rights":9.1,"S1_demographic_pressures":9.3,"S2_refugees_idps":9.5,"X1_external_intervention":9.4,"regime":"Autocracy","bti_failed_state":2.5,"bti_governance_index":4.063,"q12_sustainability":2.5,"q133_conflict_intensity":9.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":3.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":2.5,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":7.0,"si_democracy_status":3.55,"gpi_2024":3.009,"ppi_2024":4.32,"mean_years_schooling":3.953,"hdi_2023":0.387,"fsi_total":105.7,"iso":"CAF","name":"Central African Republic","cluster":0,"gap":0.42,"z_gpi":1.208,"z_ppi":1.628,"pc1":3.103,"pc2":-0.918},"TCD":{"C1_security_apparatus":8.7,"C2_factionalized_elites":9.5,"C3_group_grievance":8.1,"E1_economy":8.4,"E2_economic_inequality":8.7,"E3_human_flight":7.7,"P1_state_legitimacy":9.1,"P2_public_services":9.6,"P3_human_rights":8.4,"S1_demographic_pressures":9.5,"S2_refugees_idps":9.0,"X1_external_intervention":7.9,"regime":"Autocracy","bti_failed_state":4.0,"bti_governance_index":2.308,"q12_sustainability":2.5,"q133_conflict_intensity":7.0,"q153_anticorruption":2.0,"q162_antidemocratic_actors":1.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":1.5,"q4_stability_dem_inst":1.0,"q42_commitment_dem_inst":1.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":7.0,"si_democracy_status":2.367,"gpi_2024":2.704,"ppi_2024":4.257,"mean_years_schooling":2.283,"hdi_2023":0.394,"fsi_total":104.6,"iso":"TCD","name":"Chad","cluster":0,"gap":0.969,"z_gpi":0.479,"z_ppi":1.448,"pc1":3.538,"pc2":0.548},"COD":{"C1_security_apparatus":8.8,"C2_factionalized_elites":9.6,"C3_group_grievance":9.4,"E1_economy":8.1,"E2_economic_inequality":8.4,"E3_human_flight":6.4,"P1_state_legitimacy":9.3,"P2_public_services":9.3,"P3_human_rights":9.3,"S1_demographic_pressures":9.7,"S2_refugees_idps":9.8,"X1_external_intervention":9.1,"regime":"Autocracy","bti_failed_state":2.5,"bti_governance_index":2.875,"q12_sustainability":2.0,"q133_conflict_intensity":8.0,"q153_anticorruption":2.0,"q162_antidemocratic_actors":2.0,"q21_free_fair_elections":4.0,"q22_effective_power":3.0,"q3_rule_of_law":2.75,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":5.0,"si_democracy_status":3.667,"gpi_2024":3.264,"ppi_2024":4.169,"mean_years_schooling":7.206,"hdi_2023":0.481,"fsi_total":107.2,"iso":"COD","name":"Democratic Republic of the Congo","cluster":0,"gap":-0.62,"z_gpi":1.817,"z_ppi":1.197,"pc1":3.516,"pc2":0.176},"GNQ":{"C1_security_apparatus":5.9,"C2_factionalized_elites":8.2,"C3_group_grievance":7.5,"E1_economy":6.7,"E2_economic_inequality":7.6,"E3_human_flight":3.7,"P1_state_legitimacy":9.9,"P2_public_services":8.5,"P3_human_rights":8.2,"S1_demographic_pressures":9.1,"S2_refugees_idps":5.5,"X1_external_intervention":3.6,"regime":"Autocracy","bti_failed_state":6.5,"bti_governance_index":3.516,"q12_sustainability":3.0,"q133_conflict_intensity":3.0,"q153_anticorruption":1.0,"q162_antidemocratic_actors":1.0,"q21_free_fair_elections":2.0,"q22_effective_power":2.0,"q3_rule_of_law":1.75,"q4_stability_dem_inst":1.0,"q42_commitment_dem_inst":1.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":2.883,"gpi_2024":2.132,"ppi_2024":4.085,"mean_years_schooling":8.281,"hdi_2023":0.65,"fsi_total":84.4,"iso":"GNQ","name":"Equatorial Guinea","cluster":2,"gap":1.844,"z_gpi":-0.887,"z_ppi":0.957,"pc1":0.023,"pc2":3.036},"GAB":{"C1_security_apparatus":4.2,"C2_factionalized_elites":7.7,"C3_group_grievance":3.1,"E1_economy":5.9,"E2_economic_inequality":5.8,"E3_human_flight":4.6,"P1_state_legitimacy":8.1,"P2_public_services":6.8,"P3_human_rights":6.1,"S1_demographic_pressures":6.7,"S2_refugees_idps":2.6,"X1_external_intervention":3.9,"regime":"Autocracy","bti_failed_state":8.0,"bti_governance_index":4.567,"q12_sustainability":6.0,"q133_conflict_intensity":2.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":4.0,"q21_free_fair_elections":4.0,"q22_effective_power":3.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":2.5,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":4.0,"q81_monetary_stability":8.0,"si_democracy_status":4.7,"gpi_2024":2.372,"ppi_2024":3.55,"mean_years_schooling":9.55,"hdi_2023":0.693,"fsi_total":65.5,"iso":"GAB","name":"Gabon","cluster":2,"gap":-0.258,"z_gpi":-0.314,"z_ppi":-0.572,"pc1":-2.947,"pc2":2.777},"GHA":{"C1_security_apparatus":4.0,"C2_factionalized_elites":5.9,"C3_group_grievance":3.0,"E1_economy":5.8,"E2_economic_inequality":6.6,"E3_human_flight":6.8,"P1_state_legitimacy":3.2,"P2_public_services":6.8,"P3_human_rights":3.8,"S1_demographic_pressures":7.4,"S2_refugees_idps":3.5,"X1_external_intervention":5.5,"regime":"Democracy","bti_failed_state":7.5,"bti_governance_index":6.337,"q12_sustainability":4.5,"q133_conflict_intensity":4.0,"q153_anticorruption":5.0,"q162_antidemocratic_actors":9.0,"q21_free_fair_elections":8.0,"q22_effective_power":9.0,"q3_rule_of_law":6.75,"q4_stability_dem_inst":8.5,"q42_commitment_dem_inst":8.0,"q6_socioeconomic_dev":4.0,"q81_monetary_stability":4.0,"si_democracy_status":7.85,"gpi_2024":1.938,"ppi_2024":3.053,"mean_years_schooling":6.432,"hdi_2023":0.602,"fsi_total":62.3,"iso":"GHA","name":"Ghana","cluster":3,"gap":-0.642,"z_gpi":-1.351,"z_ppi":-1.992,"pc1":-5.427,"pc2":-0.634},"GIN":{"C1_security_apparatus":8.7,"C2_factionalized_elites":10.0,"C3_group_grievance":9.4,"E1_economy":8.0,"E2_economic_inequality":7.5,"E3_human_flight":6.3,"P1_state_legitimacy":9.7,"P2_public_services":9.4,"P3_human_rights":7.3,"S1_demographic_pressures":8.8,"S2_refugees_idps":6.2,"X1_external_intervention":7.2,"regime":"Autocracy","bti_failed_state":6.5,"bti_governance_index":5.088,"q12_sustainability":2.5,"q133_conflict_intensity":6.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":3.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":6.0,"si_democracy_status":4.367,"gpi_2024":2.423,"ppi_2024":3.95,"mean_years_schooling":2.359,"hdi_2023":0.471,"fsi_total":98.5,"iso":"GIN","name":"Guinea","cluster":0,"gap":0.763,"z_gpi":-0.192,"z_ppi":0.571,"pc1":1.36,"pc2":-0.32},"LBR":{"C1_security_apparatus":6.8,"C2_factionalized_elites":8.9,"C3_group_grievance":4.6,"E1_economy":8.3,"E2_economic_inequality":7.5,"E3_human_flight":6.7,"P1_state_legitimacy":6.2,"P2_public_services":9.1,"P3_human_rights":7.5,"S1_demographic_pressures":8.4,"S2_refugees_idps":7.4,"X1_external_intervention":7.5,"regime":"Democracy","bti_failed_state":7.0,"bti_governance_index":4.93,"q12_sustainability":3.5,"q133_conflict_intensity":5.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":7.0,"q21_free_fair_elections":8.0,"q22_effective_power":7.0,"q3_rule_of_law":5.0,"q4_stability_dem_inst":6.0,"q42_commitment_dem_inst":7.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":6.0,"si_democracy_status":6.25,"gpi_2024":2.025,"ppi_2024":3.7,"mean_years_schooling":5.318,"hdi_2023":0.487,"fsi_total":88.9,"iso":"LBR","name":"Liberia","cluster":1,"gap":0.999,"z_gpi":-1.143,"z_ppi":-0.143,"pc1":-0.92,"pc2":-0.995},"MLI":{"C1_security_apparatus":9.6,"C2_factionalized_elites":7.2,"C3_group_grievance":8.5,"E1_economy":7.5,"E2_economic_inequality":7.2,"E3_human_flight":7.7,"P1_state_legitimacy":8.6,"P2_public_services":8.9,"P3_human_rights":7.5,"S1_demographic_pressures":8.8,"S2_refugees_idps":8.5,"X1_external_intervention":9.5,"regime":"Autocracy","bti_failed_state":4.0,"bti_governance_index":3.603,"q12_sustainability":2.5,"q133_conflict_intensity":9.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":2.0,"q21_free_fair_elections":1.0,"q22_effective_power":1.0,"q3_rule_of_law":2.5,"q4_stability_dem_inst":1.0,"q42_commitment_dem_inst":1.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":3.4,"gpi_2024":3.095,"ppi_2024":3.738,"mean_years_schooling":1.627,"hdi_2023":0.41,"fsi_total":99.5,"iso":"MLI","name":"Mali","cluster":0,"gap":-1.448,"z_gpi":1.413,"z_ppi":-0.035,"pc1":2.935,"pc2":-0.947},"MRT":{"C1_security_apparatus":5.7,"C2_factionalized_elites":8.8,"C3_group_grievance":7.6,"E1_economy":6.3,"E2_economic_inequality":7.2,"E3_human_flight":5.7,"P1_state_legitimacy":7.8,"P2_public_services":8.4,"P3_human_rights":6.4,"S1_demographic_pressures":8.6,"S2_refugees_idps":8.3,"X1_external_intervention":6.2,"regime":"Autocracy","bti_failed_state":6.5,"bti_governance_index":4.107,"q12_sustainability":3.5,"q133_conflict_intensity":5.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":4.0,"q21_free_fair_elections":4.0,"q22_effective_power":2.0,"q3_rule_of_law":4.25,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":3.0,"q81_monetary_stability":6.0,"si_democracy_status":4.417,"gpi_2024":2.136,"ppi_2024":3.844,"mean_years_schooling":4.754,"hdi_2023":0.54,"fsi_total":87.0,"iso":"MRT","name":"Mauritania","cluster":2,"gap":1.146,"z_gpi":-0.878,"z_ppi":0.268,"pc1":-0.914,"pc2":1.046},"NER":{"C1_security_apparatus":8.3,"C2_factionalized_elites":9.6,"C3_group_grievance":7.7,"E1_economy":6.4,"E2_economic_inequality":7.8,"E3_human_flight":6.6,"P1_state_legitimacy":6.6,"P2_public_services":9.5,"P3_human_rights":6.7,"S1_demographic_pressures":8.9,"S2_refugees_idps":7.9,"X1_external_intervention":7.4,"regime":"Democracy","bti_failed_state":4.5,"bti_governance_index":5.513,"q12_sustainability":3.0,"q133_conflict_intensity":6.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":7.0,"q21_free_fair_elections":6.0,"q22_effective_power":7.0,"q3_rule_of_law":5.0,"q4_stability_dem_inst":6.5,"q42_commitment_dem_inst":7.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":6.0,"gpi_2024":2.792,"ppi_2024":3.703,"mean_years_schooling":1.341,"hdi_2023":0.394,"fsi_total":93.4,"iso":"NER","name":"Niger","cluster":1,"gap":-0.824,"z_gpi":0.689,"z_ppi":-0.135,"pc1":0.403,"pc2":-2.181},"NGA":{"C1_security_apparatus":9.0,"C2_factionalized_elites":9.6,"C3_group_grievance":8.6,"E1_economy":8.8,"E2_economic_inequality":8.1,"E3_human_flight":6.7,"P1_state_legitimacy":8.2,"P2_public_services":8.8,"P3_human_rights":8.6,"S1_demographic_pressures":9.6,"S2_refugees_idps":6.4,"X1_external_intervention":5.6,"regime":"Autocracy","bti_failed_state":4.0,"bti_governance_index":4.129,"q12_sustainability":3.0,"q133_conflict_intensity":9.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":4.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":4.0,"si_democracy_status":4.2,"gpi_2024":2.907,"ppi_2024":3.913,"mean_years_schooling":7.586,"hdi_2023":0.548,"fsi_total":98.0,"iso":"NGA","name":"Nigeria","cluster":0,"gap":-0.499,"z_gpi":0.964,"z_ppi":0.465,"pc1":1.541,"pc2":-0.301},"COG":{"C1_security_apparatus":6.4,"C2_factionalized_elites":6.7,"C3_group_grievance":8.8,"E1_economy":9.3,"E2_economic_inequality":7.5,"E3_human_flight":6.2,"P1_state_legitimacy":9.1,"P2_public_services":8.7,"P3_human_rights":7.2,"S1_demographic_pressures":8.5,"S2_refugees_idps":6.5,"X1_external_intervention":5.8,"regime":"Autocracy","bti_failed_state":5.5,"bti_governance_index":2.906,"q12_sustainability":2.0,"q133_conflict_intensity":6.0,"q153_anticorruption":2.0,"q162_antidemocratic_actors":2.0,"q21_free_fair_elections":2.0,"q22_effective_power":2.0,"q3_rule_of_law":2.5,"q4_stability_dem_inst":2.0,"q42_commitment_dem_inst":2.0,"q6_socioeconomic_dev":3.0,"q81_monetary_stability":7.0,"si_democracy_status":3.35,"gpi_2024":2.261,"ppi_2024":3.933,"mean_years_schooling":8.251,"hdi_2023":0.593,"fsi_total":90.7,"iso":"COG","name":"Republic of the Congo","cluster":2,"gap":1.101,"z_gpi":-0.579,"z_ppi":0.522,"pc1":0.471,"pc2":2.323},"SEN":{"C1_security_apparatus":4.5,"C2_factionalized_elites":7.0,"C3_group_grievance":5.0,"E1_economy":7.5,"E2_economic_inequality":6.3,"E3_human_flight":6.9,"P1_state_legitimacy":3.7,"P2_public_services":7.9,"P3_human_rights":4.6,"S1_demographic_pressures":7.4,"S2_refugees_idps":5.8,"X1_external_intervention":4.9,"regime":"Democracy","bti_failed_state":6.5,"bti_governance_index":6.557,"q12_sustainability":3.5,"q133_conflict_intensity":4.0,"q153_anticorruption":5.0,"q162_antidemocratic_actors":9.0,"q21_free_fair_elections":7.0,"q22_effective_power":8.0,"q3_rule_of_law":5.25,"q4_stability_dem_inst":8.0,"q42_commitment_dem_inst":9.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":6.9,"gpi_2024":2.084,"ppi_2024":3.187,"mean_years_schooling":2.887,"hdi_2023":0.517,"fsi_total":71.5,"iso":"SEN","name":"Senegal","cluster":3,"gap":-0.607,"z_gpi":-1.002,"z_ppi":-1.609,"pc1":-3.731,"pc2":-1.515},"SLE":{"C1_security_apparatus":3.6,"C2_factionalized_elites":7.8,"C3_group_grievance":5.4,"E1_economy":8.5,"E2_economic_inequality":7.5,"E3_human_flight":7.0,"P1_state_legitimacy":5.5,"P2_public_services":8.6,"P3_human_rights":5.6,"S1_demographic_pressures":8.4,"S2_refugees_idps":7.4,"X1_external_intervention":6.1,"regime":"Democracy","bti_failed_state":6.0,"bti_governance_index":4.666,"q12_sustainability":4.5,"q133_conflict_intensity":6.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":6.0,"q21_free_fair_elections":7.0,"q22_effective_power":7.0,"q3_rule_of_law":4.25,"q4_stability_dem_inst":6.0,"q42_commitment_dem_inst":6.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":5.0,"si_democracy_status":5.85,"gpi_2024":1.993,"ppi_2024":3.532,"mean_years_schooling":3.519,"hdi_2023":0.458,"fsi_total":81.4,"iso":"SLE","name":"Sierra Leone","cluster":1,"gap":0.596,"z_gpi":-1.219,"z_ppi":-0.623,"pc1":-1.577,"pc2":-0.949},"TGO":{"C1_security_apparatus":5.8,"C2_factionalized_elites":7.6,"C3_group_grievance":6.6,"E1_economy":7.0,"E2_economic_inequality":8.1,"E3_human_flight":6.5,"P1_state_legitimacy":7.6,"P2_public_services":8.1,"P3_human_rights":6.4,"S1_demographic_pressures":7.4,"S2_refugees_idps":5.7,"X1_external_intervention":5.3,"regime":"Autocracy","bti_failed_state":6.0,"bti_governance_index":5.009,"q12_sustainability":4.0,"q133_conflict_intensity":5.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":3.75,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":4.717,"gpi_2024":2.381,"ppi_2024":3.572,"mean_years_schooling":5.59,"hdi_2023":0.547,"fsi_total":82.1,"iso":"TGO","name":"Togo","cluster":1,"gap":-0.217,"z_gpi":-0.292,"z_ppi":-0.509,"pc1":-1.06,"pc2":0.248},"CIV":{"regime":"Autocracy","bti_failed_state":7.5,"bti_governance_index":5.604,"q12_sustainability":3.0,"q133_conflict_intensity":5.0,"q153_anticorruption":4.0,"q162_antidemocratic_actors":6.0,"q21_free_fair_elections":5.0,"q22_effective_power":3.0,"q3_rule_of_law":3.75,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":4.883,"gpi_2024":2.255,"ppi_2024":3.556,"mean_years_schooling":4.237,"hdi_2023":0.534,"iso":"CIV","name":"C\u00f4te d'Ivoire"},"GMB":{"regime":"Democracy","bti_failed_state":7.5,"bti_governance_index":5.896,"q12_sustainability":5.0,"q133_conflict_intensity":3.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":9.0,"q21_free_fair_elections":7.0,"q22_effective_power":7.0,"q3_rule_of_law":6.5,"q4_stability_dem_inst":7.5,"q42_commitment_dem_inst":8.0,"q6_socioeconomic_dev":2.0,"q81_monetary_stability":8.0,"si_democracy_status":7.2,"iso":"GMB","name":"Gambia"},"GNB":{"regime":"Autocracy","bti_failed_state":5.0,"bti_governance_index":3.949,"q12_sustainability":3.0,"q133_conflict_intensity":4.0,"q153_anticorruption":3.0,"q162_antidemocratic_actors":5.0,"q21_free_fair_elections":6.0,"q22_effective_power":6.0,"q3_rule_of_law":3.5,"q4_stability_dem_inst":3.0,"q42_commitment_dem_inst":3.0,"q6_socioeconomic_dev":1.0,"q81_monetary_stability":8.0,"si_democracy_status":5.15,"gpi_2024":2.085,"ppi_2024":3.875,"mean_years_schooling":3.673,"hdi_2023":0.483,"iso":"GNB","name":"Guinea-Bissau"}},"clusters":{"0":{"label":"Contested Monopoly","short":"CM","color":"#c0392b","n":7,"members":["BFA","CAF","TCD","COD","GIN","MLI","NGA"],"means":{"C1_security_apparatus":8.871,"P1_state_legitimacy":8.743,"X1_external_intervention":8.2,"q133_conflict_intensity":8.143,"hdi_2023":0.447,"q6_socioeconomic_dev":1.143,"fsi_total":101.071,"gpi_2024":2.91,"ppi_2024":3.98,"q3_rule_of_law":3.036,"bti_governance_index":3.832,"C2_factionalized_elites":9.071,"P2_public_services":9.229,"gap":-0.314}},"1":{"label":"Post-Transition Low Capacity","short":"PT","color":"#d4820a","n":4,"members":["LBR","NER","SLE","TGO"],"means":{"C1_security_apparatus":6.125,"P1_state_legitimacy":6.475,"X1_external_intervention":6.575,"q133_conflict_intensity":5.5,"hdi_2023":0.472,"q6_socioeconomic_dev":1.25,"fsi_total":86.45,"gpi_2024":2.298,"ppi_2024":3.627,"q3_rule_of_law":4.5,"bti_governance_index":5.03,"C2_factionalized_elites":8.475,"P2_public_services":8.825,"gap":0.139}},"2":{"label":"Coercively Stable Rentier","short":"CR","color":"#8e44ad","n":5,"members":["CMR","GNQ","GAB","MRT","COG"],"means":{"C1_security_apparatus":6.06,"P1_state_legitimacy":8.74,"X1_external_intervention":5.18,"q133_conflict_intensity":4.6,"hdi_2023":0.613,"q6_socioeconomic_dev":3.0,"fsi_total":84.32,"gpi_2024":2.335,"ppi_2024":3.87,"q3_rule_of_law":3.05,"bti_governance_index":3.805,"C2_factionalized_elites":8.14,"P2_public_services":8.14,"gap":0.745}},"3":{"label":"Comparatively Consolidated","short":"CC","color":"#27ae60","n":3,"members":["BEN","GHA","SEN"],"means":{"C1_security_apparatus":4.567,"P1_state_legitimacy":4.067,"X1_external_intervention":5.1,"q133_conflict_intensity":3.667,"hdi_2023":0.541,"q6_socioeconomic_dev":2.667,"fsi_total":69.033,"gpi_2024":2.109,"ppi_2024":3.178,"q3_rule_of_law":5.833,"bti_governance_index":6.232,"C2_factionalized_elites":6.533,"P2_public_services":7.667,"gap":-0.695}}},"corr":{"C1_security_apparatus":{"r":0.807,"p":0.0,"lo":0.623,"hi":0.936},"X1_external_intervention":{"r":0.817,"p":0.0,"lo":0.524,"hi":0.962},"fsi_total":{"r":0.826,"p":0.0,"lo":0.704,"hi":0.919},"P2_public_services":{"r":0.643,"p":0.003,"lo":0.355,"hi":0.83},"hdi_2023":{"r":-0.641,"p":0.0031,"lo":-0.86,"hi":-0.253},"q6_socioeconomic_dev":{"r":-0.557,"p":0.0132,"lo":-0.781,"hi":-0.21},"C2_factionalized_elites":{"r":0.472,"p":0.0415,"lo":0.121,"hi":0.755},"P1_state_legitimacy":{"r":0.386,"p":0.1024,"lo":0.005,"hi":0.742},"q3_rule_of_law":{"r":-0.342,"p":0.1521,"lo":-0.751,"hi":0.088},"mean_years_schooling":{"r":-0.321,"p":0.1808,"lo":-0.717,"hi":0.23}},"meta":{"n_core":19,"n_total":22,"pca_var":[0.619,0.212]}}, G={"w":920,"h":720,"countries":{"BEN":{"name":"Benin","d":"M392.5,381.3 L378.9,383.3 L374.8,371.8 L375.6,333.5 L372.2,330.0 L371.6,321.8 L365.9,315.9 L360.8,311.0 L362.9,302.1 L368.6,300.2 L372.0,292.9 L380.1,291.3 L383.7,286.2 L389.2,281.3 L395.1,281.2 L407.7,291.0 L407.1,296.6 L410.8,306.5 L407.5,313.3 L409.3,317.8 L401.3,328.2 L396.2,333.3 L393.1,343.9 L393.5,354.5 L392.5,381.3Z","c":[386.5,322.0]},"BFA":{"name":"Burkina Faso","d":"M301.3,324.9 L290.0,320.6 L282.3,321.2 L276.5,325.4 L269.1,321.9 L266.2,316.3 L258.8,312.7 L257.7,302.9 L262.2,295.8 L261.8,290.1 L274.9,276.0 L277.3,264.4 L281.9,260.3 L289.9,262.6 L296.8,259.1 L299.0,254.7 L311.8,247.1 L315.0,241.8 L330.4,234.7 L339.5,232.3 L343.7,235.5 L354.3,235.5 L352.9,243.7 L355.2,251.5 L364.5,262.6 L365.0,270.8 L384.0,274.7 L383.7,286.2 L380.1,291.3 L372.0,292.9 L368.6,300.2 L362.9,302.1 L348.5,301.8 L340.8,300.4 L335.5,303.1 L328.2,301.9 L299.5,302.7 L299.1,312.3 L301.3,324.9Z","c":[317.5,283.6]},"CAF":{"name":"Central African Republic","d":"M600.5,362.0 L614.2,360.7 L617.2,356.4 L620.0,356.8 L624.1,360.6 L644.9,354.2 L651.9,347.7 L660.5,341.8 L658.9,335.9 L663.6,334.4 L679.5,335.4 L695.1,327.7 L707.0,309.4 L715.4,302.6 L725.9,299.7 L727.7,306.9 L737.3,317.4 L737.3,324.2 L734.6,331.2 L735.7,336.4 L741.4,341.2 L754.0,348.5 L763.0,355.3 L763.2,360.7 L774.3,369.4 L781.2,376.6 L785.4,386.5 L797.7,393.1 L800.4,398.4 L794.9,400.1 L784.3,399.7 L771.9,398.0 L765.7,399.4 L763.3,403.5 L757.9,404.0 L751.4,400.4 L733.0,408.7 L725.5,407.1 L723.2,408.3 L718.3,418.3 L705.9,415.1 L693.9,413.5 L683.3,407.4 L669.7,401.7 L660.9,407.1 L654.5,415.5 L653.0,427.0 L642.3,426.1 L631.2,423.3 L621.3,432.1 L612.6,447.5 L610.9,442.7 L610.2,435.2 L602.6,429.8 L596.5,421.3 L595.1,415.3 L587.3,406.7 L588.6,401.7 L587.0,394.8 L588.3,381.9 L592.2,378.9 L600.5,362.0Z","c":[686.9,380.1]},"CIV":{"name":"C\u00f4te d'Ivoire","d":"M300.9,402.3 L293.4,402.5 L281.8,399.3 L271.2,399.5 L251.7,402.4 L240.2,407.1 L223.8,413.2 L220.6,412.8 L221.9,399.1 L223.5,397.0 L223.0,390.5 L216.0,383.6 L210.7,382.4 L205.9,377.9 L209.5,370.5 L207.9,362.4 L208.6,357.6 L211.2,357.6 L212.2,350.3 L210.9,347.1 L212.5,344.7 L218.7,342.7 L214.6,329.3 L210.8,322.4 L212.1,316.7 L215.4,315.4 L217.5,313.9 L222.1,316.4 L234.9,316.6 L237.9,311.7 L240.8,312.0 L245.5,310.1 L248.1,317.3 L251.9,315.2 L258.8,312.7 L266.2,316.3 L269.1,321.9 L276.5,325.4 L282.3,321.2 L290.0,320.6 L301.3,324.9 L305.7,348.7 L298.8,362.7 L294.5,381.5 L301.6,395.8 L300.9,402.3Z","c":[245.1,355.1]},"CMR":{"name":"Cameroon","d":"M564.1,447.5 L562.1,446.6 L552.3,448.7 L542.2,446.5 L534.4,447.6 L507.5,447.2 L509.9,434.2 L503.5,423.2 L495.9,420.4 L492.6,413.0 L488.3,410.6 L488.5,406.0 L492.8,394.3 L500.6,378.3 L505.4,378.1 L515.2,368.4 L521.5,368.1 L530.8,374.9 L542.1,369.3 L543.7,362.4 L547.4,355.7 L550.0,347.2 L558.8,340.4 L562.1,328.7 L565.6,324.9 L568.0,316.2 L572.3,305.5 L586.3,292.4 L587.1,286.8 L588.9,283.8 L582.4,277.0 L582.9,271.7 L587.6,270.7 L594.1,281.5 L595.3,292.7 L594.6,303.9 L603.6,319.2 L594.4,319.0 L589.8,320.2 L582.2,318.5 L578.6,326.4 L588.4,336.2 L595.6,339.1 L597.9,346.0 L603.1,357.5 L600.5,362.0 L592.2,378.9 L588.3,381.9 L587.0,394.8 L588.6,401.7 L587.3,406.7 L595.1,415.3 L596.5,421.3 L602.6,429.8 L610.2,435.2 L610.9,442.7 L612.6,447.5 L611.5,456.4 L598.3,452.5 L585.0,448.1 L564.1,447.5Z","c":[565.3,373.3]},"COD":{"name":"Democratic Republic of the Congo","d":"M857.5,426.9 L856.5,446.3 L863.2,448.5 L857.8,454.4 L851.5,458.8 L845.2,467.4 L841.7,475.1 L840.8,488.4 L836.9,494.7 L836.8,507.1 L832.1,511.7 L831.4,521.6 L829.2,522.9 L827.6,531.9 L831.8,539.4 L832.9,559.4 L835.8,574.7 L834.2,583.3 L837.5,592.9 L847.1,602.3 L856.0,623.3 L849.5,621.6 L827.3,624.4 L822.9,626.4 L818.1,637.1 L821.8,644.4 L818.9,664.3 L816.9,681.2 L821.3,684.2 L832.9,690.8 L837.4,687.7 L838.8,706.0 L826.1,705.9 L819.4,696.5 L813.3,689.3 L800.6,687.0 L796.9,678.1 L786.8,683.4 L773.6,681.1 L768.0,673.4 L757.6,671.9 L749.8,672.3 L748.9,667.0 L743.2,666.6 L735.6,665.6 L725.4,668.1 L718.2,667.7 L714.1,669.3 L715.0,649.3 L709.5,643.1 L708.3,632.8 L710.7,622.7 L707.4,616.3 L707.1,605.8 L687.0,605.9 L688.5,599.9 L680.0,600.0 L679.1,602.9 L668.9,603.5 L664.8,613.2 L662.3,617.4 L653.1,615.0 L647.7,617.4 L636.8,618.7 L630.4,610.0 L626.6,604.6 L621.9,594.6 L617.8,582.3 L569.1,582.0 L563.3,584.0 L558.5,583.7 L551.7,586.0 L549.4,580.8 L553.6,579.0 L554.1,571.8 L556.8,567.5 L562.8,564.1 L567.1,565.7 L572.8,559.4 L581.8,559.6 L582.8,564.3 L589.0,567.2 L598.7,556.8 L608.4,548.7 L612.5,543.4 L612.0,529.8 L619.2,513.7 L626.7,505.2 L637.6,497.3 L639.5,492.0 L639.9,485.9 L642.6,480.2 L641.7,470.8 L643.8,456.2 L647.0,445.9 L652.0,437.0 L653.0,427.0 L654.5,415.5 L660.9,407.1 L669.7,401.7 L683.3,407.4 L693.9,413.5 L705.9,415.1 L718.3,418.3 L723.2,408.3 L725.5,407.1 L733.0,408.7 L751.4,400.4 L757.9,404.0 L763.3,403.5 L765.7,399.4 L771.9,398.0 L784.3,399.7 L794.9,400.1 L800.4,398.4 L810.4,412.1 L817.8,414.1 L822.2,411.3 L829.9,412.4 L839.1,408.9 L843.0,415.9 L857.5,426.9Z","c":[728.3,547.6]},"COG":{"name":"Republic of the Congo","d":"M562.8,564.1 L556.6,558.4 L551.6,561.2 L544.9,568.3 L531.4,550.8 L543.9,541.6 L537.7,530.7 L543.4,526.5 L554.5,524.5 L555.8,517.2 L564.7,525.1 L579.3,525.8 L584.3,518.0 L586.4,507.0 L584.6,494.1 L576.8,484.3 L584.0,465.2 L579.8,461.9 L567.5,463.3 L562.9,454.7 L564.1,447.5 L585.0,448.1 L598.3,452.5 L611.5,456.4 L612.6,447.5 L621.3,432.1 L631.2,423.3 L642.3,426.1 L653.0,427.0 L652.0,437.0 L647.0,445.9 L643.8,456.2 L641.7,470.8 L642.6,480.2 L639.9,485.9 L639.5,492.0 L637.6,497.3 L626.7,505.2 L619.2,513.7 L612.0,529.8 L612.5,543.4 L608.4,548.7 L598.7,556.8 L589.0,567.2 L582.8,564.3 L581.8,559.6 L572.8,559.4 L567.1,565.7 L562.8,564.1Z","c":[592.9,503.0]},"GAB":{"name":"Gabon","d":"M531.4,550.8 L514.4,534.1 L503.5,520.4 L493.4,503.3 L494.0,497.8 L497.6,492.6 L501.6,480.5 L504.9,468.3 L510.5,467.3 L534.5,467.5 L534.4,447.6 L542.2,446.5 L552.3,448.7 L562.1,446.6 L564.1,447.5 L562.9,454.7 L567.5,463.3 L579.8,461.9 L584.0,465.2 L576.8,484.3 L584.6,494.1 L586.4,507.0 L584.3,518.0 L579.3,525.8 L564.7,525.1 L555.8,517.2 L554.5,524.5 L543.4,526.5 L537.7,530.7 L543.9,541.6 L531.4,550.8Z","c":[544.4,493.9]},"GHA":{"name":"Ghana","d":"M365.6,386.8 L339.7,396.5 L330.5,402.2 L315.6,407.0 L300.9,402.3 L301.6,395.8 L294.5,381.5 L298.8,362.7 L305.7,348.7 L301.3,324.9 L299.1,312.3 L299.5,302.7 L328.2,301.9 L335.5,303.1 L340.8,300.4 L348.5,301.8 L347.2,307.0 L354.1,315.7 L354.1,327.9 L355.7,341.0 L359.8,347.1 L356.2,362.2 L357.5,370.4 L361.9,381.0 L365.6,386.8Z","c":[332.7,350.8]},"GIN":{"name":"Guinea","d":"M208.6,357.6 L203.9,357.2 L200.6,363.9 L195.9,363.8 L192.7,360.2 L193.8,353.5 L186.9,343.3 L182.6,345.2 L179.0,345.6 L174.5,346.5 L174.7,340.4 L172.0,336.0 L172.5,331.2 L169.0,324.1 L164.4,318.1 L151.2,318.1 L147.3,321.3 L142.7,321.6 L139.9,325.3 L138.0,329.9 L129.2,337.3 L121.9,327.4 L115.5,320.8 L111.3,318.6 L107.2,315.3 L105.3,307.9 L102.9,304.2 L98.1,301.4 L105.4,293.2 L110.4,293.5 L114.7,290.7 L118.4,290.6 L121.0,288.4 L119.6,282.8 L121.4,281.0 L121.7,275.3 L129.7,275.5 L141.5,279.6 L145.2,279.2 L146.4,277.4 L155.4,278.7 L157.8,277.7 L158.8,283.9 L161.4,283.9 L165.7,281.7 L168.4,282.2 L173.0,286.5 L180.1,287.9 L184.6,284.2 L190.0,281.9 L193.9,279.6 L197.2,280.0 L200.9,283.7 L202.9,288.4 L209.7,295.5 L206.3,299.8 L205.6,305.3 L209.1,303.6 L211.2,305.6 L210.3,310.6 L215.4,315.4 L212.1,316.7 L210.8,322.4 L214.6,329.3 L218.7,342.7 L212.5,344.7 L210.9,347.1 L212.2,350.3 L211.2,357.6 L208.6,357.6Z","c":[167.8,313.0]},"GMB":{"name":"Gambia","d":"M69.8,265.7 L71.9,258.2 L89.9,257.7 L93.6,253.7 L98.9,253.4 L105.4,257.6 L110.5,257.7 L116.0,254.8 L119.3,259.7 L112.2,263.5 L105.0,263.2 L97.9,259.7 L91.8,263.6 L88.8,263.7 L84.8,266.1 L69.8,265.7Z","c":[95.3,260.3]},"GNB":{"name":"Guinea-Bissau","d":"M98.1,301.4 L89.2,294.4 L82.3,293.2 L78.5,288.5 L78.6,285.9 L73.6,282.3 L72.5,278.7 L81.3,276.0 L86.7,276.5 L91.2,274.6 L121.7,275.3 L121.4,281.0 L119.6,282.8 L121.0,288.4 L118.4,290.6 L114.7,290.7 L110.4,293.5 L105.4,293.2 L98.1,301.4Z","c":[98.0,286.8]},"GNQ":{"name":"Equatorial Guinea","d":"M504.9,468.3 L501.8,465.8 L507.5,447.2 L534.4,447.6 L534.5,467.5 L510.5,467.3 L504.9,468.3Z","c":[514.1,461.7]},"LBR":{"name":"Liberia","d":"M220.6,412.8 L216.3,412.9 L199.3,405.0 L184.3,392.4 L170.2,383.3 L159.1,372.6 L163.0,367.3 L163.9,362.4 L171.3,353.4 L179.0,345.6 L182.6,345.2 L186.9,343.3 L193.8,353.5 L192.7,360.2 L195.9,363.8 L200.6,363.9 L203.9,357.2 L208.6,357.6 L207.9,362.4 L209.5,370.5 L205.9,377.9 L210.7,382.4 L216.0,383.6 L223.0,390.5 L223.5,397.0 L221.9,399.1 L220.6,412.8Z","c":[197.4,375.1]},"MLI":{"name":"Mali","d":"M147.0,240.8 L152.5,237.7 L155.3,227.6 L160.5,227.2 L172.1,232.0 L181.4,228.6 L187.8,229.7 L190.3,225.9 L256.6,225.6 L260.2,213.6 L257.4,211.5 L249.4,136.3 L241.4,58.9 L266.7,58.6 L322.5,98.0 L378.2,136.8 L382.1,145.1 L392.4,150.1 L400.1,153.0 L400.2,164.1 L418.6,162.4 L418.6,202.4 L409.6,213.9 L408.2,224.5 L393.5,227.2 L371.0,228.7 L364.8,234.8 L354.3,235.5 L343.7,235.5 L339.5,232.3 L330.4,234.7 L315.0,241.8 L311.8,247.1 L299.0,254.7 L296.8,259.1 L289.9,262.6 L281.9,260.3 L277.3,264.4 L274.9,276.0 L261.8,290.1 L262.2,295.8 L257.7,302.9 L258.8,312.7 L251.9,315.2 L248.1,317.3 L245.5,310.1 L240.8,312.0 L237.9,311.7 L234.9,316.6 L222.1,316.4 L217.5,313.9 L215.4,315.4 L210.3,310.6 L211.2,305.6 L209.1,303.6 L205.6,305.3 L206.3,299.8 L209.7,295.5 L202.9,288.4 L200.9,283.7 L197.2,280.0 L193.9,279.6 L190.0,281.9 L184.6,284.2 L180.1,287.9 L173.0,286.5 L168.4,282.2 L165.7,281.7 L161.4,283.9 L158.8,283.9 L157.8,277.7 L158.6,272.5 L157.2,265.9 L151.0,261.1 L147.7,251.4 L147.0,240.8Z","c":[252.1,249.0]},"MRT":{"name":"Mauritania","d":"M147.0,240.8 L136.1,229.0 L126.1,216.4 L115.1,211.9 L107.2,206.8 L98.0,207.0 L89.9,210.7 L81.7,209.3 L76.0,214.8 L74.6,205.5 L79.2,197.0 L81.3,180.6 L79.4,163.4 L77.5,154.7 L79.1,146.0 L74.8,137.6 L66.1,129.9 L69.7,124.0 L134.4,124.1 L131.3,98.4 L135.3,89.2 L150.8,87.6 L150.3,41.0 L204.5,42.0 L204.6,14.0 L266.7,58.6 L241.4,58.9 L249.4,136.3 L257.4,211.5 L260.2,213.6 L256.6,225.6 L190.3,225.9 L187.8,229.7 L181.4,228.6 L172.1,232.0 L160.5,227.2 L155.3,227.6 L152.5,237.7 L147.0,240.8Z","c":[144.8,170.1]},"NER":{"name":"Niger","d":"M383.7,286.2 L384.0,274.7 L365.0,270.8 L364.5,262.6 L355.2,251.5 L352.9,243.7 L354.3,235.5 L364.8,234.8 L371.0,228.7 L393.5,227.2 L408.2,224.5 L409.6,213.9 L418.6,202.4 L418.6,162.4 L441.9,154.6 L489.7,119.9 L546.3,85.8 L572.5,93.6 L581.8,103.4 L593.5,96.8 L597.5,124.5 L603.7,129.1 L604.0,134.7 L610.8,140.8 L607.2,148.3 L600.9,183.8 L600.0,206.3 L578.9,222.5 L571.8,245.1 L578.7,251.4 L578.6,262.3 L589.2,262.7 L587.6,270.7 L582.9,271.7 L582.4,277.0 L579.3,277.4 L568.1,258.9 L564.3,258.2 L551.3,267.7 L538.5,262.7 L529.6,261.7 L524.9,264.1 L515.2,263.6 L505.4,270.8 L497.0,271.2 L477.0,262.5 L469.2,266.6 L460.8,266.3 L454.6,259.9 L438.0,253.6 L420.2,255.6 L415.9,259.3 L413.6,269.0 L408.9,275.9 L407.7,291.0 L395.1,281.2 L389.2,281.3 L383.7,286.2Z","c":[488.8,228.8]},"NGA":{"name":"Nigeria","d":"M488.5,406.0 L471.4,412.0 L465.1,411.1 L458.7,414.8 L445.5,414.5 L436.7,404.1 L431.2,392.1 L419.5,381.1 L407.1,381.4 L392.5,381.3 L393.5,354.5 L393.1,343.9 L396.2,333.3 L401.3,328.2 L409.3,317.8 L407.5,313.3 L410.8,306.5 L407.1,296.6 L407.7,291.0 L408.9,275.9 L413.6,269.0 L415.9,259.3 L420.2,255.6 L438.0,253.6 L454.6,259.9 L460.8,266.3 L469.2,266.6 L477.0,262.5 L497.0,271.2 L505.4,270.8 L515.2,263.6 L524.9,264.1 L529.6,261.7 L538.5,262.7 L551.3,267.7 L564.3,258.2 L568.1,258.9 L579.3,277.4 L582.4,277.0 L588.9,283.8 L587.1,286.8 L586.3,292.4 L572.3,305.5 L568.0,316.2 L565.6,324.9 L562.1,328.7 L558.8,340.4 L550.0,347.2 L547.4,355.7 L543.7,362.4 L542.1,369.3 L530.8,374.9 L521.5,368.1 L515.2,368.4 L505.4,378.1 L500.6,378.3 L492.8,394.3 L488.5,406.0Z","c":[487.7,323.6]},"SEN":{"name":"Senegal","d":"M71.9,258.2 L65.1,244.9 L56.8,238.9 L64.1,235.6 L72.1,223.6 L76.0,214.8 L81.7,209.3 L89.9,210.7 L98.0,207.0 L107.2,206.8 L115.1,211.9 L126.1,216.4 L136.1,229.0 L147.0,240.8 L147.7,251.4 L151.0,261.1 L157.2,265.9 L158.6,272.5 L157.8,277.7 L155.4,278.7 L146.4,277.4 L145.2,279.2 L141.5,279.6 L129.7,275.5 L121.7,275.3 L91.2,274.6 L86.7,276.5 L81.3,276.0 L72.5,278.7 L69.8,265.7 L84.8,266.1 L88.8,263.7 L91.8,263.6 L97.9,259.7 L105.0,263.2 L112.2,263.5 L119.3,259.7 L116.0,254.8 L110.5,257.7 L105.4,257.6 L98.9,253.4 L93.6,253.7 L89.9,257.7 L71.9,258.2Z","c":[107.0,253.3]},"SLE":{"name":"Sierra Leone","d":"M159.1,372.6 L154.6,371.3 L142.7,364.6 L134.1,355.7 L131.2,349.6 L129.2,337.3 L138.0,329.9 L139.9,325.3 L142.7,321.6 L147.3,321.3 L151.2,318.1 L164.4,318.1 L169.0,324.1 L172.5,331.2 L172.0,336.0 L174.7,340.4 L174.5,346.5 L179.0,345.6 L171.3,353.4 L163.9,362.4 L163.0,367.3 L159.1,372.6Z","c":[156.1,343.9]},"TCD":{"name":"Chad","d":"M587.6,270.7 L589.2,262.7 L578.6,262.3 L578.7,251.4 L571.8,245.1 L578.9,222.5 L600.0,206.3 L600.9,183.8 L607.2,148.3 L610.8,140.8 L604.0,134.7 L603.7,129.1 L597.5,124.5 L593.5,96.8 L610.1,86.9 L676.0,121.2 L741.9,154.9 L742.7,223.8 L728.5,222.6 L721.0,235.2 L716.6,245.7 L720.0,249.7 L714.6,254.9 L716.5,262.0 L712.2,269.1 L710.5,275.3 L716.3,274.3 L719.8,280.8 L720.0,290.6 L726.0,295.6 L725.9,299.7 L715.4,302.6 L707.0,309.4 L695.1,327.7 L679.5,335.4 L663.6,334.4 L658.9,335.9 L660.5,341.8 L651.9,347.7 L644.9,354.2 L624.1,360.6 L620.0,356.8 L617.2,356.4 L614.2,360.7 L600.5,362.0 L603.1,357.5 L597.9,346.0 L595.6,339.1 L588.4,336.2 L578.6,326.4 L582.2,318.5 L589.8,320.2 L594.4,319.0 L603.6,319.2 L594.6,303.9 L595.3,292.7 L594.1,281.5 L587.6,270.7Z","c":[642.7,269.6]},"TGO":{"name":"Togo","d":"M378.9,383.3 L365.6,386.8 L361.9,381.0 L357.5,370.4 L356.2,362.2 L359.8,347.1 L355.7,341.0 L354.1,327.9 L354.1,315.7 L347.2,307.0 L348.5,301.8 L362.9,302.1 L360.8,311.0 L365.9,315.9 L371.6,321.8 L372.2,330.0 L375.6,333.5 L374.8,371.8 L378.9,383.3Z","c":[363.3,341.8]}}};
+
+var TIP=document.createElement('div');TIP.className='tip';document.body.appendChild(TIP);
+function tipOn(e,html){TIP.innerHTML=html;TIP.style.opacity=1;tipMove(e);}
+function tipMove(e){var x=e.clientX+14,y=e.clientY+14;var r=TIP.getBoundingClientRect();
+if(x+r.width>window.innerWidth-10)x=e.clientX-r.width-14;if(y+r.height>window.innerHeight-10)y=e.clientY-r.height-14;
+TIP.style.left=x+'px';TIP.style.top=y+'px';}
+function tipOff(){TIP.style.opacity=0;}
+function bindTip(el,html){el.addEventListener('mouseenter',function(e){tipOn(e,html);});el.addEventListener('mousemove',tipMove);el.addEventListener('mouseleave',tipOff);}
+function svgEl(t,a){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+
+
+var C=P.countries, CL=P.clusters;
+var LAYERS=[
+ {id:'fsi_total',   name:'FSI Total 2023',        unit:'0 to 120',  dir:1, fmt:function(v){return v.toFixed(1);}, note:'Sum of twelve Fragile States Index sub-indicators.'},
+ {id:'q133_conflict_intensity', name:'Conflict Intensity', unit:'BTI Q13.3, 1 to 10', dir:1, fmt:function(v){return v.toFixed(1);}, note:'Bertelsmann expert coded conflict intensity.'},
+ {id:'C1_security_apparatus', name:'Security Fragmentation', unit:'FSI C1, 0 to 10', dir:1, fmt:function(v){return v.toFixed(1);}, note:'Cohesion of the state security apparatus. Higher is more fragmented.'},
+ {id:'P1_state_legitimacy', name:'State Legitimacy Deficit', unit:'FSI P1, 0 to 10', dir:1, fmt:function(v){return v.toFixed(1);}, note:'Higher indicates a wider legitimacy deficit.'},
+ {id:'gpi_2024',    name:'Global Peace Index 2024', unit:'1 to 5',   dir:1, fmt:function(v){return v.toFixed(3);}, note:'Negative peace. Higher is less peaceful.'},
+ {id:'ppi_2024',    name:'Positive Peace Index 2024', unit:'1 to 5', dir:1, fmt:function(v){return v.toFixed(3);}, note:'Structural peace deficit. Higher is weaker.'},
+ {id:'hdi_2023',    name:'Human Development 2023', unit:'0 to 1',    dir:-1, fmt:function(v){return v.toFixed(3);}, note:'Higher is better. Ramp inverted so red remains risk.'},
+ {id:'gap',         name:'Fragility Gap (derived)', unit:'z units',  dir:1, div:true, fmt:function(v){return (v>0?'+':'')+v.toFixed(2);}, note:'Derived. Standardised PPI minus standardised GPI.'},
+ {id:'BIVARIATE',   name:'Bivariate: Fragmentation x Conflict', unit:'3 x 3 classes', bivar:true, note:'Cross-tabulation of FSI C1 against BTI Q13.3, tercile classed.'}
+];
+
+function lerp(a,b,t){return a+(b-a)*t;}
+function hex(r,g,b){return '#'+[r,g,b].map(function(v){v=Math.max(0,Math.min(255,Math.round(v)));return (v<16?'0':'')+v.toString(16);}).join('');}
+function rgb(h){return [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];}
+function ramp(stops,t){
+  t=Math.max(0,Math.min(1,t));
+  var n=stops.length-1, i=Math.min(Math.floor(t*n),n-1), f=t*n-i;
+  var a=rgb(stops[i]), b=rgb(stops[i+1]);
+  return hex(lerp(a[0],b[0],f),lerp(a[1],b[1],f),lerp(a[2],b[2],f));
+}
+var SEQ=['#1b2438','#3f4b52','#8a7a45','#c8a96e','#d4820a','#c0392b','#7d1f16'];
+var DIV=['#1f5f8b','#3d7fa8','#4a5568','#8a7a45','#c8a96e','#d4820a','#c0392b'];
+var BIV=[['#2c3e50','#5b4a6e','#8e44ad'],['#7a6a2f','#a06a3f','#b3436b'],['#c8a96e','#d4820a','#c0392b']];
+
+var cur='fsi_total', pinned=null;
+var svg=document.getElementById('map');
+var paths={};
+
+(function initMap(){
+  var defs=svgEl('defs',{});
+  defs.innerHTML='';
+  var pat=svgEl('pattern',{id:'nodata',width:7,height:7,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'});
+  pat.appendChild(svgEl('rect',{width:7,height:7,fill:'#12151d'}));
+  pat.appendChild(svgEl('line',{x1:0,y1:0,x2:0,y2:7,stroke:'#2a2f42','stroke-width':2.4}));
+  defs.appendChild(pat); svg.appendChild(defs);
+  Object.keys(G.countries).forEach(function(iso){
+    var g=G.countries[iso];
+    var p=svgEl('path',{d:g.d,fill:'#1e2235','data-iso':iso});
+    p.addEventListener('mouseenter',function(e){tipOn(e,card(iso,true));});
+    p.addEventListener('mousemove',tipMove);
+    p.addEventListener('mouseleave',tipOff);
+    p.addEventListener('click',function(){pin(iso);});
+    svg.appendChild(p); paths[iso]=p;
+  });
+  Object.keys(G.countries).forEach(function(iso){
+    var g=G.countries[iso];
+    var halo=svgEl('text',{x:g.c[0],y:g.c[1],'font-size':10.5,fill:'none','text-anchor':'middle','pointer-events':'none','font-family':'IBM Plex Mono, monospace',stroke:'#0a0c10','stroke-width':3,'stroke-linejoin':'round',opacity:0.85});
+    halo.textContent=iso; svg.appendChild(halo);
+    var t=svgEl('text',{x:g.c[0],y:g.c[1],'font-size':10.5,fill:'#f2ede3','text-anchor':'middle','pointer-events':'none','font-family':'IBM Plex Mono, monospace','font-weight':600});
+    t.textContent=iso; svg.appendChild(t);
+  });
+})();
+
+function terc(vals,v){var s=vals.slice().sort(function(a,b){return a-b;});
+  var a=s[Math.floor(s.length/3)], b=s[Math.floor(2*s.length/3)];
+  return v<a?0:(v<b?1:2);}
+
+function vals(id){return Object.keys(C).map(function(k){return C[k][id];}).filter(function(v){return v!==undefined&&v!==null;});}
+
+function fillFor(iso){
+  var L=LAYERS.filter(function(l){return l.id===cur;})[0];
+  var d=C[iso];
+  if(L.bivar){
+    if(d.C1_security_apparatus===undefined||d.q133_conflict_intensity===undefined)return 'url(#nodata)';
+    var x=terc(vals('C1_security_apparatus'),d.C1_security_apparatus);
+    var y=terc(vals('q133_conflict_intensity'),d.q133_conflict_intensity);
+    return BIV[y][x];
+  }
+  var v=d[L.id];
+  if(v===undefined||v===null)return 'url(#nodata)';
+  var V=vals(L.id), mn=Math.min.apply(null,V), mx=Math.max.apply(null,V);
+  if(L.div){var m=Math.max(Math.abs(mn),Math.abs(mx)); var t=(v+m)/(2*m); return ramp(DIV,t);}
+  var t=(v-mn)/(mx-mn); if(L.dir===-1)t=1-t;
+  return ramp(SEQ,t);
+}
+
+function card(iso,brief){
+  var d=C[iso], L=LAYERS.filter(function(l){return l.id===cur;})[0];
+  var h='<b>'+d.name+'</b>';
+  if(brief){
+    if(L.bivar){h+='C1 fragmentation: '+(d.C1_security_apparatus!==undefined?d.C1_security_apparatus:'no data')+'<br>Conflict intensity: '+(d.q133_conflict_intensity!==undefined?d.q133_conflict_intensity:'no data');}
+    else {var v=d[L.id]; h+=L.name+': '+(v===undefined||v===null?'no data':L.fmt(v));}
+    h+='<br><span style="color:#7a7264">Click to pin full card</span>';
+  }
+  return h;
+}
+
+function pin(iso){
+  pinned=iso;
+  Object.keys(paths).forEach(function(k){paths[k].classList.remove('sel');});
+  paths[iso].classList.add('sel');
+  var d=C[iso];
+  var cl=(d.cluster!==undefined)?CL[d.cluster]:null;
+  function row(k,v,u){return '<tr><td>'+k+'</td><td style="color:var(--text-primary);font-family:var(--font-mono);font-size:0.78rem">'+(v===undefined||v===null?'no data':v)+(u&&v!==undefined&&v!==null?' <span style="color:var(--text-faint)">'+u+'</span>':'')+'</td></tr>';}
+  document.getElementById('detail').innerHTML=
+   '<div class="dn">'+d.name+'</div>'+
+   '<div class="dc" style="color:'+(cl?cl.color:'#7a7264')+'">'+(cl?cl.label:'Outside analytic sample')+' // BTI regime coding: '+(d.regime||'not coded')+'</div>'+
+   '<table><tr>'+
+   '<td style="vertical-align:top;padding-right:26px"><table>'+
+     row('FSI total',d.fsi_total,'/120')+row('C1 fragmentation',d.C1_security_apparatus,'/10')+
+     row('C2 factionalized elites',d.C2_factionalized_elites,'/10')+row('P1 legitimacy deficit',d.P1_state_legitimacy,'/10')+
+     row('P2 public services',d.P2_public_services,'/10')+row('X1 external intervention',d.X1_external_intervention,'/10')+
+   '</table></td>'+
+   '<td style="vertical-align:top"><table>'+
+     row('GPI 2024',d.gpi_2024)+row('PPI 2024',d.ppi_2024)+
+     row('Fragility gap',d.gap!==undefined?((d.gap>0?'+':'')+d.gap.toFixed(2)):undefined,'z')+
+     row('Conflict intensity',d.q133_conflict_intensity,'/10')+row('Rule of law',d.q3_rule_of_law,'/10')+
+     row('HDI 2023',d.hdi_2023)+
+   '</table></td></tr></table>';
+  document.querySelectorAll('.rankrow').forEach(function(r){r.classList.toggle('on',r.getAttribute('data-iso')===iso);});
+}
+
+function drawScale(){
+  var L=LAYERS.filter(function(l){return l.id===cur;})[0];
+  var el=document.getElementById('scale');
+  if(L.bivar){
+    var g='';
+    for(var y=2;y>=0;y--){for(var x=0;x<3;x++){g+='<div style="background:'+BIV[y][x]+'"></div>';}}
+    el.innerHTML='<div class="bivkey">'+g+'</div>'+
+      '<div class="lab" style="line-height:1.7">Horizontal: security fragmentation, low to high<br>Vertical: conflict intensity, low at base to high at top<br>Upper left cell: violence without fragmentation. Lower right cell: fragmentation without recorded violence.</div>';
+    return;
+  }
+  var V=vals(L.id), mn=Math.min.apply(null,V), mx=Math.max.apply(null,V), bars='';
+  for(var i=0;i<40;i++){
+    var t=i/39, c;
+    if(L.div){c=ramp(DIV,t);} else {c=ramp(SEQ,L.dir===-1?1-t:t);}
+    bars+='<div style="background:'+c+'"></div>';
+  }
+  var lo=L.div?(-Math.max(Math.abs(mn),Math.abs(mx))):mn, hi=L.div?Math.max(Math.abs(mn),Math.abs(mx)):mx;
+  el.innerHTML='<span class="lab">'+L.fmt(lo)+'</span><div class="ramp">'+bars+'</div><span class="lab">'+L.fmt(hi)+'</span>'+
+   '<span class="lab" style="margin-left:14px">'+L.name.toUpperCase()+' ('+L.unit+')</span>'+
+   '<span class="lab" style="flex-basis:100%;color:var(--text-faint)">'+L.note+'</span>';
+}
+
+function drawRanks(){
+  var L=LAYERS.filter(function(l){return l.id===cur;})[0];
+  var key=L.bivar?'q133_conflict_intensity':L.id;
+  var list=Object.keys(C).map(function(k){return C[k];}).filter(function(d){return d[key]!==undefined&&d[key]!==null;});
+  var desc=!(L.dir===-1);
+  list.sort(function(a,b){return desc?b[key]-a[key]:a[key]-b[key];});
+  document.getElementById('ranktitle').textContent=(L.bivar?'Conflict intensity':L.name)+' // ranked';
+  var h='';
+  list.forEach(function(d){
+    h+='<div class="rankrow" data-iso="'+d.iso+'"><i style="background:'+fillFor(d.iso)+'"></i><span>'+d.name+'</span><span class="v">'+
+       (L.bivar?d.q133_conflict_intensity.toFixed(1):L.fmt(d[L.id]))+'</span></div>';
+  });
+  var miss=Object.keys(C).filter(function(k){return C[k][key]===undefined||C[k][key]===null;});
+  if(miss.length)h+='<div style="margin-top:10px;font-family:var(--font-mono);font-size:0.66rem;color:var(--text-faint);line-height:1.6">No data: '+miss.map(function(k){return C[k].name;}).join(', ')+'</div>';
+  var box=document.getElementById('ranks'); box.innerHTML=h;
+  box.querySelectorAll('.rankrow').forEach(function(r){
+    r.addEventListener('click',function(){pin(r.getAttribute('data-iso'));});
+    r.addEventListener('mouseenter',function(){paths[r.getAttribute('data-iso')].setAttribute('stroke-width',2.2);paths[r.getAttribute('data-iso')].setAttribute('stroke','#e8d5aa');});
+    r.addEventListener('mouseleave',function(){var p=paths[r.getAttribute('data-iso')];p.setAttribute('stroke','#0a0c10');p.setAttribute('stroke-width',0.8);});
+  });
+}
+
+function render(){
+  Object.keys(paths).forEach(function(iso){paths[iso].setAttribute('fill',fillFor(iso));});
+  drawScale(); drawRanks();
+  if(pinned)pin(pinned);
+}
+
+(function buildCtrls(){
+  var c=document.getElementById('ctrls');
+  LAYERS.forEach(function(L){
+    var b=document.createElement('button');
+    b.className='ctrl'+(L.id===cur?' on':''); b.textContent=L.name;
+    b.addEventListener('click',function(){
+      cur=L.id;
+      c.querySelectorAll('.ctrl').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on'); render();
+    });
+    c.appendChild(b);
+  });
+})();
+render();
+pin('MLI');
+</script>
+
+<script>
+window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;var p=h>0?(window.scrollY/h)*100:0;var el=document.getElementById('progress');if(el)el.style.width=p+'%';});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.section').forEach(function(s){obs.observe(s);});
+</script>
+
+</body>
+</html>
