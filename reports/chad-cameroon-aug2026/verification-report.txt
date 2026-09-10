@@ -1,0 +1,25 @@
+QAP VERIFICATION REPORT
+
+PASS | Workbook row count | 7598
+PASS | Represented event count | 24740
+PASS | ADMIN1 count | 33
+PASS | Active 2026 ADMIN1 count | 29
+PASS | Cameroon matched totals | {"events_2025": 3134, "events_2026": 4152, "fatalities_2025": 1214, "fatalities_2026": 1355}
+PASS | Chad matched totals | {"events_2025": 139, "events_2026": 300, "fatalities_2025": 273, "fatalities_2026": 349}
+PASS | Cameroon abduction | 802 -> 1245
+PASS | Chad mob violence | 15/40 -> 70/157
+PASS | Chad air/drone | 9 events / 23 fatalities
+PASS | PCA retained variance threshold | 0.7636
+
+ERROR LEDGER
+E01 | Extraction runtime | Artifact workbook daemon timed out on the first import attempt. | Retried with a longer daemon startup timeout.
+E02 | Extraction | A whole-sheet inspect returned a truncated value payload. | Read the worksheet through range.values and asserted 7,598 data rows.
+E03 | Period harmonisation | Using the 2025 week ending 30 August produced totals that did not match the analyst comparison period. | Matched 34 weekly observations: 4 Jan to 23 Aug 2025 against 3 Jan to 29 Aug 2026.
+E04 | Analyst notes cross-check | The notes list 400 fatalities for 2025 Cameroon attacks, while the workbook sums 399 for the Attack sub-event. | The publication uses the workbook value for the sub-event and retains 400 only for the broader violence-against-civilians event type.
+
+ADDITIONAL FACTUAL CROSS-CHECKS
+PASS | Cameroon dominant sub-event has no tie | ['Abduction/forced disappearance'] at 1245
+PASS | Cameroon battle fatalities | 857
+PASS | Chad mob violence fatality share | 44.986%
+PASS | Persistent multi-vector membership | ['Cameroon: Extreme-Nord', 'Cameroon: Nord-Ouest', 'Cameroon: Sud-Ouest', 'Chad: Lac']
+PASS | One-member cluster retained | ['Cameroon: Adamaoua']

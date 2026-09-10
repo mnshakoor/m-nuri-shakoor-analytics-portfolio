@@ -1,0 +1,7611 @@
+{
+  "profile": {
+    "shape": "Event stream with weekly aggregated category-geography records",
+    "rows": 7598,
+    "represented_events": 24740,
+    "fatalities": 16818,
+    "admin1_units": 33,
+    "active_admin1_2026": 29,
+    "date_min": "2020-01-04",
+    "date_max": "2026-08-29",
+    "missing": {
+      "WEEK": 0,
+      "REGION": 0,
+      "COUNTRY": 0,
+      "ADMIN1": 0,
+      "EVENT_TYPE": 0,
+      "SUB_EVENT_TYPE": 0,
+      "EVENTS": 0,
+      "FATALITIES": 0,
+      "POPULATION_EXPOSURE": 2129,
+      "DISORDER_TYPE": 0,
+      "ID": 0,
+      "CENTROID_LATITUDE": 0,
+      "CENTROID_LONGITUDE": 0
+    },
+    "mappable_admin1": 33
+  },
+  "country_summary": {
+    "Cameroon": {
+      "events_2025": 3134,
+      "events_2026": 4152,
+      "events_change_pct": 32.48245054243778,
+      "fatalities_2025": 1214,
+      "fatalities_2026": 1355,
+      "fatalities_change_pct": 11.614497528830313,
+      "event_type_2025": {
+        "Violence against civilians": {
+          "events": 1425,
+          "fatalities": 400
+        },
+        "Protests": {
+          "events": 41,
+          "fatalities": 0
+        },
+        "Riots": {
+          "events": 121,
+          "fatalities": 39
+        },
+        "Strategic developments": {
+          "events": 949,
+          "fatalities": 3
+        },
+        "Battles": {
+          "events": 559,
+          "fatalities": 732
+        },
+        "Explosions/Remote violence": {
+          "events": 39,
+          "fatalities": 40
+        }
+      },
+      "event_type_2026": {
+        "Violence against civilians": {
+          "events": 2014,
+          "fatalities": 414
+        },
+        "Protests": {
+          "events": 75,
+          "fatalities": 0
+        },
+        "Riots": {
+          "events": 218,
+          "fatalities": 40
+        },
+        "Battles": {
+          "events": 706,
+          "fatalities": 857
+        },
+        "Explosions/Remote violence": {
+          "events": 30,
+          "fatalities": 44
+        },
+        "Strategic developments": {
+          "events": 1109,
+          "fatalities": 0
+        }
+      },
+      "sub_event_2025": {
+        "Abduction/forced disappearance": {
+          "events": 802,
+          "fatalities": 0
+        },
+        "Peaceful protest": {
+          "events": 34,
+          "fatalities": 0
+        },
+        "Mob violence": {
+          "events": 118,
+          "fatalities": 37
+        },
+        "Violent demonstration": {
+          "events": 3,
+          "fatalities": 2
+        },
+        "Arrests": {
+          "events": 63,
+          "fatalities": 0
+        },
+        "Other": {
+          "events": 233,
+          "fatalities": 0
+        },
+        "Armed clash": {
+          "events": 559,
+          "fatalities": 732
+        },
+        "Air/drone strike": {
+          "events": 1,
+          "fatalities": 2
+        },
+        "Grenade": {
+          "events": 1,
+          "fatalities": 0
+        },
+        "Remote explosive/landmine/IED": {
+          "events": 37,
+          "fatalities": 38
+        },
+        "Protest with intervention": {
+          "events": 7,
+          "fatalities": 0
+        },
+        "Agreement": {
+          "events": 14,
+          "fatalities": 0
+        },
+        "Change to group/activity": {
+          "events": 9,
+          "fatalities": 0
+        },
+        "Disrupted weapons use": {
+          "events": 35,
+          "fatalities": 3
+        },
+        "Looting/property destruction": {
+          "events": 595,
+          "fatalities": 0
+        },
+        "Attack": {
+          "events": 600,
+          "fatalities": 399
+        },
+        "Sexual violence": {
+          "events": 23,
+          "fatalities": 1
+        }
+      },
+      "sub_event_2026": {
+        "Abduction/forced disappearance": {
+          "events": 1245,
+          "fatalities": 0
+        },
+        "Peaceful protest": {
+          "events": 66,
+          "fatalities": 0
+        },
+        "Protest with intervention": {
+          "events": 9,
+          "fatalities": 0
+        },
+        "Mob violence": {
+          "events": 211,
+          "fatalities": 34
+        },
+        "Armed clash": {
+          "events": 706,
+          "fatalities": 857
+        },
+        "Air/drone strike": {
+          "events": 1,
+          "fatalities": 20
+        },
+        "Remote explosive/landmine/IED": {
+          "events": 24,
+          "fatalities": 24
+        },
+        "Shelling/artillery/missile attack": {
+          "events": 5,
+          "fatalities": 0
+        },
+        "Violent demonstration": {
+          "events": 7,
+          "fatalities": 6
+        },
+        "Agreement": {
+          "events": 4,
+          "fatalities": 0
+        },
+        "Arrests": {
+          "events": 115,
+          "fatalities": 0
+        },
+        "Change to group/activity": {
+          "events": 9,
+          "fatalities": 0
+        },
+        "Disrupted weapons use": {
+          "events": 41,
+          "fatalities": 0
+        },
+        "Looting/property destruction": {
+          "events": 630,
+          "fatalities": 0
+        },
+        "Other": {
+          "events": 310,
+          "fatalities": 0
+        },
+        "Attack": {
+          "events": 716,
+          "fatalities": 414
+        },
+        "Sexual violence": {
+          "events": 53,
+          "fatalities": 0
+        }
+      },
+      "disorder_2025": {
+        "Political violence": {
+          "events": 2141,
+          "fatalities": 1209
+        },
+        "Demonstrations": {
+          "events": 44,
+          "fatalities": 2
+        },
+        "Strategic developments": {
+          "events": 949,
+          "fatalities": 3
+        }
+      },
+      "disorder_2026": {
+        "Political violence": {
+          "events": 2961,
+          "fatalities": 1349
+        },
+        "Demonstrations": {
+          "events": 82,
+          "fatalities": 6
+        },
+        "Strategic developments": {
+          "events": 1109,
+          "fatalities": 0
+        }
+      }
+    },
+    "Chad": {
+      "events_2025": 139,
+      "events_2026": 300,
+      "events_change_pct": 115.8273381294964,
+      "fatalities_2025": 273,
+      "fatalities_2026": 349,
+      "fatalities_change_pct": 27.83882783882784,
+      "event_type_2025": {
+        "Riots": {
+          "events": 16,
+          "fatalities": 40
+        },
+        "Violence against civilians": {
+          "events": 60,
+          "fatalities": 150
+        },
+        "Battles": {
+          "events": 15,
+          "fatalities": 77
+        },
+        "Strategic developments": {
+          "events": 28,
+          "fatalities": 0
+        },
+        "Protests": {
+          "events": 18,
+          "fatalities": 4
+        },
+        "Explosions/Remote violence": {
+          "events": 2,
+          "fatalities": 2
+        }
+      },
+      "event_type_2026": {
+        "Riots": {
+          "events": 72,
+          "fatalities": 157
+        },
+        "Violence against civilians": {
+          "events": 102,
+          "fatalities": 64
+        },
+        "Battles": {
+          "events": 28,
+          "fatalities": 104
+        },
+        "Strategic developments": {
+          "events": 78,
+          "fatalities": 0
+        },
+        "Explosions/Remote violence": {
+          "events": 12,
+          "fatalities": 24
+        },
+        "Protests": {
+          "events": 8,
+          "fatalities": 0
+        }
+      },
+      "sub_event_2025": {
+        "Mob violence": {
+          "events": 15,
+          "fatalities": 40
+        },
+        "Attack": {
+          "events": 47,
+          "fatalities": 150
+        },
+        "Armed clash": {
+          "events": 15,
+          "fatalities": 77
+        },
+        "Arrests": {
+          "events": 7,
+          "fatalities": 0
+        },
+        "Violent demonstration": {
+          "events": 1,
+          "fatalities": 0
+        },
+        "Agreement": {
+          "events": 6,
+          "fatalities": 0
+        },
+        "Looting/property destruction": {
+          "events": 7,
+          "fatalities": 0
+        },
+        "Abduction/forced disappearance": {
+          "events": 10,
+          "fatalities": 0
+        },
+        "Peaceful protest": {
+          "events": 16,
+          "fatalities": 0
+        },
+        "Excessive force against protesters": {
+          "events": 2,
+          "fatalities": 4
+        },
+        "Remote explosive/landmine/IED": {
+          "events": 1,
+          "fatalities": 2
+        },
+        "Disrupted weapons use": {
+          "events": 1,
+          "fatalities": 0
+        },
+        "Sexual violence": {
+          "events": 3,
+          "fatalities": 0
+        },
+        "Change to group/activity": {
+          "events": 2,
+          "fatalities": 0
+        },
+        "Headquarters or base established": {
+          "events": 2,
+          "fatalities": 0
+        },
+        "Other": {
+          "events": 3,
+          "fatalities": 0
+        },
+        "Grenade": {
+          "events": 1,
+          "fatalities": 0
+        }
+      },
+      "sub_event_2026": {
+        "Mob violence": {
+          "events": 70,
+          "fatalities": 157
+        },
+        "Attack": {
+          "events": 62,
+          "fatalities": 61
+        },
+        "Armed clash": {
+          "events": 28,
+          "fatalities": 104
+        },
+        "Disrupted weapons use": {
+          "events": 12,
+          "fatalities": 0
+        },
+        "Air/drone strike": {
+          "events": 9,
+          "fatalities": 23
+        },
+        "Looting/property destruction": {
+          "events": 17,
+          "fatalities": 0
+        },
+        "Remote explosive/landmine/IED": {
+          "events": 2,
+          "fatalities": 1
+        },
+        "Agreement": {
+          "events": 2,
+          "fatalities": 0
+        },
+        "Change to group/activity": {
+          "events": 25,
+          "fatalities": 0
+        },
+        "Other": {
+          "events": 16,
+          "fatalities": 0
+        },
+        "Abduction/forced disappearance": {
+          "events": 37,
+          "fatalities": 0
+        },
+        "Peaceful protest": {
+          "events": 8,
+          "fatalities": 0
+        },
+        "Sexual violence": {
+          "events": 3,
+          "fatalities": 3
+        },
+        "Arrests": {
+          "events": 6,
+          "fatalities": 0
+        },
+        "Violent demonstration": {
+          "events": 2,
+          "fatalities": 0
+        },
+        "Shelling/artillery/missile attack": {
+          "events": 1,
+          "fatalities": 0
+        }
+      },
+      "disorder_2025": {
+        "Political violence": {
+          "events": 92,
+          "fatalities": 269
+        },
+        "Strategic developments": {
+          "events": 28,
+          "fatalities": 0
+        },
+        "Demonstrations": {
+          "events": 17,
+          "fatalities": 0
+        },
+        "Political violence; Demonstrations": {
+          "events": 2,
+          "fatalities": 4
+        }
+      },
+      "disorder_2026": {
+        "Political violence": {
+          "events": 212,
+          "fatalities": 349
+        },
+        "Strategic developments": {
+          "events": 78,
+          "fatalities": 0
+        },
+        "Demonstrations": {
+          "events": 10,
+          "fatalities": 0
+        }
+      }
+    }
+  },
+  "admin1": [
+    {
+      "country": "Cameroon",
+      "admin1": "Adamaoua",
+      "events_2025": 2,
+      "fatalities_2025": 0,
+      "events_2026": 1,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 1.0,
+      "coercive_share": 1.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.00024084778420038535,
+      "lat": 7.0781,
+      "lon": 13.218,
+      "abduction": 1,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.5,
+      "coercive_residual": 0.817154186281015,
+      "cluster": 3,
+      "cluster_name": "Single-record coercive outlier",
+      "pc1": 0.8771163997736697,
+      "pc2": 4.049958106773642
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Centre",
+      "events_2025": 10,
+      "fatalities_2025": 1,
+      "events_2026": 6,
+      "fatalities_2026": 1,
+      "lethality_per100": 16.666666666666668,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.17647058823529413,
+      "country_event_share": 0.001445086705202312,
+      "lat": 4.6837,
+      "lon": 11.854,
+      "abduction": 0,
+      "mob_violence": 4,
+      "air_drone": 0,
+      "acceleration": -0.4,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.0875170518114377,
+      "pc2": -0.14138252609151555
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Est",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 0,
+      "fatalities_2026": 0,
+      "lethality_per100": null,
+      "civilian_share": null,
+      "coercive_share": null,
+      "diversity": null,
+      "persistence": null,
+      "country_event_share": null,
+      "lat": 3.8946,
+      "lon": 13.8592,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": null
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Extreme-Nord",
+      "events_2025": 816,
+      "fatalities_2025": 441,
+      "events_2026": 856,
+      "fatalities_2026": 438,
+      "lethality_per100": 51.16822429906542,
+      "civilian_share": 0.4544392523364486,
+      "coercive_share": 0.48598130841121495,
+      "diversity": 17,
+      "persistence": 1.0294117647058822,
+      "country_event_share": 0.20616570327552985,
+      "lat": 11.4565,
+      "lon": 14.792,
+      "abduction": 226,
+      "mob_violence": 29,
+      "air_drone": 1,
+      "acceleration": 0.049019607843137254,
+      "coercive_residual": 0.6796184231797071,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 3.805249819251473,
+      "pc2": -0.5556514873105404
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Littoral",
+      "events_2025": 6,
+      "fatalities_2025": 2,
+      "events_2026": 10,
+      "fatalities_2026": 4,
+      "lethality_per100": 40.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.29411764705882354,
+      "country_event_share": 0.0024084778420038534,
+      "lat": 4.2905,
+      "lon": 10.2235,
+      "abduction": 0,
+      "mob_violence": 6,
+      "air_drone": 0,
+      "acceleration": 0.6666666666666666,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.9310742101622227,
+      "pc2": -0.35172071095446744
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Nord",
+      "events_2025": 10,
+      "fatalities_2025": 3,
+      "events_2026": 7,
+      "fatalities_2026": 2,
+      "lethality_per100": 28.571428571428573,
+      "civilian_share": 0.42857142857142855,
+      "coercive_share": 0.14285714285714285,
+      "diversity": 4,
+      "persistence": 0.14705882352941177,
+      "country_event_share": 0.0016859344894026974,
+      "lat": 8.6371,
+      "lon": 13.8726,
+      "abduction": 1,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": -0.3,
+      "coercive_residual": -0.6166353426810286,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.44273765954604083,
+      "pc2": 0.8939846671582158
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Nord-Ouest",
+      "events_2025": 1564,
+      "fatalities_2025": 376,
+      "events_2026": 2069,
+      "fatalities_2026": 337,
+      "lethality_per100": 16.288061865635573,
+      "civilian_share": 0.5239246012566457,
+      "coercive_share": 0.5543740937651039,
+      "diversity": 14,
+      "persistence": 1.0294117647058822,
+      "country_event_share": 0.4983140655105973,
+      "lat": 6.4342,
+      "lon": 10.4682,
+      "abduction": 738,
+      "mob_violence": 104,
+      "air_drone": 0,
+      "acceleration": 0.32289002557544755,
+      "coercive_residual": 0.7089699409683055,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 4.985539250569948,
+      "pc2": -0.5508223556442434
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Ouest",
+      "events_2025": 1,
+      "fatalities_2025": 2,
+      "events_2026": 5,
+      "fatalities_2026": 2,
+      "lethality_per100": 40.0,
+      "civilian_share": 0.2,
+      "coercive_share": 0.2,
+      "diversity": 4,
+      "persistence": 0.11764705882352941,
+      "country_event_share": 0.0012042389210019267,
+      "lat": 5.5347,
+      "lon": 10.583,
+      "abduction": 1,
+      "mob_violence": 2,
+      "air_drone": 0,
+      "acceleration": 4.0,
+      "coercive_residual": 0.4283269713840739,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.6367621125627958,
+      "pc2": 0.516798025767025
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Sud",
+      "events_2025": 3,
+      "fatalities_2025": 1,
+      "events_2026": 0,
+      "fatalities_2026": 0,
+      "lethality_per100": null,
+      "civilian_share": null,
+      "coercive_share": null,
+      "diversity": null,
+      "persistence": null,
+      "country_event_share": null,
+      "lat": 2.9212,
+      "lon": 11.3475,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -1.0
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Sud-Ouest",
+      "events_2025": 722,
+      "fatalities_2025": 388,
+      "events_2026": 1198,
+      "fatalities_2026": 571,
+      "lethality_per100": 47.66277128547579,
+      "civilian_share": 0.44741235392320533,
+      "coercive_share": 0.3981636060100167,
+      "diversity": 14,
+      "persistence": 1.0294117647058822,
+      "country_event_share": 0.2885356454720617,
+      "lat": 5.236,
+      "lon": 9.2808,
+      "abduction": 278,
+      "mob_violence": 63,
+      "air_drone": 0,
+      "acceleration": 0.6592797783933518,
+      "coercive_residual": 0.349307738985037,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 3.7095642355157317,
+      "pc2": -0.6972460618186143
+    },
+    {
+      "country": "Chad",
+      "admin1": "Barh El Gazel",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 0,
+      "fatalities_2026": 0,
+      "lethality_per100": null,
+      "civilian_share": null,
+      "coercive_share": null,
+      "diversity": null,
+      "persistence": null,
+      "country_event_share": null,
+      "lat": 14.6819,
+      "lon": 16.9986,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": null
+    },
+    {
+      "country": "Chad",
+      "admin1": "Batha",
+      "events_2025": 3,
+      "fatalities_2025": 19,
+      "events_2026": 6,
+      "fatalities_2026": 15,
+      "lethality_per100": 250.0,
+      "civilian_share": 0.5,
+      "coercive_share": 0.0,
+      "diversity": 2,
+      "persistence": 0.17647058823529413,
+      "country_event_share": 0.02,
+      "lat": 14.4504,
+      "lon": 18.9154,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": 1.0,
+      "coercive_residual": -1.4489604800919733,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.0618615185977627,
+      "pc2": -0.14223987724415552
+    },
+    {
+      "country": "Chad",
+      "admin1": "Borkou",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 4,
+      "fatalities_2026": 5,
+      "lethality_per100": 125.0,
+      "civilian_share": 0.25,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.013333333333333334,
+      "lat": 17.4744,
+      "lon": 18.1475,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": null,
+      "coercive_residual": -0.5589201562160674,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.1870912091728083,
+      "pc2": -0.03678515296136015
+    },
+    {
+      "country": "Chad",
+      "admin1": "Chari Baguirmi",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 1,
+      "fatalities_2026": 5,
+      "lethality_per100": 500.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.0033333333333333335,
+      "lat": 11.1026,
+      "lon": 16.3757,
+      "abduction": 0,
+      "mob_violence": 1,
+      "air_drone": 0,
+      "acceleration": null,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -2.3739913138716524,
+      "pc2": -2.0226515899113244
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ennedi Est",
+      "events_2025": 2,
+      "fatalities_2025": 6,
+      "events_2026": 1,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.0033333333333333335,
+      "lat": 17.4347,
+      "lon": 23.1751,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 1,
+      "acceleration": -0.5,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.5084933380413552,
+      "pc2": 0.18645254122874275
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ennedi Ouest",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 0,
+      "fatalities_2026": 0,
+      "lethality_per100": null,
+      "civilian_share": null,
+      "coercive_share": null,
+      "diversity": null,
+      "persistence": null,
+      "country_event_share": null,
+      "lat": 18.3366,
+      "lon": 20.9188,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": null
+    },
+    {
+      "country": "Chad",
+      "admin1": "Guera",
+      "events_2025": 2,
+      "fatalities_2025": 6,
+      "events_2026": 8,
+      "fatalities_2026": 10,
+      "lethality_per100": 125.0,
+      "civilian_share": 0.125,
+      "coercive_share": 0.25,
+      "diversity": 4,
+      "persistence": 0.20588235294117646,
+      "country_event_share": 0.02666666666666667,
+      "lat": 11.4606,
+      "lon": 18.1047,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": 3.0,
+      "coercive_residual": 0.8976488342530857,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.5220680530519795,
+      "pc2": -0.04887426529403381
+    },
+    {
+      "country": "Chad",
+      "admin1": "Hadjer-Lamis",
+      "events_2025": 3,
+      "fatalities_2025": 4,
+      "events_2026": 2,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 0.5,
+      "coercive_share": 0.0,
+      "diversity": 2,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.006666666666666667,
+      "lat": 12.4213,
+      "lon": 15.4845,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.3333333333333333,
+      "coercive_residual": -1.4489604800919733,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.8801778405727984,
+      "pc2": 1.0951791708528011
+    },
+    {
+      "country": "Chad",
+      "admin1": "Kanem",
+      "events_2025": 2,
+      "fatalities_2025": 2,
+      "events_2026": 2,
+      "fatalities_2026": 2,
+      "lethality_per100": 100.0,
+      "civilian_share": 1.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.006666666666666667,
+      "lat": 14.9824,
+      "lon": 15.0332,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": 0.0,
+      "coercive_residual": -3.2290411278437854,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.705071691191044,
+      "pc2": 1.7218467403466071
+    },
+    {
+      "country": "Chad",
+      "admin1": "Lac",
+      "events_2025": 39,
+      "fatalities_2025": 32,
+      "events_2026": 88,
+      "fatalities_2026": 66,
+      "lethality_per100": 75.0,
+      "civilian_share": 0.5340909090909091,
+      "coercive_share": 0.38636363636363635,
+      "diversity": 11,
+      "persistence": 0.7647058823529411,
+      "country_event_share": 0.29333333333333333,
+      "lat": 13.7534,
+      "lon": 14.1757,
+      "abduction": 32,
+      "mob_violence": 13,
+      "air_drone": 3,
+      "acceleration": 1.2564102564102564,
+      "coercive_residual": -0.007026880163196525,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 2.985567406237971,
+      "pc2": -0.24886082958885924
+    },
+    {
+      "country": "Chad",
+      "admin1": "Logone Occidental",
+      "events_2025": 7,
+      "fatalities_2025": 65,
+      "events_2026": 5,
+      "fatalities_2026": 6,
+      "lethality_per100": 120.0,
+      "civilian_share": 0.2,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.11764705882352941,
+      "country_event_share": 0.016666666666666666,
+      "lat": 8.7691,
+      "lon": 15.9364,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": -0.2857142857142857,
+      "coercive_residual": -0.3809120914408862,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.1132053908313155,
+      "pc2": -0.1747452724364377
+    },
+    {
+      "country": "Chad",
+      "admin1": "Logone Oriental",
+      "events_2025": 17,
+      "fatalities_2025": 18,
+      "events_2026": 15,
+      "fatalities_2026": 12,
+      "lethality_per100": 80.0,
+      "civilian_share": 0.06666666666666667,
+      "coercive_share": 0.06666666666666667,
+      "diversity": 6,
+      "persistence": 0.35294117647058826,
+      "country_event_share": 0.05,
+      "lat": 8.3,
+      "lon": 16.4621,
+      "abduction": 0,
+      "mob_violence": 9,
+      "air_drone": 0,
+      "acceleration": -0.11764705882352941,
+      "coercive_residual": 0.363522435567917,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.20939811121886492,
+      "pc2": -0.6123225976387766
+    },
+    {
+      "country": "Chad",
+      "admin1": "Mandoul",
+      "events_2025": 4,
+      "fatalities_2025": 3,
+      "events_2026": 10,
+      "fatalities_2026": 5,
+      "lethality_per100": 50.0,
+      "civilian_share": 0.1,
+      "coercive_share": 0.6,
+      "diversity": 3,
+      "persistence": 0.14705882352941177,
+      "country_event_share": 0.03333333333333333,
+      "lat": 8.7112,
+      "lon": 17.5787,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": 1.5,
+      "coercive_residual": 2.4028212265843565,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.0709407772900128,
+      "pc2": 0.9806549352630234
+    },
+    {
+      "country": "Chad",
+      "admin1": "Mayo Kebbi Est",
+      "events_2025": 1,
+      "fatalities_2025": 0,
+      "events_2026": 7,
+      "fatalities_2026": 13,
+      "lethality_per100": 185.71428571428572,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.11764705882352941,
+      "country_event_share": 0.023333333333333334,
+      "lat": 10.2098,
+      "lon": 15.8059,
+      "abduction": 0,
+      "mob_violence": 7,
+      "air_drone": 0,
+      "acceleration": 6.0,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.5978228204565517,
+      "pc2": -0.7544338443103514
+    },
+    {
+      "country": "Chad",
+      "admin1": "Mayo Kebbi Ouest",
+      "events_2025": 2,
+      "fatalities_2025": 22,
+      "events_2026": 7,
+      "fatalities_2026": 2,
+      "lethality_per100": 28.571428571428573,
+      "civilian_share": 0.42857142857142855,
+      "coercive_share": 0.42857142857142855,
+      "diversity": 5,
+      "persistence": 0.20588235294117646,
+      "country_event_share": 0.023333333333333334,
+      "lat": 9.2323,
+      "lon": 14.8601,
+      "abduction": 1,
+      "mob_violence": 1,
+      "air_drone": 0,
+      "acceleration": 2.5,
+      "coercive_residual": 0.5394204613546286,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": 0.2815492555674042,
+      "pc2": 1.2608705695549822
+    },
+    {
+      "country": "Chad",
+      "admin1": "Moyen-Chari",
+      "events_2025": 2,
+      "fatalities_2025": 0,
+      "events_2026": 21,
+      "fatalities_2026": 59,
+      "lethality_per100": 280.95238095238096,
+      "civilian_share": 0.47619047619047616,
+      "coercive_share": 0.047619047619047616,
+      "diversity": 6,
+      "persistence": 0.2647058823529412,
+      "country_event_share": 0.07,
+      "lat": 9.3213,
+      "lon": 18.8631,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": 9.5,
+      "coercive_residual": -1.1715187676216583,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -0.2681074025197958,
+      "pc2": -0.6745120663507982
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ndjamena",
+      "events_2025": 29,
+      "fatalities_2025": 23,
+      "events_2026": 39,
+      "fatalities_2026": 9,
+      "lethality_per100": 23.076923076923077,
+      "civilian_share": 0.1794871794871795,
+      "coercive_share": 0.20512820512820512,
+      "diversity": 9,
+      "persistence": 0.7058823529411765,
+      "country_event_share": 0.13,
+      "lat": 12.1523,
+      "lon": 15.0196,
+      "abduction": 1,
+      "mob_violence": 6,
+      "air_drone": 0,
+      "acceleration": 0.3448275862068966,
+      "coercive_residual": 0.5221056405950446,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": 1.4524782822403057,
+      "pc2": -0.5495795609438631
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ouaddai",
+      "events_2025": 14,
+      "fatalities_2025": 30,
+      "events_2026": 30,
+      "fatalities_2026": 11,
+      "lethality_per100": 36.666666666666664,
+      "civilian_share": 0.43333333333333335,
+      "coercive_share": 0.1,
+      "diversity": 10,
+      "persistence": 0.4411764705882353,
+      "country_event_share": 0.1,
+      "lat": 13.5147,
+      "lon": 21.2678,
+      "abduction": 2,
+      "mob_violence": 7,
+      "air_drone": 0,
+      "acceleration": 1.1428571428571428,
+      "coercive_residual": -0.8069968623125852,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": 1.048523628414619,
+      "pc2": -0.05774027259841902
+    },
+    {
+      "country": "Chad",
+      "admin1": "Salamat",
+      "events_2025": 3,
+      "fatalities_2025": 27,
+      "events_2026": 2,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 2,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.006666666666666667,
+      "lat": 10.6118,
+      "lon": 20.7096,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.3333333333333333,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.3852075546825455,
+      "pc2": 0.11627611196986411
+    },
+    {
+      "country": "Chad",
+      "admin1": "Sila",
+      "events_2025": 3,
+      "fatalities_2025": 14,
+      "events_2026": 9,
+      "fatalities_2026": 4,
+      "lethality_per100": 44.44444444444444,
+      "civilian_share": 0.4444444444444444,
+      "coercive_share": 0.1111111111111111,
+      "diversity": 4,
+      "persistence": 0.17647058823529413,
+      "country_event_share": 0.03,
+      "lat": 11.996,
+      "lon": 21.4824,
+      "abduction": 0,
+      "mob_violence": 2,
+      "air_drone": 0,
+      "acceleration": 2.0,
+      "coercive_residual": -0.8015964843279052,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.3305783237735501,
+      "pc2": 0.712185357806754
+    },
+    {
+      "country": "Chad",
+      "admin1": "Tandjile",
+      "events_2025": 1,
+      "fatalities_2025": 0,
+      "events_2026": 2,
+      "fatalities_2026": 6,
+      "lethality_per100": 300.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.006666666666666667,
+      "lat": 9.6484,
+      "lon": 16.6525,
+      "abduction": 0,
+      "mob_violence": 2,
+      "air_drone": 0,
+      "acceleration": 1.0,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.9650257960669875,
+      "pc2": -1.1722266830870285
+    },
+    {
+      "country": "Chad",
+      "admin1": "Tibesti",
+      "events_2025": 3,
+      "fatalities_2025": 2,
+      "events_2026": 1,
+      "fatalities_2026": 2,
+      "lethality_per100": 200.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.0033333333333333335,
+      "lat": 20.2226,
+      "lon": 18.2624,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.6666666666666666,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.854692528373474,
+      "pc2": -0.6971891112272844
+    },
+    {
+      "country": "Chad",
+      "admin1": "Wadi Fira",
+      "events_2025": 2,
+      "fatalities_2025": 0,
+      "events_2026": 40,
+      "fatalities_2026": 117,
+      "lethality_per100": 292.5,
+      "civilian_share": 0.175,
+      "coercive_share": 0.1,
+      "diversity": 13,
+      "persistence": 0.5294117647058824,
+      "country_event_share": 0.13333333333333333,
+      "lat": 14.9451,
+      "lon": 21.4027,
+      "abduction": 1,
+      "mob_violence": 10,
+      "air_drone": 5,
+      "acceleration": 19.0,
+      "coercive_residual": 0.1127114723591845,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": 0.9862364262238731,
+      "pc2": -2.0452219613095854
+    }
+  ],
+  "active_admin1": [
+    {
+      "country": "Cameroon",
+      "admin1": "Adamaoua",
+      "events_2025": 2,
+      "fatalities_2025": 0,
+      "events_2026": 1,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 1.0,
+      "coercive_share": 1.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.00024084778420038535,
+      "lat": 7.0781,
+      "lon": 13.218,
+      "abduction": 1,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.5,
+      "coercive_residual": 0.817154186281015,
+      "cluster": 3,
+      "cluster_name": "Single-record coercive outlier",
+      "pc1": 0.8771163997736697,
+      "pc2": 4.049958106773642
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Centre",
+      "events_2025": 10,
+      "fatalities_2025": 1,
+      "events_2026": 6,
+      "fatalities_2026": 1,
+      "lethality_per100": 16.666666666666668,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.17647058823529413,
+      "country_event_share": 0.001445086705202312,
+      "lat": 4.6837,
+      "lon": 11.854,
+      "abduction": 0,
+      "mob_violence": 4,
+      "air_drone": 0,
+      "acceleration": -0.4,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.0875170518114377,
+      "pc2": -0.14138252609151555
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Extreme-Nord",
+      "events_2025": 816,
+      "fatalities_2025": 441,
+      "events_2026": 856,
+      "fatalities_2026": 438,
+      "lethality_per100": 51.16822429906542,
+      "civilian_share": 0.4544392523364486,
+      "coercive_share": 0.48598130841121495,
+      "diversity": 17,
+      "persistence": 1.0294117647058822,
+      "country_event_share": 0.20616570327552985,
+      "lat": 11.4565,
+      "lon": 14.792,
+      "abduction": 226,
+      "mob_violence": 29,
+      "air_drone": 1,
+      "acceleration": 0.049019607843137254,
+      "coercive_residual": 0.6796184231797071,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 3.805249819251473,
+      "pc2": -0.5556514873105404
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Littoral",
+      "events_2025": 6,
+      "fatalities_2025": 2,
+      "events_2026": 10,
+      "fatalities_2026": 4,
+      "lethality_per100": 40.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.29411764705882354,
+      "country_event_share": 0.0024084778420038534,
+      "lat": 4.2905,
+      "lon": 10.2235,
+      "abduction": 0,
+      "mob_violence": 6,
+      "air_drone": 0,
+      "acceleration": 0.6666666666666666,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.9310742101622227,
+      "pc2": -0.35172071095446744
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Nord",
+      "events_2025": 10,
+      "fatalities_2025": 3,
+      "events_2026": 7,
+      "fatalities_2026": 2,
+      "lethality_per100": 28.571428571428573,
+      "civilian_share": 0.42857142857142855,
+      "coercive_share": 0.14285714285714285,
+      "diversity": 4,
+      "persistence": 0.14705882352941177,
+      "country_event_share": 0.0016859344894026974,
+      "lat": 8.6371,
+      "lon": 13.8726,
+      "abduction": 1,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": -0.3,
+      "coercive_residual": -0.6166353426810286,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.44273765954604083,
+      "pc2": 0.8939846671582158
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Nord-Ouest",
+      "events_2025": 1564,
+      "fatalities_2025": 376,
+      "events_2026": 2069,
+      "fatalities_2026": 337,
+      "lethality_per100": 16.288061865635573,
+      "civilian_share": 0.5239246012566457,
+      "coercive_share": 0.5543740937651039,
+      "diversity": 14,
+      "persistence": 1.0294117647058822,
+      "country_event_share": 0.4983140655105973,
+      "lat": 6.4342,
+      "lon": 10.4682,
+      "abduction": 738,
+      "mob_violence": 104,
+      "air_drone": 0,
+      "acceleration": 0.32289002557544755,
+      "coercive_residual": 0.7089699409683055,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 4.985539250569948,
+      "pc2": -0.5508223556442434
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Ouest",
+      "events_2025": 1,
+      "fatalities_2025": 2,
+      "events_2026": 5,
+      "fatalities_2026": 2,
+      "lethality_per100": 40.0,
+      "civilian_share": 0.2,
+      "coercive_share": 0.2,
+      "diversity": 4,
+      "persistence": 0.11764705882352941,
+      "country_event_share": 0.0012042389210019267,
+      "lat": 5.5347,
+      "lon": 10.583,
+      "abduction": 1,
+      "mob_violence": 2,
+      "air_drone": 0,
+      "acceleration": 4.0,
+      "coercive_residual": 0.4283269713840739,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.6367621125627958,
+      "pc2": 0.516798025767025
+    },
+    {
+      "country": "Cameroon",
+      "admin1": "Sud-Ouest",
+      "events_2025": 722,
+      "fatalities_2025": 388,
+      "events_2026": 1198,
+      "fatalities_2026": 571,
+      "lethality_per100": 47.66277128547579,
+      "civilian_share": 0.44741235392320533,
+      "coercive_share": 0.3981636060100167,
+      "diversity": 14,
+      "persistence": 1.0294117647058822,
+      "country_event_share": 0.2885356454720617,
+      "lat": 5.236,
+      "lon": 9.2808,
+      "abduction": 278,
+      "mob_violence": 63,
+      "air_drone": 0,
+      "acceleration": 0.6592797783933518,
+      "coercive_residual": 0.349307738985037,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 3.7095642355157317,
+      "pc2": -0.6972460618186143
+    },
+    {
+      "country": "Chad",
+      "admin1": "Batha",
+      "events_2025": 3,
+      "fatalities_2025": 19,
+      "events_2026": 6,
+      "fatalities_2026": 15,
+      "lethality_per100": 250.0,
+      "civilian_share": 0.5,
+      "coercive_share": 0.0,
+      "diversity": 2,
+      "persistence": 0.17647058823529413,
+      "country_event_share": 0.02,
+      "lat": 14.4504,
+      "lon": 18.9154,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": 1.0,
+      "coercive_residual": -1.4489604800919733,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.0618615185977627,
+      "pc2": -0.14223987724415552
+    },
+    {
+      "country": "Chad",
+      "admin1": "Borkou",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 4,
+      "fatalities_2026": 5,
+      "lethality_per100": 125.0,
+      "civilian_share": 0.25,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.013333333333333334,
+      "lat": 17.4744,
+      "lon": 18.1475,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": null,
+      "coercive_residual": -0.5589201562160674,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.1870912091728083,
+      "pc2": -0.03678515296136015
+    },
+    {
+      "country": "Chad",
+      "admin1": "Chari Baguirmi",
+      "events_2025": 0,
+      "fatalities_2025": 0,
+      "events_2026": 1,
+      "fatalities_2026": 5,
+      "lethality_per100": 500.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.0033333333333333335,
+      "lat": 11.1026,
+      "lon": 16.3757,
+      "abduction": 0,
+      "mob_violence": 1,
+      "air_drone": 0,
+      "acceleration": null,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -2.3739913138716524,
+      "pc2": -2.0226515899113244
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ennedi Est",
+      "events_2025": 2,
+      "fatalities_2025": 6,
+      "events_2026": 1,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.0033333333333333335,
+      "lat": 17.4347,
+      "lon": 23.1751,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 1,
+      "acceleration": -0.5,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.5084933380413552,
+      "pc2": 0.18645254122874275
+    },
+    {
+      "country": "Chad",
+      "admin1": "Guera",
+      "events_2025": 2,
+      "fatalities_2025": 6,
+      "events_2026": 8,
+      "fatalities_2026": 10,
+      "lethality_per100": 125.0,
+      "civilian_share": 0.125,
+      "coercive_share": 0.25,
+      "diversity": 4,
+      "persistence": 0.20588235294117646,
+      "country_event_share": 0.02666666666666667,
+      "lat": 11.4606,
+      "lon": 18.1047,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": 3.0,
+      "coercive_residual": 0.8976488342530857,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.5220680530519795,
+      "pc2": -0.04887426529403381
+    },
+    {
+      "country": "Chad",
+      "admin1": "Hadjer-Lamis",
+      "events_2025": 3,
+      "fatalities_2025": 4,
+      "events_2026": 2,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 0.5,
+      "coercive_share": 0.0,
+      "diversity": 2,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.006666666666666667,
+      "lat": 12.4213,
+      "lon": 15.4845,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.3333333333333333,
+      "coercive_residual": -1.4489604800919733,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.8801778405727984,
+      "pc2": 1.0951791708528011
+    },
+    {
+      "country": "Chad",
+      "admin1": "Kanem",
+      "events_2025": 2,
+      "fatalities_2025": 2,
+      "events_2026": 2,
+      "fatalities_2026": 2,
+      "lethality_per100": 100.0,
+      "civilian_share": 1.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.006666666666666667,
+      "lat": 14.9824,
+      "lon": 15.0332,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": 0.0,
+      "coercive_residual": -3.2290411278437854,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.705071691191044,
+      "pc2": 1.7218467403466071
+    },
+    {
+      "country": "Chad",
+      "admin1": "Lac",
+      "events_2025": 39,
+      "fatalities_2025": 32,
+      "events_2026": 88,
+      "fatalities_2026": 66,
+      "lethality_per100": 75.0,
+      "civilian_share": 0.5340909090909091,
+      "coercive_share": 0.38636363636363635,
+      "diversity": 11,
+      "persistence": 0.7647058823529411,
+      "country_event_share": 0.29333333333333333,
+      "lat": 13.7534,
+      "lon": 14.1757,
+      "abduction": 32,
+      "mob_violence": 13,
+      "air_drone": 3,
+      "acceleration": 1.2564102564102564,
+      "coercive_residual": -0.007026880163196525,
+      "cluster": 1,
+      "cluster_name": "Persistent multi-vector hotspots",
+      "pc1": 2.985567406237971,
+      "pc2": -0.24886082958885924
+    },
+    {
+      "country": "Chad",
+      "admin1": "Logone Occidental",
+      "events_2025": 7,
+      "fatalities_2025": 65,
+      "events_2026": 5,
+      "fatalities_2026": 6,
+      "lethality_per100": 120.0,
+      "civilian_share": 0.2,
+      "coercive_share": 0.0,
+      "diversity": 3,
+      "persistence": 0.11764705882352941,
+      "country_event_share": 0.016666666666666666,
+      "lat": 8.7691,
+      "lon": 15.9364,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": -0.2857142857142857,
+      "coercive_residual": -0.3809120914408862,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.1132053908313155,
+      "pc2": -0.1747452724364377
+    },
+    {
+      "country": "Chad",
+      "admin1": "Logone Oriental",
+      "events_2025": 17,
+      "fatalities_2025": 18,
+      "events_2026": 15,
+      "fatalities_2026": 12,
+      "lethality_per100": 80.0,
+      "civilian_share": 0.06666666666666667,
+      "coercive_share": 0.06666666666666667,
+      "diversity": 6,
+      "persistence": 0.35294117647058826,
+      "country_event_share": 0.05,
+      "lat": 8.3,
+      "lon": 16.4621,
+      "abduction": 0,
+      "mob_violence": 9,
+      "air_drone": 0,
+      "acceleration": -0.11764705882352941,
+      "coercive_residual": 0.363522435567917,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.20939811121886492,
+      "pc2": -0.6123225976387766
+    },
+    {
+      "country": "Chad",
+      "admin1": "Mandoul",
+      "events_2025": 4,
+      "fatalities_2025": 3,
+      "events_2026": 10,
+      "fatalities_2026": 5,
+      "lethality_per100": 50.0,
+      "civilian_share": 0.1,
+      "coercive_share": 0.6,
+      "diversity": 3,
+      "persistence": 0.14705882352941177,
+      "country_event_share": 0.03333333333333333,
+      "lat": 8.7112,
+      "lon": 17.5787,
+      "abduction": 0,
+      "mob_violence": 3,
+      "air_drone": 0,
+      "acceleration": 1.5,
+      "coercive_residual": 2.4028212265843565,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.0709407772900128,
+      "pc2": 0.9806549352630234
+    },
+    {
+      "country": "Chad",
+      "admin1": "Mayo Kebbi Est",
+      "events_2025": 1,
+      "fatalities_2025": 0,
+      "events_2026": 7,
+      "fatalities_2026": 13,
+      "lethality_per100": 185.71428571428572,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.11764705882352941,
+      "country_event_share": 0.023333333333333334,
+      "lat": 10.2098,
+      "lon": 15.8059,
+      "abduction": 0,
+      "mob_violence": 7,
+      "air_drone": 0,
+      "acceleration": 6.0,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.5978228204565517,
+      "pc2": -0.7544338443103514
+    },
+    {
+      "country": "Chad",
+      "admin1": "Mayo Kebbi Ouest",
+      "events_2025": 2,
+      "fatalities_2025": 22,
+      "events_2026": 7,
+      "fatalities_2026": 2,
+      "lethality_per100": 28.571428571428573,
+      "civilian_share": 0.42857142857142855,
+      "coercive_share": 0.42857142857142855,
+      "diversity": 5,
+      "persistence": 0.20588235294117646,
+      "country_event_share": 0.023333333333333334,
+      "lat": 9.2323,
+      "lon": 14.8601,
+      "abduction": 1,
+      "mob_violence": 1,
+      "air_drone": 0,
+      "acceleration": 2.5,
+      "coercive_residual": 0.5394204613546286,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": 0.2815492555674042,
+      "pc2": 1.2608705695549822
+    },
+    {
+      "country": "Chad",
+      "admin1": "Moyen-Chari",
+      "events_2025": 2,
+      "fatalities_2025": 0,
+      "events_2026": 21,
+      "fatalities_2026": 59,
+      "lethality_per100": 280.95238095238096,
+      "civilian_share": 0.47619047619047616,
+      "coercive_share": 0.047619047619047616,
+      "diversity": 6,
+      "persistence": 0.2647058823529412,
+      "country_event_share": 0.07,
+      "lat": 9.3213,
+      "lon": 18.8631,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": 9.5,
+      "coercive_residual": -1.1715187676216583,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -0.2681074025197958,
+      "pc2": -0.6745120663507982
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ndjamena",
+      "events_2025": 29,
+      "fatalities_2025": 23,
+      "events_2026": 39,
+      "fatalities_2026": 9,
+      "lethality_per100": 23.076923076923077,
+      "civilian_share": 0.1794871794871795,
+      "coercive_share": 0.20512820512820512,
+      "diversity": 9,
+      "persistence": 0.7058823529411765,
+      "country_event_share": 0.13,
+      "lat": 12.1523,
+      "lon": 15.0196,
+      "abduction": 1,
+      "mob_violence": 6,
+      "air_drone": 0,
+      "acceleration": 0.3448275862068966,
+      "coercive_residual": 0.5221056405950446,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": 1.4524782822403057,
+      "pc2": -0.5495795609438631
+    },
+    {
+      "country": "Chad",
+      "admin1": "Ouaddai",
+      "events_2025": 14,
+      "fatalities_2025": 30,
+      "events_2026": 30,
+      "fatalities_2026": 11,
+      "lethality_per100": 36.666666666666664,
+      "civilian_share": 0.43333333333333335,
+      "coercive_share": 0.1,
+      "diversity": 10,
+      "persistence": 0.4411764705882353,
+      "country_event_share": 0.1,
+      "lat": 13.5147,
+      "lon": 21.2678,
+      "abduction": 2,
+      "mob_violence": 7,
+      "air_drone": 0,
+      "acceleration": 1.1428571428571428,
+      "coercive_residual": -0.8069968623125852,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": 1.048523628414619,
+      "pc2": -0.05774027259841902
+    },
+    {
+      "country": "Chad",
+      "admin1": "Salamat",
+      "events_2025": 3,
+      "fatalities_2025": 27,
+      "events_2026": 2,
+      "fatalities_2026": 0,
+      "lethality_per100": 0.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 2,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.006666666666666667,
+      "lat": 10.6118,
+      "lon": 20.7096,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.3333333333333333,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -1.3852075546825455,
+      "pc2": 0.11627611196986411
+    },
+    {
+      "country": "Chad",
+      "admin1": "Sila",
+      "events_2025": 3,
+      "fatalities_2025": 14,
+      "events_2026": 9,
+      "fatalities_2026": 4,
+      "lethality_per100": 44.44444444444444,
+      "civilian_share": 0.4444444444444444,
+      "coercive_share": 0.1111111111111111,
+      "diversity": 4,
+      "persistence": 0.17647058823529413,
+      "country_event_share": 0.03,
+      "lat": 11.996,
+      "lon": 21.4824,
+      "abduction": 0,
+      "mob_violence": 2,
+      "air_drone": 0,
+      "acceleration": 2.0,
+      "coercive_residual": -0.8015964843279052,
+      "cluster": 2,
+      "cluster_name": "Lower-volume mixed activity",
+      "pc1": -0.3305783237735501,
+      "pc2": 0.712185357806754
+    },
+    {
+      "country": "Chad",
+      "admin1": "Tandjile",
+      "events_2025": 1,
+      "fatalities_2025": 0,
+      "events_2026": 2,
+      "fatalities_2026": 6,
+      "lethality_per100": 300.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.058823529411764705,
+      "country_event_share": 0.006666666666666667,
+      "lat": 9.6484,
+      "lon": 16.6525,
+      "abduction": 0,
+      "mob_violence": 2,
+      "air_drone": 0,
+      "acceleration": 1.0,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.9650257960669875,
+      "pc2": -1.1722266830870285
+    },
+    {
+      "country": "Chad",
+      "admin1": "Tibesti",
+      "events_2025": 3,
+      "fatalities_2025": 2,
+      "events_2026": 1,
+      "fatalities_2026": 2,
+      "lethality_per100": 200.0,
+      "civilian_share": 0.0,
+      "coercive_share": 0.0,
+      "diversity": 1,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.0033333333333333335,
+      "lat": 20.2226,
+      "lon": 18.2624,
+      "abduction": 0,
+      "mob_violence": 0,
+      "air_drone": 0,
+      "acceleration": -0.6666666666666666,
+      "coercive_residual": 0.33112016765983865,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": -1.854692528373474,
+      "pc2": -0.6971891112272844
+    },
+    {
+      "country": "Chad",
+      "admin1": "Wadi Fira",
+      "events_2025": 2,
+      "fatalities_2025": 0,
+      "events_2026": 40,
+      "fatalities_2026": 117,
+      "lethality_per100": 292.5,
+      "civilian_share": 0.175,
+      "coercive_share": 0.1,
+      "diversity": 13,
+      "persistence": 0.5294117647058824,
+      "country_event_share": 0.13333333333333333,
+      "lat": 14.9451,
+      "lon": 21.4027,
+      "abduction": 1,
+      "mob_violence": 10,
+      "air_drone": 5,
+      "acceleration": 19.0,
+      "coercive_residual": 0.1127114723591845,
+      "cluster": 0,
+      "cluster_name": "Sparse high-lethality",
+      "pc1": 0.9862364262238731,
+      "pc2": -2.0452219613095854
+    }
+  ],
+  "univariate": {
+    "events_2026": {
+      "n": 29,
+      "min": 1.0,
+      "q25": 2.0,
+      "median": 7.0,
+      "mean": 153.51724137931035,
+      "q75": 21.0,
+      "max": 2069.0
+    },
+    "fatalities_2026": {
+      "n": 29,
+      "min": 0.0,
+      "q25": 2.0,
+      "median": 5.0,
+      "mean": 58.758620689655174,
+      "q75": 13.0,
+      "max": 571.0
+    },
+    "lethality_per100": {
+      "n": 29,
+      "min": 0.0,
+      "q25": 28.571428571428573,
+      "median": 50.0,
+      "mean": 105.42356145222072,
+      "q75": 125.0,
+      "max": 500.0
+    },
+    "civilian_share": {
+      "n": 29,
+      "min": 0.0,
+      "q25": 0.0,
+      "median": 0.2,
+      "mean": 0.29197007151283333,
+      "q75": 0.4544392523364486,
+      "max": 1.0
+    },
+    "coercive_share": {
+      "n": 29,
+      "min": 0.0,
+      "q25": 0.0,
+      "median": 0.06666666666666667,
+      "mean": 0.1750633188449508,
+      "q75": 0.25,
+      "max": 1.0
+    },
+    "diversity": {
+      "n": 29,
+      "min": 1.0,
+      "q25": 2.0,
+      "median": 3.0,
+      "mean": 5.137931034482759,
+      "q75": 6.0,
+      "max": 17.0
+    },
+    "persistence": {
+      "n": 29,
+      "min": 0.029411764705882353,
+      "q25": 0.058823529411764705,
+      "median": 0.17647058823529413,
+      "mean": 0.2900608519269777,
+      "q75": 0.35294117647058826,
+      "max": 1.0294117647058822
+    },
+    "country_event_share": {
+      "n": 29,
+      "min": 0.00024084778420038535,
+      "q25": 0.0033333333333333335,
+      "median": 0.02,
+      "mean": 0.06896551724137931,
+      "q75": 0.07,
+      "max": 0.4983140655105973
+    },
+    "coercive_residual": {
+      "n": 29,
+      "min": -3.2290411278437854,
+      "q25": -0.5589201562160674,
+      "median": 0.33112016765983865,
+      "mean": 1.7036180895110161e-16,
+      "q75": 0.4283269713840739,
+      "max": 2.4028212265843565
+    }
+  },
+  "correlation_matrix": {
+    "events_2026": {
+      "events_2026": 0.9999999999999993,
+      "fatalities_2026": 0.8427737709832266,
+      "lethality_per100": -0.19578942689466744,
+      "civilian_share": 0.22843325268854686,
+      "coercive_share": 0.4220003688967278,
+      "diversity": 0.6739863487992107,
+      "persistence": 0.7646172848411087,
+      "country_event_share": 0.8708986695862156
+    },
+    "fatalities_2026": {
+      "events_2026": 0.8427737709832266,
+      "fatalities_2026": 1.0,
+      "lethality_per100": -0.11158054520648401,
+      "civilian_share": 0.2189139627487078,
+      "coercive_share": 0.3903945378769049,
+      "diversity": 0.7862737733447669,
+      "persistence": 0.8315055100544689,
+      "country_event_share": 0.761323674187504
+    },
+    "lethality_per100": {
+      "events_2026": -0.19578942689466744,
+      "fatalities_2026": -0.11158054520648401,
+      "lethality_per100": 1.0,
+      "civilian_share": -0.24998833961899478,
+      "coercive_share": -0.3689618216418757,
+      "diversity": -0.16806514595991215,
+      "persistence": -0.20392670808846466,
+      "country_event_share": -0.158209300681347
+    },
+    "civilian_share": {
+      "events_2026": 0.22843325268854686,
+      "fatalities_2026": 0.2189139627487078,
+      "lethality_per100": -0.24998833961899478,
+      "civilian_share": 1.0,
+      "coercive_share": 0.4958514227969627,
+      "diversity": 0.21117975738980307,
+      "persistence": 0.20611487017807048,
+      "country_event_share": 0.2634683835426933
+    },
+    "coercive_share": {
+      "events_2026": 0.4220003688967278,
+      "fatalities_2026": 0.3903945378769049,
+      "lethality_per100": -0.3689618216418757,
+      "civilian_share": 0.4958514227969627,
+      "coercive_share": 1.0,
+      "diversity": 0.3820089591869708,
+      "persistence": 0.4084188248388639,
+      "country_event_share": 0.4370286384540528
+    },
+    "diversity": {
+      "events_2026": 0.6739863487992107,
+      "fatalities_2026": 0.7862737733447669,
+      "lethality_per100": -0.16806514595991215,
+      "civilian_share": 0.21117975738980307,
+      "coercive_share": 0.3820089591869708,
+      "diversity": 0.9999999999999999,
+      "persistence": 0.9506871541707196,
+      "country_event_share": 0.8383557366587656
+    },
+    "persistence": {
+      "events_2026": 0.7646172848411087,
+      "fatalities_2026": 0.8315055100544689,
+      "lethality_per100": -0.20392670808846466,
+      "civilian_share": 0.20611487017807048,
+      "coercive_share": 0.4084188248388639,
+      "diversity": 0.9506871541707196,
+      "persistence": 1.0,
+      "country_event_share": 0.9043164937612426
+    },
+    "country_event_share": {
+      "events_2026": 0.8708986695862156,
+      "fatalities_2026": 0.761323674187504,
+      "lethality_per100": -0.158209300681347,
+      "civilian_share": 0.2634683835426933,
+      "coercive_share": 0.4370286384540528,
+      "diversity": 0.8383557366587656,
+      "persistence": 0.9043164937612426,
+      "country_event_share": 1.0
+    }
+  },
+  "key_correlations": {
+    "civilian_coercive": {
+      "n": 29,
+      "r": 0.4958514227969627,
+      "p": 0.006229658908847872,
+      "lo": 0.0048640137532267955,
+      "hi": 0.8336230879375478,
+      "bootstrap_resamples": 8000,
+      "seed": 42
+    },
+    "coercive_lethality": {
+      "n": 29,
+      "r": -0.3689618216418757,
+      "p": 0.04887935215353068,
+      "lo": -0.5473361147163109,
+      "hi": -0.19043862720929378,
+      "bootstrap_resamples": 8000,
+      "seed": 42
+    },
+    "events_fatalities": {
+      "n": 29,
+      "r": 0.8427737709832266,
+      "p": 9.71773179185571e-09,
+      "lo": 0.7407417605913733,
+      "hi": 0.998551680620332,
+      "bootstrap_resamples": 8000,
+      "seed": 42
+    },
+    "diversity_events": {
+      "n": 29,
+      "r": 0.6739863487992107,
+      "p": 6.115065783075764e-05,
+      "lo": 0.4983268654141401,
+      "hi": 0.8834055102575725,
+      "bootstrap_resamples": 8000,
+      "seed": 42
+    },
+    "persistence_events": {
+      "n": 29,
+      "r": 0.7646172848411087,
+      "p": 1.372268044625068e-06,
+      "lo": 0.6112752411555816,
+      "hi": 0.9332238093993526,
+      "bootstrap_resamples": 8000,
+      "seed": 42
+    }
+  },
+  "regression": {
+    "outcome": "log(1 + fatalities per 100 events)",
+    "n": 29,
+    "r2": 0.20581367169436515,
+    "terms": [
+      {
+        "term": "Intercept",
+        "coef": 3.031558347245531,
+        "se": 0.6631086494904527,
+        "p": 0.0001130776999886651,
+        "lo": 2.1402083561391967,
+        "hi": 3.743364200534573
+      },
+      {
+        "term": "Coercive share (standardized)",
+        "coef": -0.5827151466910656,
+        "se": 0.3674173742296076,
+        "p": 0.12531391339345926,
+        "lo": -1.007803903375758,
+        "hi": 0.016369586806329776
+      },
+      {
+        "term": "Event volume log (standardized)",
+        "coef": 0.6402981621770248,
+        "se": 0.36276812485321674,
+        "p": 0.08977263297511794,
+        "lo": 0.025650373106350943,
+        "hi": 1.4476461836332728
+      },
+      {
+        "term": "Chad indicator",
+        "coef": 1.0247297904398205,
+        "se": 0.8085599748067915,
+        "p": 0.21670813107859063,
+        "lo": 0.16763214452390623,
+        "hi": 1.8581025796876955
+      }
+    ],
+    "bootstrap_resamples": 8000,
+    "seed": 42,
+    "predictor_selection": "Post hoc after correlation inspection"
+  },
+  "pca": {
+    "retained_variance_2d": 0.763580484583793,
+    "variance_ratio": [
+      0.5455533214016449,
+      0.21802716318214807
+    ],
+    "loadings": {
+      "lethality_per100": [
+        -0.20417342130244176,
+        -0.5211339148835438
+      ],
+      "civilian_share": [
+        0.25219708823754566,
+        0.5548807789383308
+      ],
+      "coercive_share": [
+        0.36072844014975847,
+        0.4484584022802841
+      ],
+      "diversity": [
+        0.4989963572765151,
+        -0.2905333074318438
+      ],
+      "persistence": [
+        0.514082512388581,
+        -0.28092066494712237
+      ],
+      "country_event_share": [
+        0.5013049382025807,
+        -0.23682441306912727
+      ]
+    }
+  },
+  "clusters": [
+    {
+      "cluster": 0,
+      "name": "Sparse high-lethality",
+      "n": 7,
+      "members": [
+        "Chad: Batha",
+        "Chad: Chari Baguirmi",
+        "Chad: Mayo Kebbi Est",
+        "Chad: Moyen-Chari",
+        "Chad: Tandjile",
+        "Chad: Tibesti",
+        "Chad: Wadi Fira"
+      ],
+      "lethality_per100": 287.0238095238095,
+      "civilian_share": 0.16445578231292515,
+      "coercive_share": 0.021088435374149662,
+      "diversity": 3.5714285714285716,
+      "persistence": 0.17226890756302524,
+      "country_event_share": 0.037142857142857144
+    },
+    {
+      "cluster": 1,
+      "name": "Persistent multi-vector hotspots",
+      "n": 4,
+      "members": [
+        "Cameroon: Extreme-Nord",
+        "Cameroon: Nord-Ouest",
+        "Cameroon: Sud-Ouest",
+        "Chad: Lac"
+      ],
+      "lethality_per100": 47.5297643625442,
+      "civilian_share": 0.4899667791518022,
+      "coercive_share": 0.45622066113749293,
+      "diversity": 14.0,
+      "persistence": 0.963235294117647,
+      "country_event_share": 0.3215871868978806
+    },
+    {
+      "cluster": 2,
+      "name": "Lower-volume mixed activity",
+      "n": 17,
+      "members": [
+        "Cameroon: Centre",
+        "Cameroon: Littoral",
+        "Cameroon: Nord",
+        "Cameroon: Ouest",
+        "Chad: Borkou",
+        "Chad: Ennedi Est",
+        "Chad: Guera",
+        "Chad: Hadjer-Lamis",
+        "Chad: Kanem",
+        "Chad: Logone Occidental",
+        "Chad: Logone Oriental",
+        "Chad: Mandoul",
+        "Chad: Mayo Kebbi Ouest",
+        "Chad: Ndjamena",
+        "Chad: Ouaddai",
+        "Chad: Salamat",
+        "Chad: Sila"
+      ],
+      "lethality_per100": 50.470444588091645,
+      "civilian_share": 0.2562396753573224,
+      "coercive_share": 0.12378438554909144,
+      "diversity": 3.9411764705882355,
+      "persistence": 0.19550173010380623,
+      "country_event_share": 0.026671200272016325
+    },
+    {
+      "cluster": 3,
+      "name": "Single-record coercive outlier",
+      "n": 1,
+      "members": [
+        "Cameroon: Adamaoua"
+      ],
+      "lethality_per100": 0.0,
+      "civilian_share": 1.0,
+      "coercive_share": 1.0,
+      "diversity": 1.0,
+      "persistence": 0.029411764705882353,
+      "country_event_share": 0.00024084778420038535
+    }
+  ],
+  "weekly": [
+    {
+      "country": "Cameroon",
+      "date": "2020-01-04",
+      "events": 35,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-01-11",
+      "events": 37,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-01-18",
+      "events": 36,
+      "fatalities": 184
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-01-25",
+      "events": 27,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-02-01",
+      "events": 31,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-02-08",
+      "events": 48,
+      "fatalities": 63
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-02-15",
+      "events": 29,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-02-22",
+      "events": 24,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-02-29",
+      "events": 30,
+      "fatalities": 38
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-03-07",
+      "events": 29,
+      "fatalities": 57
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-03-14",
+      "events": 18,
+      "fatalities": 10
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-03-21",
+      "events": 25,
+      "fatalities": 56
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-03-28",
+      "events": 22,
+      "fatalities": 63
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-04-04",
+      "events": 20,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-04-11",
+      "events": 30,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-04-18",
+      "events": 23,
+      "fatalities": 38
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-04-25",
+      "events": 26,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-05-02",
+      "events": 17,
+      "fatalities": 20
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-05-09",
+      "events": 27,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-05-16",
+      "events": 33,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-05-23",
+      "events": 19,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-05-30",
+      "events": 28,
+      "fatalities": 14
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-06-06",
+      "events": 37,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-06-13",
+      "events": 29,
+      "fatalities": 68
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-06-20",
+      "events": 20,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-06-27",
+      "events": 34,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-07-04",
+      "events": 28,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-07-11",
+      "events": 37,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-07-18",
+      "events": 21,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-07-25",
+      "events": 27,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-08-01",
+      "events": 29,
+      "fatalities": 41
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-08-08",
+      "events": 28,
+      "fatalities": 44
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-08-15",
+      "events": 24,
+      "fatalities": 13
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-08-22",
+      "events": 26,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-08-29",
+      "events": 30,
+      "fatalities": 41
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-09-05",
+      "events": 23,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-09-12",
+      "events": 33,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-09-19",
+      "events": 38,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-09-26",
+      "events": 30,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-10-03",
+      "events": 17,
+      "fatalities": 5
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-10-10",
+      "events": 27,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-10-17",
+      "events": 29,
+      "fatalities": 15
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-10-24",
+      "events": 41,
+      "fatalities": 48
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-10-31",
+      "events": 35,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-11-07",
+      "events": 33,
+      "fatalities": 18
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-11-14",
+      "events": 31,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-11-21",
+      "events": 33,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-11-28",
+      "events": 33,
+      "fatalities": 23
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-12-05",
+      "events": 23,
+      "fatalities": 4
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-12-12",
+      "events": 48,
+      "fatalities": 18
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-12-19",
+      "events": 35,
+      "fatalities": 44
+    },
+    {
+      "country": "Cameroon",
+      "date": "2020-12-26",
+      "events": 33,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-01-02",
+      "events": 57,
+      "fatalities": 80
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-01-09",
+      "events": 48,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-01-16",
+      "events": 56,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-01-23",
+      "events": 51,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-01-30",
+      "events": 49,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-02-06",
+      "events": 53,
+      "fatalities": 50
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-02-13",
+      "events": 56,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-02-20",
+      "events": 46,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-02-27",
+      "events": 47,
+      "fatalities": 76
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-03-06",
+      "events": 33,
+      "fatalities": 18
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-03-13",
+      "events": 16,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-03-20",
+      "events": 39,
+      "fatalities": 46
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-03-27",
+      "events": 26,
+      "fatalities": 45
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-04-03",
+      "events": 29,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-04-10",
+      "events": 20,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-04-17",
+      "events": 24,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-04-24",
+      "events": 37,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-05-01",
+      "events": 31,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-05-08",
+      "events": 16,
+      "fatalities": 14
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-05-15",
+      "events": 41,
+      "fatalities": 47
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-05-22",
+      "events": 33,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-05-29",
+      "events": 29,
+      "fatalities": 50
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-06-05",
+      "events": 24,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-06-12",
+      "events": 23,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-06-19",
+      "events": 17,
+      "fatalities": 16
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-06-26",
+      "events": 25,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-07-03",
+      "events": 28,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-07-10",
+      "events": 21,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-07-17",
+      "events": 25,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-07-24",
+      "events": 10,
+      "fatalities": 61
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-07-31",
+      "events": 21,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-08-07",
+      "events": 19,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-08-14",
+      "events": 24,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-08-21",
+      "events": 21,
+      "fatalities": 16
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-08-28",
+      "events": 20,
+      "fatalities": 7
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-09-04",
+      "events": 19,
+      "fatalities": 18
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-09-11",
+      "events": 31,
+      "fatalities": 98
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-09-18",
+      "events": 26,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-09-25",
+      "events": 33,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-10-02",
+      "events": 26,
+      "fatalities": 23
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-10-09",
+      "events": 21,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-10-16",
+      "events": 27,
+      "fatalities": 43
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-10-23",
+      "events": 25,
+      "fatalities": 11
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-10-30",
+      "events": 22,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-11-06",
+      "events": 26,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-11-13",
+      "events": 24,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-11-20",
+      "events": 18,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-11-27",
+      "events": 17,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-12-04",
+      "events": 23,
+      "fatalities": 39
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-12-11",
+      "events": 13,
+      "fatalities": 9
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-12-18",
+      "events": 8,
+      "fatalities": 8
+    },
+    {
+      "country": "Cameroon",
+      "date": "2021-12-25",
+      "events": 14,
+      "fatalities": 10
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-01-01",
+      "events": 8,
+      "fatalities": 2
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-01-08",
+      "events": 34,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-01-15",
+      "events": 24,
+      "fatalities": 16
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-01-22",
+      "events": 25,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-01-29",
+      "events": 15,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-02-05",
+      "events": 22,
+      "fatalities": 16
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-02-12",
+      "events": 19,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-02-19",
+      "events": 21,
+      "fatalities": 10
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-02-26",
+      "events": 12,
+      "fatalities": 18
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-03-05",
+      "events": 23,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-03-12",
+      "events": 19,
+      "fatalities": 7
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-03-19",
+      "events": 18,
+      "fatalities": 14
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-03-26",
+      "events": 18,
+      "fatalities": 9
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-04-02",
+      "events": 40,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-04-09",
+      "events": 28,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-04-16",
+      "events": 28,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-04-23",
+      "events": 27,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-04-30",
+      "events": 40,
+      "fatalities": 16
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-05-07",
+      "events": 43,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-05-14",
+      "events": 56,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-05-21",
+      "events": 73,
+      "fatalities": 61
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-05-28",
+      "events": 54,
+      "fatalities": 72
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-06-04",
+      "events": 60,
+      "fatalities": 47
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-06-11",
+      "events": 42,
+      "fatalities": 50
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-06-18",
+      "events": 38,
+      "fatalities": 57
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-06-25",
+      "events": 41,
+      "fatalities": 76
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-07-02",
+      "events": 65,
+      "fatalities": 58
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-07-09",
+      "events": 28,
+      "fatalities": 31
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-07-16",
+      "events": 32,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-07-23",
+      "events": 53,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-07-30",
+      "events": 60,
+      "fatalities": 71
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-08-06",
+      "events": 65,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-08-13",
+      "events": 42,
+      "fatalities": 31
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-08-20",
+      "events": 53,
+      "fatalities": 31
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-08-27",
+      "events": 56,
+      "fatalities": 41
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-09-03",
+      "events": 75,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-09-10",
+      "events": 52,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-09-17",
+      "events": 49,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-09-24",
+      "events": 53,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-10-01",
+      "events": 38,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-10-08",
+      "events": 61,
+      "fatalities": 65
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-10-15",
+      "events": 62,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-10-22",
+      "events": 58,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-10-29",
+      "events": 61,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-11-05",
+      "events": 49,
+      "fatalities": 13
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-11-12",
+      "events": 72,
+      "fatalities": 39
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-11-19",
+      "events": 49,
+      "fatalities": 16
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-11-26",
+      "events": 50,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-12-03",
+      "events": 43,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-12-10",
+      "events": 56,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-12-17",
+      "events": 52,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-12-24",
+      "events": 24,
+      "fatalities": 13
+    },
+    {
+      "country": "Cameroon",
+      "date": "2022-12-31",
+      "events": 65,
+      "fatalities": 47
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-01-07",
+      "events": 83,
+      "fatalities": 58
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-01-14",
+      "events": 71,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-01-21",
+      "events": 57,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-01-28",
+      "events": 58,
+      "fatalities": 39
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-02-04",
+      "events": 86,
+      "fatalities": 70
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-02-11",
+      "events": 47,
+      "fatalities": 32
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-02-18",
+      "events": 58,
+      "fatalities": 62
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-02-25",
+      "events": 72,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-03-04",
+      "events": 60,
+      "fatalities": 20
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-03-11",
+      "events": 73,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-03-18",
+      "events": 54,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-03-25",
+      "events": 41,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-04-01",
+      "events": 53,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-04-08",
+      "events": 48,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-04-15",
+      "events": 51,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-04-22",
+      "events": 38,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-04-29",
+      "events": 51,
+      "fatalities": 39
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-05-06",
+      "events": 67,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-05-13",
+      "events": 68,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-05-20",
+      "events": 70,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-05-27",
+      "events": 77,
+      "fatalities": 45
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-06-03",
+      "events": 77,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-06-10",
+      "events": 76,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-06-17",
+      "events": 94,
+      "fatalities": 45
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-06-24",
+      "events": 71,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-07-01",
+      "events": 82,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-07-08",
+      "events": 94,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-07-15",
+      "events": 80,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-07-22",
+      "events": 83,
+      "fatalities": 46
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-07-29",
+      "events": 75,
+      "fatalities": 54
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-08-05",
+      "events": 81,
+      "fatalities": 51
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-08-12",
+      "events": 68,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-08-19",
+      "events": 79,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-08-26",
+      "events": 68,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-09-02",
+      "events": 117,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-09-09",
+      "events": 83,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-09-16",
+      "events": 69,
+      "fatalities": 54
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-09-23",
+      "events": 76,
+      "fatalities": 57
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-09-30",
+      "events": 74,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-10-07",
+      "events": 64,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-10-14",
+      "events": 69,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-10-21",
+      "events": 55,
+      "fatalities": 15
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-10-28",
+      "events": 54,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-11-04",
+      "events": 79,
+      "fatalities": 97
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-11-11",
+      "events": 88,
+      "fatalities": 86
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-11-18",
+      "events": 66,
+      "fatalities": 64
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-11-25",
+      "events": 78,
+      "fatalities": 41
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-12-02",
+      "events": 107,
+      "fatalities": 23
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-12-09",
+      "events": 92,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-12-16",
+      "events": 121,
+      "fatalities": 117
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-12-23",
+      "events": 96,
+      "fatalities": 59
+    },
+    {
+      "country": "Cameroon",
+      "date": "2023-12-30",
+      "events": 67,
+      "fatalities": 48
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-01-06",
+      "events": 73,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-01-13",
+      "events": 73,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-01-20",
+      "events": 51,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-01-27",
+      "events": 41,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-02-03",
+      "events": 109,
+      "fatalities": 55
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-02-10",
+      "events": 110,
+      "fatalities": 47
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-02-17",
+      "events": 94,
+      "fatalities": 102
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-02-24",
+      "events": 52,
+      "fatalities": 39
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-03-02",
+      "events": 29,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-03-09",
+      "events": 58,
+      "fatalities": 14
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-03-16",
+      "events": 85,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-03-23",
+      "events": 109,
+      "fatalities": 78
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-03-30",
+      "events": 85,
+      "fatalities": 50
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-04-06",
+      "events": 82,
+      "fatalities": 56
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-04-13",
+      "events": 98,
+      "fatalities": 48
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-04-20",
+      "events": 103,
+      "fatalities": 43
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-04-27",
+      "events": 98,
+      "fatalities": 142
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-05-04",
+      "events": 97,
+      "fatalities": 44
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-05-11",
+      "events": 113,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-05-18",
+      "events": 125,
+      "fatalities": 77
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-05-25",
+      "events": 106,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-06-01",
+      "events": 86,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-06-08",
+      "events": 47,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-06-15",
+      "events": 80,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-06-22",
+      "events": 70,
+      "fatalities": 41
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-06-29",
+      "events": 98,
+      "fatalities": 110
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-07-06",
+      "events": 80,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-07-13",
+      "events": 79,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-07-20",
+      "events": 109,
+      "fatalities": 65
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-07-27",
+      "events": 116,
+      "fatalities": 38
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-08-03",
+      "events": 115,
+      "fatalities": 57
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-08-10",
+      "events": 106,
+      "fatalities": 53
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-08-17",
+      "events": 84,
+      "fatalities": 31
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-08-24",
+      "events": 124,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-08-31",
+      "events": 77,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-09-07",
+      "events": 32,
+      "fatalities": 10
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-09-14",
+      "events": 83,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-09-21",
+      "events": 117,
+      "fatalities": 31
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-09-28",
+      "events": 107,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-10-05",
+      "events": 125,
+      "fatalities": 77
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-10-12",
+      "events": 130,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-10-19",
+      "events": 87,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-10-26",
+      "events": 86,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-11-02",
+      "events": 131,
+      "fatalities": 64
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-11-09",
+      "events": 96,
+      "fatalities": 75
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-11-16",
+      "events": 82,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-11-23",
+      "events": 89,
+      "fatalities": 68
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-11-30",
+      "events": 91,
+      "fatalities": 51
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-12-07",
+      "events": 85,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-12-14",
+      "events": 79,
+      "fatalities": 54
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-12-21",
+      "events": 68,
+      "fatalities": 6
+    },
+    {
+      "country": "Cameroon",
+      "date": "2024-12-28",
+      "events": 68,
+      "fatalities": 71
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-01-04",
+      "events": 111,
+      "fatalities": 62
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-01-11",
+      "events": 116,
+      "fatalities": 77
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-01-18",
+      "events": 80,
+      "fatalities": 12
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-01-25",
+      "events": 112,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-02-01",
+      "events": 65,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-02-08",
+      "events": 81,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-02-15",
+      "events": 54,
+      "fatalities": 20
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-02-22",
+      "events": 64,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-03-01",
+      "events": 80,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-03-08",
+      "events": 85,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-03-15",
+      "events": 62,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-03-22",
+      "events": 74,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-03-29",
+      "events": 96,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-04-05",
+      "events": 95,
+      "fatalities": 51
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-04-12",
+      "events": 66,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-04-19",
+      "events": 78,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-04-26",
+      "events": 66,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-05-03",
+      "events": 95,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-05-10",
+      "events": 105,
+      "fatalities": 48
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-05-17",
+      "events": 122,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-05-24",
+      "events": 86,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-05-31",
+      "events": 119,
+      "fatalities": 45
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-06-07",
+      "events": 129,
+      "fatalities": 60
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-06-14",
+      "events": 111,
+      "fatalities": 55
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-06-21",
+      "events": 107,
+      "fatalities": 61
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-06-28",
+      "events": 67,
+      "fatalities": 64
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-07-05",
+      "events": 106,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-07-12",
+      "events": 96,
+      "fatalities": 13
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-07-19",
+      "events": 92,
+      "fatalities": 43
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-07-26",
+      "events": 90,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-08-02",
+      "events": 79,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-08-09",
+      "events": 121,
+      "fatalities": 35
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-08-16",
+      "events": 123,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-08-23",
+      "events": 101,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-08-30",
+      "events": 101,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-09-06",
+      "events": 135,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-09-13",
+      "events": 135,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-09-20",
+      "events": 123,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-09-27",
+      "events": 120,
+      "fatalities": 48
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-10-04",
+      "events": 92,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-10-11",
+      "events": 158,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-10-18",
+      "events": 133,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-10-25",
+      "events": 154,
+      "fatalities": 92
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-11-01",
+      "events": 129,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-11-08",
+      "events": 124,
+      "fatalities": 41
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-11-15",
+      "events": 115,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-11-22",
+      "events": 102,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-11-29",
+      "events": 135,
+      "fatalities": 57
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-12-06",
+      "events": 129,
+      "fatalities": 48
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-12-13",
+      "events": 116,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-12-20",
+      "events": 121,
+      "fatalities": 34
+    },
+    {
+      "country": "Cameroon",
+      "date": "2025-12-27",
+      "events": 97,
+      "fatalities": 23
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-01-03",
+      "events": 93,
+      "fatalities": 46
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-01-10",
+      "events": 106,
+      "fatalities": 43
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-01-17",
+      "events": 101,
+      "fatalities": 14
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-01-24",
+      "events": 113,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-01-31",
+      "events": 116,
+      "fatalities": 37
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-02-07",
+      "events": 122,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-02-14",
+      "events": 145,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-02-21",
+      "events": 107,
+      "fatalities": 33
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-02-28",
+      "events": 125,
+      "fatalities": 58
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-03-07",
+      "events": 118,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-03-14",
+      "events": 134,
+      "fatalities": 47
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-03-21",
+      "events": 109,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-03-28",
+      "events": 138,
+      "fatalities": 50
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-04-04",
+      "events": 138,
+      "fatalities": 51
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-04-11",
+      "events": 112,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-04-18",
+      "events": 133,
+      "fatalities": 38
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-04-25",
+      "events": 125,
+      "fatalities": 67
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-05-02",
+      "events": 142,
+      "fatalities": 46
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-05-09",
+      "events": 138,
+      "fatalities": 40
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-05-16",
+      "events": 122,
+      "fatalities": 50
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-05-23",
+      "events": 124,
+      "fatalities": 24
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-05-30",
+      "events": 129,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-06-06",
+      "events": 145,
+      "fatalities": 49
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-06-13",
+      "events": 130,
+      "fatalities": 56
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-06-20",
+      "events": 114,
+      "fatalities": 29
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-06-27",
+      "events": 115,
+      "fatalities": 52
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-07-04",
+      "events": 121,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-07-11",
+      "events": 119,
+      "fatalities": 58
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-07-18",
+      "events": 123,
+      "fatalities": 36
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-07-25",
+      "events": 126,
+      "fatalities": 42
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-08-01",
+      "events": 109,
+      "fatalities": 30
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-08-08",
+      "events": 138,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-08-15",
+      "events": 121,
+      "fatalities": 19
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-08-22",
+      "events": 80,
+      "fatalities": 17
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-08-29",
+      "events": 21,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2020-01-04",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2020-01-11",
+      "events": 2,
+      "fatalities": 17
+    },
+    {
+      "country": "Chad",
+      "date": "2020-01-18",
+      "events": 5,
+      "fatalities": 23
+    },
+    {
+      "country": "Chad",
+      "date": "2020-01-25",
+      "events": 5,
+      "fatalities": 37
+    },
+    {
+      "country": "Chad",
+      "date": "2020-02-01",
+      "events": 2,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2020-02-08",
+      "events": 6,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2020-02-15",
+      "events": 3,
+      "fatalities": 43
+    },
+    {
+      "country": "Chad",
+      "date": "2020-02-29",
+      "events": 4,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2020-03-07",
+      "events": 7,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2020-03-14",
+      "events": 3,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2020-03-21",
+      "events": 6,
+      "fatalities": 101
+    },
+    {
+      "country": "Chad",
+      "date": "2020-03-28",
+      "events": 2,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2020-04-04",
+      "events": 3,
+      "fatalities": 162
+    },
+    {
+      "country": "Chad",
+      "date": "2020-04-11",
+      "events": 4,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2020-04-18",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2020-04-25",
+      "events": 8,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2020-05-02",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2020-05-09",
+      "events": 2,
+      "fatalities": 27
+    },
+    {
+      "country": "Chad",
+      "date": "2020-05-16",
+      "events": 3,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2020-05-23",
+      "events": 4,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2020-05-30",
+      "events": 5,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "date": "2020-06-06",
+      "events": 5,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2020-06-13",
+      "events": 3,
+      "fatalities": 25
+    },
+    {
+      "country": "Chad",
+      "date": "2020-06-20",
+      "events": 5,
+      "fatalities": 17
+    },
+    {
+      "country": "Chad",
+      "date": "2020-06-27",
+      "events": 2,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2020-07-04",
+      "events": 4,
+      "fatalities": 19
+    },
+    {
+      "country": "Chad",
+      "date": "2020-07-11",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2020-07-18",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2020-07-25",
+      "events": 3,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2020-08-08",
+      "events": 2,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2020-08-15",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2020-08-22",
+      "events": 3,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2020-08-29",
+      "events": 3,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2020-09-05",
+      "events": 3,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2020-09-12",
+      "events": 2,
+      "fatalities": 10
+    },
+    {
+      "country": "Chad",
+      "date": "2020-09-19",
+      "events": 1,
+      "fatalities": 20
+    },
+    {
+      "country": "Chad",
+      "date": "2020-09-26",
+      "events": 1,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2020-10-03",
+      "events": 3,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2020-10-17",
+      "events": 3,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2020-10-24",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2020-10-31",
+      "events": 4,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2020-11-07",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2020-11-14",
+      "events": 1,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "date": "2020-11-21",
+      "events": 7,
+      "fatalities": 37
+    },
+    {
+      "country": "Chad",
+      "date": "2020-11-28",
+      "events": 3,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2020-12-05",
+      "events": 4,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "date": "2020-12-12",
+      "events": 3,
+      "fatalities": 32
+    },
+    {
+      "country": "Chad",
+      "date": "2020-12-19",
+      "events": 3,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2020-12-26",
+      "events": 2,
+      "fatalities": 14
+    },
+    {
+      "country": "Chad",
+      "date": "2021-01-02",
+      "events": 2,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2021-01-09",
+      "events": 2,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2021-01-23",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-01-30",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-02-06",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-02-13",
+      "events": 10,
+      "fatalities": 38
+    },
+    {
+      "country": "Chad",
+      "date": "2021-02-20",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-02-27",
+      "events": 2,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2021-03-06",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-03-13",
+      "events": 4,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2021-03-20",
+      "events": 7,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-03-27",
+      "events": 5,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-04-03",
+      "events": 3,
+      "fatalities": 16
+    },
+    {
+      "country": "Chad",
+      "date": "2021-04-10",
+      "events": 10,
+      "fatalities": 65
+    },
+    {
+      "country": "Chad",
+      "date": "2021-04-17",
+      "events": 10,
+      "fatalities": 309
+    },
+    {
+      "country": "Chad",
+      "date": "2021-04-24",
+      "events": 14,
+      "fatalities": 172
+    },
+    {
+      "country": "Chad",
+      "date": "2021-05-01",
+      "events": 3,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-05-08",
+      "events": 5,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2021-05-15",
+      "events": 9,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-05-22",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-05-29",
+      "events": 7,
+      "fatalities": 15
+    },
+    {
+      "country": "Chad",
+      "date": "2021-06-05",
+      "events": 5,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2021-06-12",
+      "events": 6,
+      "fatalities": 14
+    },
+    {
+      "country": "Chad",
+      "date": "2021-06-19",
+      "events": 4,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2021-06-26",
+      "events": 5,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-07-03",
+      "events": 6,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2021-07-10",
+      "events": 4,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-07-17",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-07-24",
+      "events": 7,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2021-07-31",
+      "events": 3,
+      "fatalities": 29
+    },
+    {
+      "country": "Chad",
+      "date": "2021-08-07",
+      "events": 6,
+      "fatalities": 23
+    },
+    {
+      "country": "Chad",
+      "date": "2021-08-14",
+      "events": 6,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2021-08-21",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-08-28",
+      "events": 4,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-09-04",
+      "events": 5,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-09-11",
+      "events": 5,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-09-18",
+      "events": 5,
+      "fatalities": 37
+    },
+    {
+      "country": "Chad",
+      "date": "2021-09-25",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-10-02",
+      "events": 4,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2021-10-09",
+      "events": 9,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-10-16",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-10-23",
+      "events": 4,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2021-10-30",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2021-11-06",
+      "events": 5,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2021-11-13",
+      "events": 9,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2021-11-20",
+      "events": 10,
+      "fatalities": 23
+    },
+    {
+      "country": "Chad",
+      "date": "2021-11-27",
+      "events": 5,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2021-12-04",
+      "events": 6,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2021-12-11",
+      "events": 5,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2021-12-18",
+      "events": 6,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2022-01-01",
+      "events": 5,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2022-01-08",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-01-15",
+      "events": 8,
+      "fatalities": 10
+    },
+    {
+      "country": "Chad",
+      "date": "2022-01-22",
+      "events": 10,
+      "fatalities": 19
+    },
+    {
+      "country": "Chad",
+      "date": "2022-01-29",
+      "events": 6,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2022-02-05",
+      "events": 2,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2022-02-12",
+      "events": 11,
+      "fatalities": 18
+    },
+    {
+      "country": "Chad",
+      "date": "2022-02-19",
+      "events": 6,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2022-02-26",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2022-03-05",
+      "events": 8,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-03-12",
+      "events": 4,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2022-03-19",
+      "events": 6,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-03-26",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-04-02",
+      "events": 8,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2022-04-09",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-04-16",
+      "events": 5,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2022-04-23",
+      "events": 2,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2022-04-30",
+      "events": 7,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2022-05-07",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-05-14",
+      "events": 14,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2022-05-21",
+      "events": 6,
+      "fatalities": 300
+    },
+    {
+      "country": "Chad",
+      "date": "2022-05-28",
+      "events": 4,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2022-06-04",
+      "events": 6,
+      "fatalities": 27
+    },
+    {
+      "country": "Chad",
+      "date": "2022-06-11",
+      "events": 4,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2022-06-18",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2022-06-25",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-07-02",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-07-09",
+      "events": 4,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2022-07-16",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-07-23",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-07-30",
+      "events": 4,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2022-08-06",
+      "events": 5,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2022-08-13",
+      "events": 5,
+      "fatalities": 21
+    },
+    {
+      "country": "Chad",
+      "date": "2022-08-20",
+      "events": 5,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2022-08-27",
+      "events": 5,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2022-09-03",
+      "events": 6,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2022-09-10",
+      "events": 12,
+      "fatalities": 24
+    },
+    {
+      "country": "Chad",
+      "date": "2022-09-17",
+      "events": 9,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2022-09-24",
+      "events": 6,
+      "fatalities": 21
+    },
+    {
+      "country": "Chad",
+      "date": "2022-10-01",
+      "events": 4,
+      "fatalities": 22
+    },
+    {
+      "country": "Chad",
+      "date": "2022-10-08",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-10-15",
+      "events": 20,
+      "fatalities": 106
+    },
+    {
+      "country": "Chad",
+      "date": "2022-10-22",
+      "events": 6,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2022-10-29",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-11-05",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2022-11-12",
+      "events": 6,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2022-11-19",
+      "events": 4,
+      "fatalities": 33
+    },
+    {
+      "country": "Chad",
+      "date": "2022-11-26",
+      "events": 1,
+      "fatalities": 10
+    },
+    {
+      "country": "Chad",
+      "date": "2022-12-03",
+      "events": 3,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2022-12-10",
+      "events": 1,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2022-12-24",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2022-12-31",
+      "events": 6,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2023-01-07",
+      "events": 6,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-01-21",
+      "events": 1,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2023-01-28",
+      "events": 6,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2023-02-04",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-02-11",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-02-18",
+      "events": 6,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2023-02-25",
+      "events": 10,
+      "fatalities": 16
+    },
+    {
+      "country": "Chad",
+      "date": "2023-03-04",
+      "events": 2,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2023-03-11",
+      "events": 1,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "date": "2023-03-18",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-03-25",
+      "events": 5,
+      "fatalities": 32
+    },
+    {
+      "country": "Chad",
+      "date": "2023-04-01",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-04-15",
+      "events": 10,
+      "fatalities": 26
+    },
+    {
+      "country": "Chad",
+      "date": "2023-04-22",
+      "events": 1,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2023-04-29",
+      "events": 10,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2023-05-06",
+      "events": 9,
+      "fatalities": 29
+    },
+    {
+      "country": "Chad",
+      "date": "2023-05-13",
+      "events": 3,
+      "fatalities": 25
+    },
+    {
+      "country": "Chad",
+      "date": "2023-05-20",
+      "events": 3,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2023-05-27",
+      "events": 6,
+      "fatalities": 24
+    },
+    {
+      "country": "Chad",
+      "date": "2023-06-03",
+      "events": 6,
+      "fatalities": 21
+    },
+    {
+      "country": "Chad",
+      "date": "2023-06-10",
+      "events": 5,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2023-06-17",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-06-24",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-07-01",
+      "events": 11,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2023-07-08",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-07-15",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-07-22",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-07-29",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-08-05",
+      "events": 6,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2023-08-12",
+      "events": 3,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2023-08-19",
+      "events": 5,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2023-08-26",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-09-02",
+      "events": 4,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2023-09-09",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-09-16",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-09-23",
+      "events": 7,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2023-09-30",
+      "events": 5,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2023-10-07",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-10-21",
+      "events": 2,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2023-10-28",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-11-04",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-11-11",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-11-18",
+      "events": 3,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2023-11-25",
+      "events": 1,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2023-12-02",
+      "events": 4,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2023-12-09",
+      "events": 4,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2023-12-16",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2023-12-30",
+      "events": 2,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-01-06",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-01-13",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-01-20",
+      "events": 3,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2024-01-27",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-02-03",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-02-10",
+      "events": 1,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-02-17",
+      "events": 4,
+      "fatalities": 10
+    },
+    {
+      "country": "Chad",
+      "date": "2024-02-24",
+      "events": 4,
+      "fatalities": 20
+    },
+    {
+      "country": "Chad",
+      "date": "2024-03-02",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-03-09",
+      "events": 1,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-03-16",
+      "events": 9,
+      "fatalities": 76
+    },
+    {
+      "country": "Chad",
+      "date": "2024-03-23",
+      "events": 10,
+      "fatalities": 30
+    },
+    {
+      "country": "Chad",
+      "date": "2024-03-30",
+      "events": 3,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-04-06",
+      "events": 5,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2024-04-13",
+      "events": 1,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-04-20",
+      "events": 4,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-04-27",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-05-04",
+      "events": 7,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2024-05-11",
+      "events": 2,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-05-18",
+      "events": 3,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2024-05-25",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-06-01",
+      "events": 1,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-06-08",
+      "events": 4,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2024-06-15",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-06-22",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-06-29",
+      "events": 5,
+      "fatalities": 144
+    },
+    {
+      "country": "Chad",
+      "date": "2024-07-06",
+      "events": 4,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2024-07-13",
+      "events": 7,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-08-03",
+      "events": 2,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "date": "2024-08-10",
+      "events": 7,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-08-17",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-08-24",
+      "events": 6,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2024-08-31",
+      "events": 1,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-09-07",
+      "events": 7,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2024-09-14",
+      "events": 7,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-09-21",
+      "events": 3,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2024-09-28",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-10-05",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-10-12",
+      "events": 6,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-10-19",
+      "events": 4,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2024-10-26",
+      "events": 2,
+      "fatalities": 40
+    },
+    {
+      "country": "Chad",
+      "date": "2024-11-02",
+      "events": 5,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2024-11-09",
+      "events": 4,
+      "fatalities": 116
+    },
+    {
+      "country": "Chad",
+      "date": "2024-11-23",
+      "events": 2,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-11-30",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2024-12-07",
+      "events": 2,
+      "fatalities": 22
+    },
+    {
+      "country": "Chad",
+      "date": "2024-12-14",
+      "events": 2,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2024-12-21",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2024-12-28",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-01-04",
+      "events": 8,
+      "fatalities": 25
+    },
+    {
+      "country": "Chad",
+      "date": "2025-01-11",
+      "events": 8,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2025-01-18",
+      "events": 2,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2025-01-25",
+      "events": 4,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2025-02-01",
+      "events": 3,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2025-02-08",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-02-15",
+      "events": 4,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-02-22",
+      "events": 3,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2025-03-01",
+      "events": 2,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2025-03-08",
+      "events": 5,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-03-15",
+      "events": 7,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2025-03-29",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-04-12",
+      "events": 6,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2025-04-19",
+      "events": 5,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2025-04-26",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-05-03",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-05-10",
+      "events": 7,
+      "fatalities": 44
+    },
+    {
+      "country": "Chad",
+      "date": "2025-05-17",
+      "events": 2,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2025-06-07",
+      "events": 5,
+      "fatalities": 18
+    },
+    {
+      "country": "Chad",
+      "date": "2025-06-14",
+      "events": 5,
+      "fatalities": 56
+    },
+    {
+      "country": "Chad",
+      "date": "2025-06-21",
+      "events": 7,
+      "fatalities": 20
+    },
+    {
+      "country": "Chad",
+      "date": "2025-06-28",
+      "events": 10,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2025-07-05",
+      "events": 11,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-07-12",
+      "events": 9,
+      "fatalities": 33
+    },
+    {
+      "country": "Chad",
+      "date": "2025-07-19",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-08-02",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-08-09",
+      "events": 3,
+      "fatalities": 17
+    },
+    {
+      "country": "Chad",
+      "date": "2025-08-16",
+      "events": 1,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-08-23",
+      "events": 7,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2025-08-30",
+      "events": 7,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2025-09-13",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-09-20",
+      "events": 6,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "date": "2025-09-27",
+      "events": 5,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2025-10-04",
+      "events": 3,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2025-10-11",
+      "events": 7,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2025-10-18",
+      "events": 11,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-10-25",
+      "events": 11,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-11-01",
+      "events": 5,
+      "fatalities": 37
+    },
+    {
+      "country": "Chad",
+      "date": "2025-11-08",
+      "events": 6,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-11-15",
+      "events": 8,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2025-11-22",
+      "events": 11,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2025-11-29",
+      "events": 6,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2025-12-06",
+      "events": 6,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2025-12-13",
+      "events": 12,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2025-12-20",
+      "events": 2,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2025-12-27",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2026-01-03",
+      "events": 5,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2026-01-10",
+      "events": 13,
+      "fatalities": 45
+    },
+    {
+      "country": "Chad",
+      "date": "2026-01-17",
+      "events": 5,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "date": "2026-01-24",
+      "events": 4,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2026-01-31",
+      "events": 26,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "date": "2026-02-07",
+      "events": 6,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "date": "2026-02-14",
+      "events": 7,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2026-02-21",
+      "events": 11,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2026-02-28",
+      "events": 8,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2026-03-07",
+      "events": 5,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2026-03-14",
+      "events": 3,
+      "fatalities": 18
+    },
+    {
+      "country": "Chad",
+      "date": "2026-03-21",
+      "events": 9,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2026-03-28",
+      "events": 9,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2026-04-04",
+      "events": 3,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2026-04-11",
+      "events": 6,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2026-04-18",
+      "events": 14,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "date": "2026-04-25",
+      "events": 21,
+      "fatalities": 83
+    },
+    {
+      "country": "Chad",
+      "date": "2026-05-02",
+      "events": 8,
+      "fatalities": 27
+    },
+    {
+      "country": "Chad",
+      "date": "2026-05-09",
+      "events": 11,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "date": "2026-05-16",
+      "events": 15,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2026-05-23",
+      "events": 10,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2026-05-30",
+      "events": 10,
+      "fatalities": 17
+    },
+    {
+      "country": "Chad",
+      "date": "2026-06-06",
+      "events": 10,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2026-06-13",
+      "events": 10,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "date": "2026-06-20",
+      "events": 6,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "date": "2026-06-27",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2026-07-04",
+      "events": 14,
+      "fatalities": 17
+    },
+    {
+      "country": "Chad",
+      "date": "2026-07-11",
+      "events": 8,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2026-07-18",
+      "events": 8,
+      "fatalities": 7
+    },
+    {
+      "country": "Chad",
+      "date": "2026-07-25",
+      "events": 17,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2026-08-01",
+      "events": 2,
+      "fatalities": 0
+    },
+    {
+      "country": "Chad",
+      "date": "2026-08-08",
+      "events": 3,
+      "fatalities": 1
+    },
+    {
+      "country": "Chad",
+      "date": "2026-08-15",
+      "events": 3,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "date": "2026-08-22",
+      "events": 2,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "date": "2026-08-29",
+      "events": 6,
+      "fatalities": 3
+    }
+  ],
+  "monthly": [
+    {
+      "country": "Cameroon",
+      "month": "2020-01",
+      "events": 135,
+      "fatalities": 283
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-02",
+      "events": 162,
+      "fatalities": 198
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-03",
+      "events": 94,
+      "fatalities": 186
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-04",
+      "events": 99,
+      "fatalities": 125
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-05",
+      "events": 124,
+      "fatalities": 97
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-06",
+      "events": 120,
+      "fatalities": 153
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-07",
+      "events": 113,
+      "fatalities": 96
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-08",
+      "events": 137,
+      "fatalities": 167
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-09",
+      "events": 124,
+      "fatalities": 125
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-10",
+      "events": 149,
+      "fatalities": 153
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-11",
+      "events": 130,
+      "fatalities": 90
+    },
+    {
+      "country": "Cameroon",
+      "month": "2020-12",
+      "events": 139,
+      "fatalities": 100
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-01",
+      "events": 261,
+      "fatalities": 165
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-02",
+      "events": 202,
+      "fatalities": 201
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-03",
+      "events": 114,
+      "fatalities": 121
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-04",
+      "events": 110,
+      "fatalities": 71
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-05",
+      "events": 150,
+      "fatalities": 164
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-06",
+      "events": 89,
+      "fatalities": 101
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-07",
+      "events": 105,
+      "fatalities": 175
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-08",
+      "events": 84,
+      "fatalities": 98
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-09",
+      "events": 109,
+      "fatalities": 181
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-10",
+      "events": 121,
+      "fatalities": 123
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-11",
+      "events": 85,
+      "fatalities": 83
+    },
+    {
+      "country": "Cameroon",
+      "month": "2021-12",
+      "events": 58,
+      "fatalities": 66
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-01",
+      "events": 106,
+      "fatalities": 87
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-02",
+      "events": 74,
+      "fatalities": 70
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-03",
+      "events": 78,
+      "fatalities": 70
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-04",
+      "events": 163,
+      "fatalities": 119
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-05",
+      "events": 226,
+      "fatalities": 191
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-06",
+      "events": 181,
+      "fatalities": 230
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-07",
+      "events": 238,
+      "fatalities": 230
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-08",
+      "events": 216,
+      "fatalities": 163
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-09",
+      "events": 229,
+      "fatalities": 117
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-10",
+      "events": 280,
+      "fatalities": 167
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-11",
+      "events": 220,
+      "fatalities": 103
+    },
+    {
+      "country": "Cameroon",
+      "month": "2022-12",
+      "events": 240,
+      "fatalities": 135
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-01",
+      "events": 269,
+      "fatalities": 154
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-02",
+      "events": 263,
+      "fatalities": 189
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-03",
+      "events": 228,
+      "fatalities": 119
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-04",
+      "events": 241,
+      "fatalities": 149
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-05",
+      "events": 282,
+      "fatalities": 119
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-06",
+      "events": 318,
+      "fatalities": 177
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-07",
+      "events": 414,
+      "fatalities": 207
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-08",
+      "events": 296,
+      "fatalities": 143
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-09",
+      "events": 419,
+      "fatalities": 215
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-10",
+      "events": 242,
+      "fatalities": 99
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-11",
+      "events": 311,
+      "fatalities": 288
+    },
+    {
+      "country": "Cameroon",
+      "month": "2023-12",
+      "events": 483,
+      "fatalities": 307
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-01",
+      "events": 238,
+      "fatalities": 136
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-02",
+      "events": 365,
+      "fatalities": 243
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-03",
+      "events": 366,
+      "fatalities": 191
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-04",
+      "events": 381,
+      "fatalities": 289
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-05",
+      "events": 441,
+      "fatalities": 241
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-06",
+      "events": 381,
+      "fatalities": 230
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-07",
+      "events": 384,
+      "fatalities": 154
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-08",
+      "events": 506,
+      "fatalities": 239
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-09",
+      "events": 339,
+      "fatalities": 120
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-10",
+      "events": 428,
+      "fatalities": 198
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-11",
+      "events": 489,
+      "fatalities": 284
+    },
+    {
+      "country": "Cameroon",
+      "month": "2024-12",
+      "events": 300,
+      "fatalities": 168
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-01",
+      "events": 419,
+      "fatalities": 180
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-02",
+      "events": 264,
+      "fatalities": 97
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-03",
+      "events": 397,
+      "fatalities": 140
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-04",
+      "events": 305,
+      "fatalities": 133
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-05",
+      "events": 527,
+      "fatalities": 181
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-06",
+      "events": 414,
+      "fatalities": 240
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-07",
+      "events": 384,
+      "fatalities": 119
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-08",
+      "events": 525,
+      "fatalities": 148
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-09",
+      "events": 513,
+      "fatalities": 132
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-10",
+      "events": 537,
+      "fatalities": 187
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-11",
+      "events": 605,
+      "fatalities": 213
+    },
+    {
+      "country": "Cameroon",
+      "month": "2025-12",
+      "events": 463,
+      "fatalities": 141
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-01",
+      "events": 529,
+      "fatalities": 176
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-02",
+      "events": 499,
+      "fatalities": 173
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-03",
+      "events": 499,
+      "fatalities": 153
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-04",
+      "events": 508,
+      "fatalities": 205
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-05",
+      "events": 655,
+      "fatalities": 182
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-06",
+      "events": 504,
+      "fatalities": 186
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-07",
+      "events": 489,
+      "fatalities": 178
+    },
+    {
+      "country": "Cameroon",
+      "month": "2026-08",
+      "events": 469,
+      "fatalities": 102
+    },
+    {
+      "country": "Chad",
+      "month": "2020-01",
+      "events": 15,
+      "fatalities": 77
+    },
+    {
+      "country": "Chad",
+      "month": "2020-02",
+      "events": 15,
+      "fatalities": 52
+    },
+    {
+      "country": "Chad",
+      "month": "2020-03",
+      "events": 18,
+      "fatalities": 113
+    },
+    {
+      "country": "Chad",
+      "month": "2020-04",
+      "events": 18,
+      "fatalities": 183
+    },
+    {
+      "country": "Chad",
+      "month": "2020-05",
+      "events": 15,
+      "fatalities": 45
+    },
+    {
+      "country": "Chad",
+      "month": "2020-06",
+      "events": 15,
+      "fatalities": 50
+    },
+    {
+      "country": "Chad",
+      "month": "2020-07",
+      "events": 11,
+      "fatalities": 33
+    },
+    {
+      "country": "Chad",
+      "month": "2020-08",
+      "events": 11,
+      "fatalities": 19
+    },
+    {
+      "country": "Chad",
+      "month": "2020-09",
+      "events": 7,
+      "fatalities": 39
+    },
+    {
+      "country": "Chad",
+      "month": "2020-10",
+      "events": 11,
+      "fatalities": 18
+    },
+    {
+      "country": "Chad",
+      "month": "2020-11",
+      "events": 12,
+      "fatalities": 51
+    },
+    {
+      "country": "Chad",
+      "month": "2020-12",
+      "events": 12,
+      "fatalities": 62
+    },
+    {
+      "country": "Chad",
+      "month": "2021-01",
+      "events": 9,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "month": "2021-02",
+      "events": 16,
+      "fatalities": 42
+    },
+    {
+      "country": "Chad",
+      "month": "2021-03",
+      "events": 19,
+      "fatalities": 4
+    },
+    {
+      "country": "Chad",
+      "month": "2021-04",
+      "events": 37,
+      "fatalities": 562
+    },
+    {
+      "country": "Chad",
+      "month": "2021-05",
+      "events": 26,
+      "fatalities": 26
+    },
+    {
+      "country": "Chad",
+      "month": "2021-06",
+      "events": 20,
+      "fatalities": 17
+    },
+    {
+      "country": "Chad",
+      "month": "2021-07",
+      "events": 22,
+      "fatalities": 35
+    },
+    {
+      "country": "Chad",
+      "month": "2021-08",
+      "events": 17,
+      "fatalities": 34
+    },
+    {
+      "country": "Chad",
+      "month": "2021-09",
+      "events": 16,
+      "fatalities": 40
+    },
+    {
+      "country": "Chad",
+      "month": "2021-10",
+      "events": 22,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "month": "2021-11",
+      "events": 29,
+      "fatalities": 34
+    },
+    {
+      "country": "Chad",
+      "month": "2021-12",
+      "events": 17,
+      "fatalities": 14
+    },
+    {
+      "country": "Chad",
+      "month": "2022-01",
+      "events": 32,
+      "fatalities": 39
+    },
+    {
+      "country": "Chad",
+      "month": "2022-02",
+      "events": 21,
+      "fatalities": 42
+    },
+    {
+      "country": "Chad",
+      "month": "2022-03",
+      "events": 21,
+      "fatalities": 3
+    },
+    {
+      "country": "Chad",
+      "month": "2022-04",
+      "events": 25,
+      "fatalities": 22
+    },
+    {
+      "country": "Chad",
+      "month": "2022-05",
+      "events": 28,
+      "fatalities": 306
+    },
+    {
+      "country": "Chad",
+      "month": "2022-06",
+      "events": 17,
+      "fatalities": 32
+    },
+    {
+      "country": "Chad",
+      "month": "2022-07",
+      "events": 18,
+      "fatalities": 19
+    },
+    {
+      "country": "Chad",
+      "month": "2022-08",
+      "events": 20,
+      "fatalities": 42
+    },
+    {
+      "country": "Chad",
+      "month": "2022-09",
+      "events": 33,
+      "fatalities": 57
+    },
+    {
+      "country": "Chad",
+      "month": "2022-10",
+      "events": 35,
+      "fatalities": 131
+    },
+    {
+      "country": "Chad",
+      "month": "2022-11",
+      "events": 12,
+      "fatalities": 45
+    },
+    {
+      "country": "Chad",
+      "month": "2022-12",
+      "events": 12,
+      "fatalities": 23
+    },
+    {
+      "country": "Chad",
+      "month": "2023-01",
+      "events": 13,
+      "fatalities": 16
+    },
+    {
+      "country": "Chad",
+      "month": "2023-02",
+      "events": 19,
+      "fatalities": 18
+    },
+    {
+      "country": "Chad",
+      "month": "2023-03",
+      "events": 10,
+      "fatalities": 49
+    },
+    {
+      "country": "Chad",
+      "month": "2023-04",
+      "events": 22,
+      "fatalities": 38
+    },
+    {
+      "country": "Chad",
+      "month": "2023-05",
+      "events": 21,
+      "fatalities": 91
+    },
+    {
+      "country": "Chad",
+      "month": "2023-06",
+      "events": 13,
+      "fatalities": 26
+    },
+    {
+      "country": "Chad",
+      "month": "2023-07",
+      "events": 20,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "month": "2023-08",
+      "events": 17,
+      "fatalities": 19
+    },
+    {
+      "country": "Chad",
+      "month": "2023-09",
+      "events": 21,
+      "fatalities": 14
+    },
+    {
+      "country": "Chad",
+      "month": "2023-10",
+      "events": 7,
+      "fatalities": 2
+    },
+    {
+      "country": "Chad",
+      "month": "2023-11",
+      "events": 8,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "month": "2023-12",
+      "events": 13,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "month": "2024-01",
+      "events": 10,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "month": "2024-02",
+      "events": 10,
+      "fatalities": 33
+    },
+    {
+      "country": "Chad",
+      "month": "2024-03",
+      "events": 24,
+      "fatalities": 110
+    },
+    {
+      "country": "Chad",
+      "month": "2024-04",
+      "events": 13,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "month": "2024-05",
+      "events": 13,
+      "fatalities": 11
+    },
+    {
+      "country": "Chad",
+      "month": "2024-06",
+      "events": 13,
+      "fatalities": 155
+    },
+    {
+      "country": "Chad",
+      "month": "2024-07",
+      "events": 11,
+      "fatalities": 5
+    },
+    {
+      "country": "Chad",
+      "month": "2024-08",
+      "events": 19,
+      "fatalities": 21
+    },
+    {
+      "country": "Chad",
+      "month": "2024-09",
+      "events": 18,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "month": "2024-10",
+      "events": 14,
+      "fatalities": 49
+    },
+    {
+      "country": "Chad",
+      "month": "2024-11",
+      "events": 14,
+      "fatalities": 120
+    },
+    {
+      "country": "Chad",
+      "month": "2024-12",
+      "events": 8,
+      "fatalities": 30
+    },
+    {
+      "country": "Chad",
+      "month": "2025-01",
+      "events": 22,
+      "fatalities": 44
+    },
+    {
+      "country": "Chad",
+      "month": "2025-02",
+      "events": 11,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "month": "2025-03",
+      "events": 16,
+      "fatalities": 9
+    },
+    {
+      "country": "Chad",
+      "month": "2025-04",
+      "events": 14,
+      "fatalities": 8
+    },
+    {
+      "country": "Chad",
+      "month": "2025-05",
+      "events": 12,
+      "fatalities": 50
+    },
+    {
+      "country": "Chad",
+      "month": "2025-06",
+      "events": 27,
+      "fatalities": 98
+    },
+    {
+      "country": "Chad",
+      "month": "2025-07",
+      "events": 23,
+      "fatalities": 34
+    },
+    {
+      "country": "Chad",
+      "month": "2025-08",
+      "events": 21,
+      "fatalities": 26
+    },
+    {
+      "country": "Chad",
+      "month": "2025-09",
+      "events": 14,
+      "fatalities": 13
+    },
+    {
+      "country": "Chad",
+      "month": "2025-10",
+      "events": 32,
+      "fatalities": 14
+    },
+    {
+      "country": "Chad",
+      "month": "2025-11",
+      "events": 36,
+      "fatalities": 47
+    },
+    {
+      "country": "Chad",
+      "month": "2025-12",
+      "events": 23,
+      "fatalities": 6
+    },
+    {
+      "country": "Chad",
+      "month": "2026-01",
+      "events": 53,
+      "fatalities": 67
+    },
+    {
+      "country": "Chad",
+      "month": "2026-02",
+      "events": 32,
+      "fatalities": 39
+    },
+    {
+      "country": "Chad",
+      "month": "2026-03",
+      "events": 26,
+      "fatalities": 31
+    },
+    {
+      "country": "Chad",
+      "month": "2026-04",
+      "events": 44,
+      "fatalities": 98
+    },
+    {
+      "country": "Chad",
+      "month": "2026-05",
+      "events": 54,
+      "fatalities": 58
+    },
+    {
+      "country": "Chad",
+      "month": "2026-06",
+      "events": 28,
+      "fatalities": 12
+    },
+    {
+      "country": "Chad",
+      "month": "2026-07",
+      "events": 47,
+      "fatalities": 26
+    },
+    {
+      "country": "Chad",
+      "month": "2026-08",
+      "events": 16,
+      "fatalities": 18
+    }
+  ],
+  "timeline_clusters": [
+    {
+      "country": "Chad",
+      "date": "2026-04-25",
+      "admin1": "Wadi Fira",
+      "sub_event": "Mob violence",
+      "events": 6,
+      "fatalities": 66
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-06-27",
+      "admin1": "Extreme-Nord",
+      "sub_event": "Attack",
+      "events": 13,
+      "fatalities": 31
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-02-28",
+      "admin1": "Extreme-Nord",
+      "sub_event": "Armed clash",
+      "events": 14,
+      "fatalities": 28
+    },
+    {
+      "country": "Chad",
+      "date": "2026-01-10",
+      "admin1": "Moyen-Chari",
+      "sub_event": "Armed clash",
+      "events": 2,
+      "fatalities": 28
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-04-18",
+      "admin1": "Sud-Ouest",
+      "sub_event": "Armed clash",
+      "events": 15,
+      "fatalities": 27
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-01-03",
+      "admin1": "Nord-Ouest",
+      "sub_event": "Armed clash",
+      "events": 7,
+      "fatalities": 26
+    },
+    {
+      "country": "Chad",
+      "date": "2026-05-02",
+      "admin1": "Lac",
+      "sub_event": "Armed clash",
+      "events": 1,
+      "fatalities": 26
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-03-28",
+      "admin1": "Sud-Ouest",
+      "sub_event": "Armed clash",
+      "events": 16,
+      "fatalities": 25
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-02-14",
+      "admin1": "Extreme-Nord",
+      "sub_event": "Armed clash",
+      "events": 4,
+      "fatalities": 22
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-07-18",
+      "admin1": "Sud-Ouest",
+      "sub_event": "Armed clash",
+      "events": 10,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-06-13",
+      "admin1": "Extreme-Nord",
+      "sub_event": "Armed clash",
+      "events": 9,
+      "fatalities": 21
+    },
+    {
+      "country": "Cameroon",
+      "date": "2026-04-25",
+      "admin1": "Extreme-Nord",
+      "sub_event": "Armed clash",
+      "events": 7,
+      "fatalities": 21
+    }
+  ],
+  "spot_checks": [
+    {
+      "date": "2020-12-26",
+      "COUNTRY": "Cameroon",
+      "ADMIN1": "Adamaoua",
+      "EVENT_TYPE": "Battles",
+      "SUB_EVENT_TYPE": "Armed clash",
+      "EVENTS": "1",
+      "FATALITIES": "0",
+      "DISORDER_TYPE": "Political violence"
+    },
+    {
+      "date": "2025-11-29",
+      "COUNTRY": "Cameroon",
+      "ADMIN1": "Adamaoua",
+      "EVENT_TYPE": "Protests",
+      "SUB_EVENT_TYPE": "Protest with intervention",
+      "EVENTS": "1",
+      "FATALITIES": "0",
+      "DISORDER_TYPE": "Demonstrations"
+    },
+    {
+      "date": "2026-01-10",
+      "COUNTRY": "Chad",
+      "ADMIN1": "Wadi Fira",
+      "EVENT_TYPE": "Violence against civilians",
+      "SUB_EVENT_TYPE": "Sexual violence",
+      "EVENTS": "1",
+      "FATALITIES": "0",
+      "DISORDER_TYPE": "Political violence"
+    }
+  ],
+  "errors": [
+    {
+      "id": "E01",
+      "origin": "Extraction runtime",
+      "error": "Artifact workbook daemon timed out on the first import attempt.",
+      "caught_by": "Explicit import failure.",
+      "resolution": "Retried with a longer daemon startup timeout.",
+      "consequence": "No analysis would have been produced."
+    },
+    {
+      "id": "E02",
+      "origin": "Extraction",
+      "error": "A whole-sheet inspect returned a truncated value payload.",
+      "caught_by": "Record-count assertion failed.",
+      "resolution": "Read the worksheet through range.values and asserted 7,598 data rows.",
+      "consequence": "A partial dataset could have been mistaken for the full workbook."
+    },
+    {
+      "id": "E03",
+      "origin": "Period harmonisation",
+      "error": "Using the 2025 week ending 30 August produced totals that did not match the analyst comparison period.",
+      "caught_by": "Cross-check against the supplied assessment totals.",
+      "resolution": "Matched 34 weekly observations: 4 Jan to 23 Aug 2025 against 3 Jan to 29 Aug 2026.",
+      "consequence": "Year-on-year change rates would have been understated."
+    },
+    {
+      "id": "E04",
+      "origin": "Analyst notes cross-check",
+      "error": "The notes list 400 fatalities for 2025 Cameroon attacks, while the workbook sums 399 for the Attack sub-event.",
+      "caught_by": "Deterministic category aggregation.",
+      "resolution": "The publication uses the workbook value for the sub-event and retains 400 only for the broader violence-against-civilians event type.",
+      "consequence": "A category-level fatality statement would have been off by one."
+    }
+  ],
+  "falsification": [
+    {
+      "id": "F1",
+      "test": "Cameroon coercion shift",
+      "overturn": "A refreshed event-level extract shows the 2026 abduction increase is primarily a coding or deduplication artifact rather than additional incidents."
+    },
+    {
+      "id": "F2",
+      "test": "Chad fragmented escalation",
+      "overturn": "Actor-attributed event data shows the apparent mix of mob, battle, abduction and air activity is generated by one coherent campaign rather than multiple mechanisms."
+    },
+    {
+      "id": "F3",
+      "test": "Coercive composition and lower lethality",
+      "overturn": "A longer ADMIN1 panel removes the negative association between coercive share and lethality or reverses its sign after within-region controls."
+    },
+    {
+      "id": "F4",
+      "test": "Hotspot persistence",
+      "overturn": "Later 2026 weeks show the current high-burden regions reverting rapidly toward baseline while other ADMIN1 units sustain the escalation."
+    }
+  ],
+  "direction": {
+    "events": "higher means more risk burden",
+    "fatalities": "higher means more risk burden",
+    "lethality_per100": "higher means more lethal intensity",
+    "civilian_share": "higher means more civilian targeting",
+    "coercive_share": "higher means more coercive activity",
+    "diversity": "higher means more tactical diversification",
+    "persistence": "higher means more persistent activity"
+  }
+}

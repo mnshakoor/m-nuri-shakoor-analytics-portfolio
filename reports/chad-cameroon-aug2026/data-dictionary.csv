@@ -1,0 +1,15 @@
+field,meaning,type,direction,source_or_derived,missing_rule
+week_date,Week-ending Saturday date,date,neither,source transformed from Excel serial,none
+COUNTRY,Country label,text,neither,source,none
+ADMIN1,First-order administrative unit,text,neither,source,none
+EVENT_TYPE,Event family,category,risk context,source,none
+SUB_EVENT_TYPE,Sub-event family,category,risk context,source,none
+EVENTS,Count of represented events in the row,integer,higher risk burden,source,none
+FATALITIES,Recorded fatalities,integer,higher risk burden,source,none
+POPULATION_EXPOSURE,Population exposure field supplied in workbook,number,higher exposure,source,blank stays missing
+DISORDER_TYPE,Disorder family,category,risk context,source,none
+CENTROID_LATITUDE,ADMIN1 centroid latitude,number,neither,source,none
+CENTROID_LONGITUDE,ADMIN1 centroid longitude,number,neither,source,none
+lethality_per100,Fatalities per 100 represented events in matched 2026 period,number,higher risk intensity,derived,undefined when events are zero
+coercive_share,"Share of events classified as abduction, looting/property destruction, arrests, or sexual violence",proportion,higher coercive activity,derived,undefined when events are zero
+coercive_residual,Within-sample z(coercive share) minus z(violence-against-civilians share),z-score difference,positive means coercion is high relative to civilian-targeting share,derived,active ADMIN1 only
