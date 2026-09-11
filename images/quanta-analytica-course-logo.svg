@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#0a0c10"></rect>
+      <polygon points="600,80 720,150 720,290 600,360 480,290 480,150" fill="none" stroke="#c8a96e" stroke-width="3"></polygon>
+      <polygon points="600,130 670,170 670,260 600,300 530,260 530,170" fill="none" stroke="#9a7f52" stroke-width="1.5"></polygon>
+      <circle cx="600" cy="220" r="18" fill="#c8a96e"></circle>
+      <text x="600" y="430" font-family="serif" font-size="48" font-weight="700" fill="#e8e4dc" text-anchor="middle">Key Intelligence Questions</text>
+      <text x="600" y="490" font-family="serif" font-size="36" fill="#c8a96e" text-anchor="middle">and Problem Framing</text>
+      <text x="600" y="560" font-family="monospace" font-size="22" fill="#7a7264" text-anchor="middle" letter-spacing="4">QUANTA ANALYTICA · MNS CONSULTING</text>
+    </svg>
