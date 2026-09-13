@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worldwide Governance Indicators — Instrument Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void: #0a0c0f;
+    --panel: #12151a;
+    --panel-raised: #171b21;
+    --line: rgba(148,163,184,0.14);
+    --line-strong: rgba(148,163,184,0.28);
+    --steel: #6f93b3;
+    --steel-dim: #4c6478;
+    --signal: #8caf9e;
+    --alert: #b97a5c;
+    --text: #dfe3e8;
+    --text-dim: #8993a1;
+    --text-faint: #5c6570;
+    --radius: 3px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html,body{
+    margin:0;
+    padding:0;
+    background: var(--void);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body{
+    background-image:
+      linear-gradient(180deg, rgba(111,147,179,0.05) 0%, transparent 340px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+  }
+
+  .frame{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px 80px;
+  }
+
+  /* ---------- Header ---------- */
+
+  header{
+    padding: 40px 0 26px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 30px;
+  }
+
+  .masthead-row{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .kicker{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    color: var(--steel);
+    margin: 0 0 10px;
+  }
+
+  h1{
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.12;
+    margin: 0 0 12px;
+    color: #eef1f4;
+    max-width: 720px;
+  }
+
+  .dek{
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    max-width: 620px;
+    margin: 0;
+  }
+
+  .meta-block{
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--text-faint);
+    line-height: 1.9;
+    white-space: nowrap;
+  }
+  .meta-block span{ color: var(--text-dim); }
+
+  /* ---------- Pillar strip ---------- */
+
+  .pillars{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 34px;
+  }
+
+  .pillar{
+    background: var(--panel);
+    padding: 16px 14px;
+    min-height: 84px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .pillar .num{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--text-faint);
+  }
+
+  .pillar .label{
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: var(--text);
+    margin-top: 10px;
+  }
+
+  @media (max-width: 760px){
+    .pillars{ grid-template-columns: repeat(3, 1fr); }
+    .meta-block{ text-align:left; }
+  }
+  @media (max-width: 460px){
+    .pillars{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- Instrument panel (viz housing) ---------- */
+
+  .instrument{
+    background: var(--panel);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .instrument-bar{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel-raised);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .instrument-bar .id-tag{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+
+  .dot{
+    width:6px; height:6px; border-radius:50%;
+    background: var(--signal);
+    box-shadow: 0 0 6px var(--signal);
+  }
+
+  .instrument-body{
+    padding: 18px;
+  }
+
+  .viz-shell{
+    width: 100%;
+    background: #0d1014;
+    border: 1px solid var(--line);
+  }
+
+  .instrument-foot{
+    padding: 11px 18px;
+    border-top: 1px solid var(--line);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--text-faint);
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* ---------- Reading notes ---------- */
+
+  .notes{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 700px){
+    .notes{ grid-template-columns: 1fr; }
+  }
+
+  .note h2{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    color: var(--steel);
+    margin: 0 0 10px;
+  }
+
+  .note p{
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-dim);
+    margin: 0 0 12px;
+  }
+
+  .note p:last-child{ margin-bottom: 0; }
+
+  .scale-key{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+
+  .scale-key .chip{
+    display:flex;
+    align-items:center;
+    gap: 7px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .swatch{
+    width: 10px; height: 10px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    margin-top: 46px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--text-faint);
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  a{ color: var(--steel); text-decoration: none; }
+  a:hover{ color: var(--signal); }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <header>
+    <div class="masthead-row">
+      <div>
+        <p class="kicker">GOVERNANCE &amp; INSTITUTIONAL RISK — REFERENCE INSTRUMENT</p>
+        <h1>Worldwide Governance Indicators</h1>
+        <p class="dek">Six aggregate measures of governance perception, tracked across more than 200 countries and territories, drawn from over thirty underlying data sources.</p>
+      </div>
+      <div class="meta-block">
+        SOURCE <span>WORLD BANK / WGI PROJECT</span><br>
+        METHOD <span>KAUFMANN · KRAAY · MASTRUZZI</span><br>
+        SCALE <span>−2.5 TO +2.5</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="pillars">
+    <div class="pillar"><div class="num">01</div><div class="label">Voice &amp; Accountability</div></div>
+    <div class="pillar"><div class="num">02</div><div class="label">Political Stability &amp; Absence of Violence</div></div>
+    <div class="pillar"><div class="num">03</div><div class="label">Government Effectiveness</div></div>
+    <div class="pillar"><div class="num">04</div><div class="label">Regulatory Quality</div></div>
+    <div class="pillar"><div class="num">05</div><div class="label">Rule of Law</div></div>
+    <div class="pillar"><div class="num">06</div><div class="label">Control of Corruption</div></div>
+  </div>
+
+  <div class="instrument">
+    <div class="instrument-bar">
+      <div class="id-tag"><span class="dot"></span> WGI-DASHBOARD // LIVE EMBED</div>
+      <div>TABLEAU PUBLIC</div>
+    </div>
+    <div class="instrument-body">
+      <div class="viz-shell">
+        <div class='tableauPlaceholder' id='viz1789263265995' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='WGI Dashboard ' src='https://public.tableau.com/static/images/Wo/WorldwideGovernanceIndicatorAnalysis/WGIDashboard/1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='WorldwideGovernanceIndicatorAnalysis/WGIDashboard' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Wo/WorldwideGovernanceIndicatorAnalysis/WGIDashboard/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>
+      </div>
+    </div>
+    <div class="instrument-foot">
+      <span>UPDATE CYCLE: ANNUAL</span>
+      <span>UNIT OF ANALYSIS: COUNTRY / TERRITORY</span>
+      <span>PERCENTILE RANK: 0–100</span>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note">
+      <h2>READING THE INDICATORS</h2>
+      <p>Each pillar is an aggregate, not a raw statistic. It compresses survey data, expert assessment, and NGO reporting into a single score, so a shift of a few tenths of a point across a year is rarely noise. It typically reflects convergence across several independent sources.</p>
+      <p>Treat the six pillars as one system rather than six unrelated scores. A drop in Rule of Law alongside a drop in Control of Corruption points to institutional erosion, not measurement error.</p>
+    </div>
+    <div class="note">
+      <h2>SCALE &amp; CAVEATS</h2>
+      <p>Scores run from approximately −2.5 (weak) to +2.5 (strong) and are also reported as a percentile rank from 0 to 100 relative to all other countries in a given year.</p>
+      <div class="scale-key">
+        <div class="chip"><span class="swatch" style="background:var(--alert)"></span> WEAK (&lt; −0.5)</div>
+        <div class="chip"><span class="swatch" style="background:var(--text-faint)"></span> MIXED (−0.5 to 0.5)</div>
+        <div class="chip"><span class="swatch" style="background:var(--signal)"></span> STRONG (&gt; 0.5)</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>MNS CONSULTING — REFERENCE VIEWS</span>
+    <span>DATA © WORLD BANK GROUP. VISUALIZATION HOSTED ON TABLEAU PUBLIC.</span>
+  </footer>
+
+</div>
+
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1789263265995');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) {
+    vizElement.style.width='100%';
+    vizElement.style.minWidth='420px';
+    vizElement.style.maxWidth='100%';
+    vizElement.style.minHeight='1427px';
+    vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';
+  } else if ( divElement.offsetWidth > 500 ) {
+    vizElement.style.width='100%';
+    vizElement.style.minWidth='420px';
+    vizElement.style.maxWidth='100%';
+    vizElement.style.minHeight='1427px';
+    vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='2077px';
+  }
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+
+</body>
+</html>
