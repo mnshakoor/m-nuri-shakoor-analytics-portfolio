@@ -34,6 +34,7 @@
         "@id": "https://portfolio.mshakoor.com/#person",
         "name": "M. Nuri Shakoor",
         "url": "https://mnshakoor.com",
+        "image": "https://portfolio.mnshakoor.com/images/pic2-m-nuri-shakoor-IMG-9557.jpg",
         "jobTitle": "Global Security Analyst and Geopolitical Risk Intelligence Consultant",
         "description": "Independent analyst producing global security assessments, geopolitical risk intelligence, data visualizations, and applied analytic tools.",
         "knowsAbout": [
@@ -76,6 +77,26 @@
         "isPartOf": { "@id": "https://portfolio.mshakoor.com/#website" },
         "about": { "@id": "https://portfolio.mshakoor.com/#person" },
         "inLanguage": "en-US"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://portfolio.mshakoor.com/#links",
+        "name": "Live consoles, dashboards, tools, and channels",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Africa Conflict Exposure Monitor", "url": "https://acem.arac-international.org/" },
+          { "@type": "ListItem", "position": 2, "name": "ARAC Global Stability Analytics Dashboard", "url": "https://agsi.arac-international.org/analytics" },
+          { "@type": "ListItem", "position": 3, "name": "Digital Content Editor", "url": "https://newsletter.arac-international.org/" },
+          { "@type": "ListItem", "position": 4, "name": "MOSAIC Displacement Signal Console", "url": "https://mosaic.arac-international.org/" },
+          { "@type": "ListItem", "position": 5, "name": "OpenAI Custom GPT Contributor", "url": "https://quanta-analytica.com/chatgpt/openai" },
+          { "@type": "ListItem", "position": 6, "name": "THINK Media Literacy Initiative", "url": "https://think.arac-international.org/" },
+          { "@type": "ListItem", "position": 7, "name": "The Fragility Gap Report", "url": "https://portfolio.mnshakoor.com/reports/wca-report1/qap-data-story-fragility-gap.html" },
+          { "@type": "ListItem", "position": 8, "name": "ARAC GSA ISD Global Indicator Analysis Dashboard v1", "url": "https://quanta-analytica.com/tools/arac-global-stability-dashboard.html" },
+          { "@type": "ListItem", "position": 9, "name": "ISO 31000 Risk Register App", "url": "https://quanta-analytica.com/tools/qa-risk-register.html" },
+          { "@type": "ListItem", "position": 10, "name": "V-Dem Explorer", "url": "https://quanta-analytica.com/tools/vdem-explorer.html" },
+          { "@type": "ListItem", "position": 11, "name": "Global Security Report 2024", "url": "https://quanta-analytica.com/tools/2024-global-security-report.html" },
+          { "@type": "ListItem", "position": 12, "name": "World Governance Indicators Dashboard", "url": "https://portfolio.mnshakoor.com/reports/wgi-report/wgi-dashboard.html" },
+          { "@type": "ListItem", "position": 13, "name": "ARAC International Inc. Channels", "url": "https://linktr.ee/mnshakoor" }
+        ]
       }
     ]
   }
@@ -694,6 +715,110 @@
       transform: translateY(0);
     }
 
+    .links-profile {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: clamp(1.5rem, 4vw, 2.6rem);
+      align-items: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2.6rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .links-avatar {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--gold);
+      padding: 4px;
+    }
+
+    .links-profile-copy h2 { max-width: 780px; }
+    .links-profile-copy .section-index { margin-bottom: 0.7rem; }
+
+    .links-logo {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      padding: 0.9rem;
+      border: 1px solid var(--line-strong);
+      background: var(--ink-raised);
+      justify-self: end;
+    }
+
+    .quicklinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quicklink-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      padding: 1.6rem;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(145deg, rgba(200, 169, 110, 0.05), transparent 45%),
+        var(--ink-raised);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 180ms ease, transform 180ms ease;
+    }
+
+    .quicklink-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--line-strong);
+    }
+
+    .quicklink-tag {
+      display: inline-block;
+      margin-bottom: 0.9rem;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .quicklink-card h3 {
+      margin-bottom: 0.6rem;
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      font-weight: 400;
+      line-height: 1.22;
+      color: var(--paper);
+    }
+
+    .quicklink-card p {
+      flex-grow: 1;
+      margin-bottom: 1.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .quicklink-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--gold-light);
+      font-family: var(--mono);
+      font-size: 0.71rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .quicklink-open::after { content: "↗"; }
+
     @media (max-width: 860px) {
       .menu-button { display: inline-flex; }
 
@@ -728,6 +853,13 @@
       .hero { min-height: auto; }
       .hero-aside { max-width: 500px; }
       .institution-list { grid-template-columns: 1fr 1fr; }
+
+      .links-profile {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+
+      .links-logo { justify-self: start; }
 
       .institution-list li,
       .institution-list li:first-child {
@@ -788,6 +920,7 @@
       </button>
 
       <ul class="nav-links" id="primary-menu">
+        <li><a href="#links">Live work</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#method">Method</a></li>
         <li><a href="#about">About</a></li>
@@ -817,6 +950,129 @@
           <p><strong>Product posture</strong>Source-disciplined, transparent, and built for practical use</p>
           <span class="signal">Portfolio publishing underway</span>
         </aside>
+      </div>
+    </section>
+
+    <section class="section links-section section-rule" id="links" aria-labelledby="links-title">
+      <div class="shell">
+        <div class="links-profile reveal">
+          <img class="links-avatar" src="https://portfolio.mnshakoor.com/images/pic2-m-nuri-shakoor-IMG-9557.jpg" alt="M. Nuri Shakoor conducting field research" width="132" height="132" loading="lazy">
+          <div class="links-profile-copy">
+            <p class="section-index">00 / Live work</p>
+            <h2 id="links-title">Consoles, dashboards, tools, and reporting currently in use.</h2>
+            <p class="section-intro">
+              A working directory of the products, channels, and publications that carry the Quanta Analytica Process™ into practice, each summarized so you know what you are opening before you open it.
+            </p>
+          </div>
+          <img class="links-logo" src="https://portfolio.mnshakoor.com/images/quanta-analytica-mns-consulting.png" alt="Quanta Analytica / MNS Consulting logo" width="120" height="120" loading="lazy">
+        </div>
+
+        <ul class="quicklinks-grid" role="list">
+          <li>
+            <a class="quicklink-card reveal" href="https://acem.arac-international.org/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Live monitoring</span>
+              <h3>Africa Conflict Exposure Monitor</h3>
+              <p>Exception based monitoring of conflict and political risk across priority African states and their regional spillover.</p>
+              <span class="quicklink-open">Open console</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://agsi.arac-international.org/analytics" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Analytics dashboard</span>
+              <h3>ARAC Global Stability Analytics Dashboard</h3>
+              <p>Public dashboard holding the Fragile States Index, Bertelsmann Transformation Index, and V-Dem as three independent lenses on fragility and governance, not a single fused score.</p>
+              <span class="quicklink-open">Open dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://newsletter.arac-international.org/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Editorial</span>
+              <h3>Digital Content Editor</h3>
+              <p>Newsletter and briefing hub for ARAC International's editorial output on conflict, governance, and security risk.</p>
+              <span class="quicklink-open">Read the newsletter</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://mosaic.arac-international.org/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Live console</span>
+              <h3>MOSAIC: Displacement Signal Console</h3>
+              <p>Displacement risk console built on IOM DTM data, tracking where population movement pressure is changing and what it may indicate for humanitarian access and stability.</p>
+              <span class="quicklink-open">Open console</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://quanta-analytica.com/chatgpt/openai" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">AI tools</span>
+              <h3>OpenAI Custom GPT Contributor</h3>
+              <p>Directory of custom GPT assistants prompt engineered under MNS Consulting across geopolitical risk, information integrity, and applied analytic tradecraft.</p>
+              <span class="quicklink-open">View directory</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://think.arac-international.org/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Public education</span>
+              <h3>THINK: Media Literacy, Digital Literacy, Critical Thinking</h3>
+              <p>A free ARAC International public education initiative that helps readers reason about information rather than telling them what to think.</p>
+              <span class="quicklink-open">Visit THINK</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://portfolio.mnshakoor.com/reports/wca-report1/qap-data-story-fragility-gap.html" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Data story</span>
+              <h3>The Fragility Gap Report, Aug 2026</h3>
+              <p>A QAP data story examining the gap between formal state fragility indicators and observed conditions on the ground.</p>
+              <span class="quicklink-open">Read the report</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://quanta-analytica.com/tools/arac-global-stability-dashboard.html" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Tool</span>
+              <h3>ARAC GSA: ISD Global Indicator Analysis, Dashboard v1</h3>
+              <p>First generation build of the global stability indicator dashboard, presented as a standalone analytic tool.</p>
+              <span class="quicklink-open">Open tool</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://quanta-analytica.com/tools/qa-risk-register.html" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Applied tool</span>
+              <h3>ISO 31000 Risk Register App</h3>
+              <p>A working risk register application structured on the ISO 31000:2018 risk management framework for identifying, scoring, and tracking risk.</p>
+              <span class="quicklink-open">Open tool</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://quanta-analytica.com/tools/vdem-explorer.html" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Tool</span>
+              <h3>V-Dem Explorer, 1st generation</h3>
+              <p>An early exploration tool for navigating Varieties of Democracy indicators across countries and years.</p>
+              <span class="quicklink-open">Open tool</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://quanta-analytica.com/tools/2024-global-security-report.html" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Report</span>
+              <h3>Global Security Report 2024</h3>
+              <p>An annual global security assessment surveying conflict trends, fragility, and risk conditions across regions.</p>
+              <span class="quicklink-open">Read the report</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://portfolio.mnshakoor.com/reports/wgi-report/wgi-dashboard.html" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Dashboard</span>
+              <h3>World Governance Indicators Dashboard</h3>
+              <p>An interactive dashboard built on the World Bank's Worldwide Governance Indicators for cross country governance comparison.</p>
+              <span class="quicklink-open">Open dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://linktr.ee/mnshakoor" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">Channels</span>
+              <h3>ARAC International Inc. Channels</h3>
+              <p>Consolidated hub for the ARAC International YouTube channel and other professional and organizational links.</p>
+              <span class="quicklink-open">View channels</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
