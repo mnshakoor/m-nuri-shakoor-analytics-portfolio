@@ -1,0 +1,40 @@
+name: Add Resume-CV navigation
+
+on:
+  push:
+    paths:
+      - '_nav_patch/**'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-nav:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Add Resume-CV link to portfolio navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text()
+          old='''        <li><a href="#about">About</a></li>\n        <li><a href="#contact">Contact</a></li>'''
+          new='''        <li><a href="#about">About</a></li>\n        <li><a href="05/Resume-CV/">Resume / CV</a></li>\n        <li><a href="#contact">Contact</a></li>'''
+          if 'href="05/Resume-CV/"' not in s:
+              if old not in s:
+                  raise SystemExit('Expected navigation block not found')
+              s=s.replace(old,new,1)
+              p.write_text(s)
+          PY
+          rm -rf _nav_patch
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html _nav_patch
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Link Resume-CV section from portfolio navigation'
+          git push
