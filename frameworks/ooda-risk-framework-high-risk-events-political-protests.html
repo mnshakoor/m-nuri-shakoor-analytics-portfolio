@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OODA Loop Risk Framework for Field Analysts Covering Political Protests | MNS Consulting</title>
+<meta name="description" content="A field-analysis framework combining the OODA loop, a four-phase public-order model, and a 5x5 risk matrix, built from contemporaneous field observation of UN General Assembly 81 protests in New York City.">
+<meta name="keywords" content="OODA loop, field analyst framework, political protest risk assessment, civil unrest monitoring, public order classification, risk assessment framework, structured analytic techniques, security risk management, UNGA 81, M. Nuri Shakoor, MNS Consulting">
+<meta name="author" content="M. Nuri Shakoor, SRMP-R">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-high-risk-events-political-protests.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="OODA Loop and Risk-Assessment Framework for Field Analysts">
+<meta property="og:description" content="A field-analysis framework combining the OODA loop, a four-phase public-order model, and a 5x5 risk matrix, built from contemporaneous field observation of UN General Assembly 81 protests in New York City.">
+<meta property="og:image" content="https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-fig1-ooda-loop.png">
+<meta property="og:url" content="https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-high-risk-events-political-protests.html">
+<meta property="og:site_name" content="MNS Consulting Portfolio">
+<meta property="article:author" content="M. Nuri Shakoor">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OODA Loop and Risk-Assessment Framework for Field Analysts">
+<meta name="twitter:description" content="A field-analysis framework for covering high-risk events and political protests, combining OODA, a four-phase public-order model, and a 5x5 risk matrix.">
+<meta name="twitter:image" content="https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-fig1-ooda-loop.png">
+
+<!-- Favicon: inline gold hexagon emblem -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 92,27 92,73 50,96 8,73 8,27' fill='%230a0c10' stroke='%23c8a96e' stroke-width='4'/%3E%3Ctext x='50' y='63' font-family='Georgia,serif' font-size='42' fill='%23c8a96e' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+
+<!-- Schema.org: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Understanding the Dynamics of Covering and Monitoring High-Risk Events and Political Protests",
+  "alternativeHeadline": "An OODA Loop and Risk-Assessment Framework for Field Analysts",
+  "description": "A field-analysis framework combining the OODA loop, a four-phase public-order model, and a 5x5 risk matrix, built from contemporaneous field observation of UN General Assembly 81 protests in New York City.",
+  "image": "https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-fig1-ooda-loop.png",
+  "author": {
+    "@type": "Person",
+    "name": "M. Nuri Shakoor",
+    "url": "https://mnshakoor.com",
+    "jobTitle": "Global Security Analyst, SRMP-R"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MNS Consulting",
+    "url": "https://mnshakoor.com"
+  },
+  "mainEntityOfPage": "https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-high-risk-events-political-protests.html",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-26",
+  "keywords": "OODA loop, field analysis, political protest risk assessment, civil unrest monitoring, public order classification, structured analytic techniques"
+}
+</script>
+
+<!-- Schema.org: Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://portfolio.mnshakoor.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Frameworks", "item": "https://portfolio.mnshakoor.com/frameworks/"},
+    {"@type": "ListItem", "position": 3, "name": "OODA Loop and Risk-Assessment Framework for Field Analysts", "item": "https://portfolio.mnshakoor.com/frameworks/ooda-risk-framework-high-risk-events-political-protests.html"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --obsidian:#0a0c10; --obsidian-mid:#10131a; --obsidian-card:#13161f; --obsidian-border:#1c2030; --obsidian-surface:#181b26;
+  --gold:#c8a96e; --gold-light:#dfc28e; --gold-dim:#9a7f52; --gold-muted:#6b5838; --gold-glow:rgba(200,169,110,.12);
+  --slate:#5d7a9a; --slate-light:#7f9ab8;
+  --red:#c0392b; --red-light:#e26a5c; --red-bg:rgba(192,57,43,.12);
+  --amber:#d4820a; --amber-light:#f0a838; --amber-bg:rgba(212,130,10,.12);
+  --green:#3f8f5f; --green-light:#5cb381; --green-bg:rgba(63,143,95,.12);
+  --yellow:#c9a227; --yellow-bg:rgba(201,162,39,.12);
+  --navy-ooda:#0c172a; --gold-ooda:#d2a345; --slate-ooda:#434f64; --black-ooda:#101010;
+  --text-primary:#e8e4dc; --text-secondary:#b8b0a0; --text-muted:#7a7264; --text-faint:#4a4640;
+  --font-display:'Libre Baskerville', Georgia, serif;
+  --font-body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  --font-mono:'IBM Plex Mono','Courier New',monospace;
+  --radius-sm:3px; --radius-md:6px; --radius-lg:10px;
+  --border-default:1px solid var(--obsidian-border);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{background:var(--obsidian);color:var(--text-primary);font-family:var(--font-body);font-size:.97rem;line-height:1.7;-webkit-font-smoothing:antialiased;}
+a{color:var(--gold);text-decoration:none;transition:color .15s ease;}
+a:hover{color:var(--gold-light);}
+p{color:var(--text-secondary);margin-bottom:1rem;}
+p:last-child{margin-bottom:0;}
+strong,b{color:var(--text-primary);font-weight:600;}
+em,i{color:var(--slate-light);font-style:italic;}
+ul,ol{color:var(--text-secondary);padding-left:1.25rem;margin-bottom:1rem;}
+li{margin-bottom:.4rem;}
+sup a{font-family:var(--font-mono);color:var(--gold-dim);text-decoration:none;font-size:.72em;}
+img{max-width:100%;display:block;}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--gold-light));z-index:9999;transition:width .1s linear;box-shadow:0 0 8px var(--gold-glow);}
+
+nav{position:fixed;top:3px;left:0;right:0;z-index:1000;background:rgba(10,12,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--obsidian-border);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:var(--font-mono);font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+.nav-brand span{color:var(--text-muted);font-weight:400;}
+.nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none;}
+.nav-links a{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{border:1px solid var(--gold-dim);padding:6px 12px;border-radius:var(--radius-sm);color:var(--gold)!important;background:var(--gold-glow);}
+
+.hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;padding:130px 1.5rem 3rem;overflow:hidden;background:radial-gradient(ellipse at 18% 60%,rgba(200,169,110,.06) 0%,transparent 60%),radial-gradient(ellipse at 82% 15%,rgba(93,122,154,.05) 0%,transparent 50%),var(--obsidian);}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,169,110,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(200,169,110,.07) 1px,transparent 1px);background-size:40px 40px;animation:gridDrift 22s linear infinite;pointer-events:none;}
+@keyframes gridDrift{0%{transform:translate(0,0);}100%{transform:translate(40px,40px);}}
+.hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;width:100%;}
+.hero-eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem;border-bottom:1px solid var(--obsidian-border);padding-bottom:.6rem;}
+.hero-eyebrow .tag{color:var(--gold-dim);}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,3rem);font-weight:700;line-height:1.18;color:var(--text-primary);letter-spacing:-.01em;margin-bottom:.6rem;}
+.hero .title-gold{color:var(--gold);display:block;margin-top:.4rem;font-size:.62em;font-weight:400;font-family:var(--font-body);letter-spacing:.01em;}
+.hero-subtitle{font-family:var(--font-body);font-size:1.02rem;color:var(--text-secondary);margin-bottom:1.5rem;max-width:680px;line-height:1.65;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem;align-items:center;}
+.meta-cell{display:flex;flex-direction:column;gap:2px;}
+.meta-cell .label{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted);}
+.meta-cell .value{font-family:var(--font-mono);font-size:.8rem;font-weight:600;color:var(--text-primary);}
+.meta-divider{width:1px;height:32px;background:var(--gold-dim);align-self:center;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.5rem;}
+.btn{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.2rem;border-radius:var(--radius-sm);border:1px solid var(--gold-dim);display:inline-flex;align-items:center;gap:.5rem;}
+.btn-gold{background:var(--gold);color:var(--obsidian);border-color:var(--gold);font-weight:600;}
+.btn-gold:hover{background:var(--gold-light);color:var(--obsidian);}
+.btn-outline{color:var(--gold);background:transparent;}
+.btn-outline:hover{background:var(--gold-glow);color:var(--gold-light);}
+
+.metrics-strip{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid var(--obsidian-border);}
+.metric-block{background:var(--obsidian-card);border:var(--border-default);border-top:2px solid var(--gold-dim);padding:.9rem 1.25rem;border-radius:var(--radius-md);min-width:140px;}
+.metric-value{font-family:var(--font-mono);font-size:1.35rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:3px;}
+.metric-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);}
+
+main{max-width:900px;margin:0 auto;padding:3rem 1.5rem 4rem;}
+
+.toc{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);padding:1.5rem;margin-bottom:3rem;}
+.toc-title{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.toc ol{list-style:none;padding-left:0;margin-bottom:0;columns:2;column-gap:2rem;}
+.toc li{margin-bottom:.55rem;font-size:.86rem;break-inside:avoid;}
+.toc a{color:var(--text-secondary);}
+.toc a:hover{color:var(--gold);}
+.toc-num{font-family:var(--font-mono);color:var(--gold-dim);margin-right:.4rem;}
+@media (max-width:640px){.toc ol{columns:1;}}
+
+.section{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;margin-bottom:3.25rem;scroll-margin-top:80px;}
+.section.visible{opacity:1;transform:translateY(0);}
+.section-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-bottom:.9rem;border-bottom:1px solid var(--obsidian-border);}
+.section-num{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-dim);background:var(--gold-glow);border:1px solid var(--gold-muted);padding:3px 10px;border-radius:var(--radius-sm);white-space:nowrap;}
+.section-title{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--text-primary);letter-spacing:-.01em;}
+.sub-section{margin-top:1.75rem;padding-top:1.25rem;}
+.sub-section::before{content:'';display:block;height:1px;background:linear-gradient(90deg,var(--gold-muted),transparent);margin-bottom:1.1rem;}
+.sub-title{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;}
+
+.callout{border-left:3px solid var(--gold);background:var(--gold-glow);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:1.1rem 1.4rem;margin:1.25rem 0;}
+.callout-label{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;}
+.callout p{color:var(--text-primary);font-size:.94rem;margin-bottom:0;}
+.callout.slate{border-left-color:var(--slate);background:rgba(93,122,154,.08);}
+.callout.slate .callout-label{color:var(--slate-light);}
+
+figure{margin:1.5rem 0;}
+figure img{border-radius:var(--radius-md);border:var(--border-default);}
+figcaption{font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-top:.6rem;text-align:center;letter-spacing:.03em;}
+
+.ooda-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0;}
+.ooda-card{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);padding:1.1rem 1.3rem;border-top:3px solid var(--gold-dim);}
+.ooda-card.observe{border-top-color:var(--navy-ooda);}
+.ooda-card.orient{border-top-color:var(--gold-ooda);}
+.ooda-card.decide{border-top-color:var(--slate-ooda);}
+.ooda-card.act{border-top-color:var(--black-ooda);}
+.ooda-card h3{font-family:var(--font-mono);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary);margin-bottom:.5rem;}
+.ooda-card p{font-size:.88rem;margin-bottom:0;}
+@media (max-width:640px){.ooda-grid{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.86rem;}
+th{background:var(--obsidian-surface);color:var(--gold);font-family:var(--font-mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;padding:.7rem .75rem;border:1px solid var(--obsidian-border);text-align:left;}
+td{background:var(--obsidian-card);color:var(--text-secondary);padding:.75rem;border:1px solid var(--obsidian-border);vertical-align:top;}
+tbody tr:nth-child(even) td{background:#151925;}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:1.5rem;}
+.table-scroll table{margin-bottom:0;}
+
+.phase-badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:3px 10px;border-radius:var(--radius-sm);border:1px solid;white-space:nowrap;}
+.phase-badge.passive{color:var(--green-light);border-color:var(--green);background:var(--green-bg);}
+.phase-badge.friction{color:var(--yellow);border-color:var(--yellow);background:var(--yellow-bg);}
+.phase-badge.confrontation{color:var(--amber-light);border-color:var(--amber);background:var(--amber-bg);}
+.phase-badge.violent{color:var(--red-light);border-color:var(--red);background:var(--red-bg);}
+
+.model-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1rem 0 1.5rem;}
+.model-card{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);overflow:hidden;}
+.model-card-head{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;padding:.75rem 1rem;color:var(--gold);background:var(--gold-glow);border-bottom:1px solid var(--obsidian-border);}
+.model-card-head .case{display:block;color:var(--text-muted);font-weight:400;margin-top:2px;text-transform:none;letter-spacing:0;font-size:.78rem;}
+.model-card-body{padding:1rem 1.1rem;}
+.model-card-body p{font-size:.88rem;margin-bottom:0;}
+@media (max-width:640px){.model-grid{grid-template-columns:1fr;}}
+
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1rem 0 1.5rem;}
+.card-cell{background:var(--obsidian-card);border:var(--border-default);border-radius:var(--radius-md);padding:1rem 1.1rem;}
+.card-cell .label{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.4rem;}
+.card-cell p{font-size:.85rem;margin-bottom:0;color:var(--text-secondary);}
+@media (max-width:640px){.card-grid{grid-template-columns:1fr;}}
+
+.case-block{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--obsidian-border);}
+.case-block h3{font-family:var(--font-display);font-size:1.05rem;color:var(--gold-light);margin-bottom:.75rem;}
+.case-block ul{margin-bottom:.5rem;}
+.case-block li strong{color:var(--gold);}
+
+.refs{list-style:none;padding-left:0;font-size:.85rem;}
+.refs li{display:flex;gap:.75rem;margin-bottom:.85rem;color:var(--text-secondary);}
+.refs .ref-num{font-family:var(--font-mono);color:var(--gold-dim);flex-shrink:0;}
+
+footer{max-width:900px;margin:0 auto;padding:0 1.5rem 3rem;color:var(--text-muted);font-family:var(--font-body);font-size:.84rem;text-align:center;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--obsidian-border);}
+.footer-links a{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);}
+.footer-links a:hover{color:var(--gold);}
+.footer-brand{font-family:var(--font-mono);font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:.5rem;}
+.footer-doc-id{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;color:var(--text-faint);margin-bottom:.5rem;}
+.footer-legal{font-size:.75rem;color:var(--text-faint);max-width:640px;margin:0 auto;line-height:1.55;}
+
+@media (max-width:768px){
+  nav{padding:0 1rem;}
+  .nav-links a:not(.nav-cta){display:none;}
+  .hero{padding:100px 1rem 2rem;}
+  main{padding:2.25rem 1rem 3rem;}
+  .card-grid{grid-template-columns:1fr;}
+  table{font-size:.78rem;}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav>
+  <div class="nav-brand">MNS CONSULTING <span>// FRAMEWORKS</span></div>
+  <ul class="nav-links">
+    <li><a href="https://portfolio.mnshakoor.com/">Portfolio</a></li>
+    <li><a href="https://mnshakoor.com">mnshakoor.com</a></li>
+    <li><a href="https://portal.iosi.institute">IOSI Portal</a></li>
+    <li><a class="nav-cta" href="ooda-risk-framework-high-risk-events-political-protests.pdf">Download PDF</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="tag">FIELD ANALYSIS FRAMEWORK</span>
+      <span>MNS CONSULTING</span>
+    </div>
+    <h1>Understanding the Dynamics of Covering and Monitoring High-Risk Events and Political Protests
+      <span class="title-gold">An OODA Loop and Risk-Assessment Framework for Field Analysts</span>
+    </h1>
+    <p class="hero-subtitle">A field-analysis methodology that pairs the Observe-Orient-Decide-Act cycle with a four-phase public-order model and a paired field-state and 5&times;5 risk matrix, built to separate political intensity from actual interaction risk while preserving personal safety and evidentiary integrity.</p>
+    <div class="hero-meta">
+      <div class="meta-cell"><span class="label">Author</span><span class="value">M. Nuri Shakoor, SRMP-R</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Practice</span><span class="value">MNS Consulting</span></div>
+      <div class="meta-divider"></div>
+      <div class="meta-cell"><span class="label">Case Study</span><span class="value">UNGA 81, New York City, Sept 2026</span></div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="ooda-risk-framework-high-risk-events-political-protests.pdf">Download PDF Version</a>
+      <a class="btn btn-outline" href="#s7">Read the Case Study</a>
+    </div>
+    <div class="metrics-strip">
+      <div class="metric-block"><div class="metric-value">4</div><div class="metric-label">Public-Order Phases</div></div>
+      <div class="metric-block"><div class="metric-value">7</div><div class="metric-label">Field-Picture Domains</div></div>
+      <div class="metric-block"><div class="metric-value">6</div><div class="metric-label">Case Threads, UNGA 81</div></div>
+      <div class="metric-block"><div class="metric-value">4</div><div class="metric-label">Functional Event Models</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">On This Page</div>
+    <ol>
+      <li><span class="toc-num">01</span><a href="#s1">Purpose and Operating Principles</a></li>
+      <li><span class="toc-num">02</span><a href="#s2">The Integrated OODA-Risk Model</a></li>
+      <li><span class="toc-num">03</span><a href="#s3">Observe: The Seven-Domain Field Picture</a></li>
+      <li><span class="toc-num">04</span><a href="#s4">Orient: Event and Crowd Classification</a></li>
+      <li><span class="toc-num">05</span><a href="#s5">Risk Architecture</a></li>
+      <li><span class="toc-num">06</span><a href="#s6">Decision Triggers and Analyst Actions</a></li>
+      <li><span class="toc-num">07</span><a href="#s7">Lived Case Study: UNGA 81, New York City</a></li>
+      <li><span class="toc-num">08</span><a href="#s8">Comparative Analysis of Documented Events</a></li>
+      <li><span class="toc-num">09</span><a href="#s9">Four Functional Models of Political Events</a></li>
+      <li><span class="toc-num">10</span><a href="#s10">MNS Field Analyst Collection Card</a></li>
+      <li><span class="toc-num">11</span><a href="#s11">Evidence Discipline and After-Action Review</a></li>
+      <li><span class="toc-num">12</span><a href="#s12">Conclusion</a></li>
+      <li><span class="toc-num">&mdash;</span><a href="#refs">References</a></li>
+    </ol>
+  </nav>
+
+  <section class="section" id="overview">
+    <div class="section-header">
+      <span class="section-num">OVERVIEW</span>
+      <span class="section-title">Executive Overview</span>
+    </div>
+    <p>This framework is designed for field analysts covering political events, demonstrations, counter-demonstrations, diplomatic gatherings, and developing civil unrest. It combines the Observe-Orient-Decide-Act (OODA) decision cycle with a layered risk-assessment model and a behavior-based public-order classification system. The intent is to give analysts a disciplined way to distinguish political intensity from actual interaction risk while maintaining personal safety and evidentiary integrity.</p>
+    <p>The model is grounded in M. Nuri Shakoor&rsquo;s contemporaneous field notes, photographs, and video observations from UN General Assembly 81 in New York City in September 2026.<sup><a href="#ref1">[1]</a></sup> It also incorporates a four-phase public-order framework spanning Passive Assembly, Expressive Friction, Dynamic Confrontation, and Violent Disorder/Riot.<sup><a href="#ref2">[2]</a></sup> The OODA cycle provides the cognitive structure for continuously updating the analyst&rsquo;s field picture in a fast-changing environment.<sup><a href="#ref3">[3]</a></sup></p>
+    <p>The principal lesson from UNGA 81 is that political events should be analyzed as evolving systems rather than photographed as static crowds. The analyst&rsquo;s task is to observe behavior before inferring intent, orient on relationships and trajectory, decide according to evidence and safety, act conservatively, and immediately restart the loop.</p>
+    <div class="callout">
+      <div class="callout-label">Field Doctrine</div>
+      <p>Observe behavior before judging intent. Orient on relationships, space, and trajectory. Decide according to evidence and safety. Act conservatively, preserve access, and immediately restart the loop.</p>
+    </div>
+  </section>
+
+  <section class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Purpose and Operating Principles</span>
+    </div>
+    <p>The framework supports analysts who must simultaneously collect political information, monitor changes in public-order conditions, protect themselves, and preserve a defensible evidence trail. It is not a policing doctrine and does not direct law-enforcement tactics. It is a field-analysis methodology.</p>
+    <p>The analyst maintains two separate mental models: mobilization intensity and interaction risk. Large crowds, loud chanting, coordinated apparel, or severe rhetoric may indicate strong mobilization but do not by themselves establish violence. Interaction risk increases when hostile or mutually antagonistic actors converge, separation distance decreases, egress is constrained, crowd compression increases, or security actors shift from facilitation toward physical separation.</p>
+    <p>Every field judgment should be traceable to one of three evidence layers: direct observation, contemporaneous analyst assessment, or externally reported information. Claims printed on signs and statements made by participants should be treated as attributed political claims until independently corroborated.</p>
+  </section>
+
+  <section class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">The Integrated OODA-Risk Model</span>
+    </div>
+    <p>Boyd&rsquo;s OODA loop is a continuous decision cycle of observing, orienting, deciding, and acting. Air University describes it as a process for functioning in complex, fast-changing environments, with observation and orientation feeding decisions that are then tested through action.<sup><a href="#ref3">[3]</a></sup></p>
+    <figure>
+      <img src="ooda-risk-framework-fig1-ooda-loop.png" alt="MNS Consulting field analyst adaptation of the OODA loop, showing Observe, Orient, Decide, and Act arranged around a central Field OODA-Risk Loop label" width="1672" height="940" loading="lazy">
+      <figcaption>Figure 1. MNS Consulting field analyst adaptation of the OODA loop for monitoring high-risk events.</figcaption>
+    </figure>
+    <div class="ooda-grid">
+      <div class="ooda-card observe">
+        <h3>2.1 &nbsp;Observe</h3>
+        <p>Establish the field picture before interpreting it. Record actors, messages, space, behavior, security posture, movement, media activity, and available egress. Write what is seen before writing what it means.</p>
+      </div>
+      <div class="ooda-card orient">
+        <h3>2.2 &nbsp;Orient</h3>
+        <p>Convert observations into meaning. Identify the event type, public-order phase, principal grievance, political target, legitimacy frame, organizational structure, counter-presence, and direction of risk. Orientation should actively test alternate explanations rather than merely confirming the analyst&rsquo;s first impression.</p>
+      </div>
+      <div class="ooda-card decide">
+        <h3>2.3 &nbsp;Decide</h3>
+        <p>Select the next collection and safety action. Decide whether to hold position, reposition, widen standoff distance, preserve an exit route, follow movement, change from still photography to video, document security changes, or terminate collection.</p>
+      </div>
+      <div class="ooda-card act">
+        <h3>2.4 &nbsp;Act</h3>
+        <p>Execute the selected action proportionately. The action produces new information, which begins the next OODA cycle. Field analysis is continuous, not episodic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Observe: The Seven-Domain Field Picture</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th style="width:22%">Domain</th><th>What the Analyst Records</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Actors</strong></td><td>Protesters, counter-protesters, organizers, media, police, private security, political supporters, bystanders.</td></tr>
+          <tr><td><strong>Message</strong></td><td>Slogans, grievances, targets, demands, symbols, named individuals, organizational branding.</td></tr>
+          <tr><td><strong>Space</strong></td><td>Density, barriers, streets, entrances, choke points, police lines, safe routes, egress.</td></tr>
+          <tr><td><strong>Behavior</strong></td><td>Chanting, marching, filming, debating, arguing, pushing, fighting, dispersing, regrouping.</td></tr>
+          <tr><td><strong>Security</strong></td><td>Police numbers, posture, reinforcement, barricades, separation tactics, visible emergency assets.</td></tr>
+          <tr><td><strong>Movement</strong></td><td>Arrival, convergence, fragmentation, dispersal, relocation, re-formation.</td></tr>
+          <tr><td><strong>Information Environment</strong></td><td>Phones, livestreams, journalists, influencers, movement media, amplification behavior.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Orient: Event and Crowd Classification</span>
+    </div>
+    <p>The analyst should classify two things separately: the event form and the immediate crowd phase. Event form describes what the gathering is doing. Crowd phase describes its current interaction condition. The reference framework distinguishes lawful rallies and demonstrations from civil disobedience, civil unrest, and riot based on behavior, disruption, and violence, not political viewpoint.<sup><a href="#ref2">[2]</a></sup></p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Phase</th><th>Primary Indicators</th><th>Risk Meaning</th><th>UNGA 81 Illustration</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="phase-badge passive">Passive Assembly</span></td>
+            <td>Open spacing, ambient discussion, periodic chants.</td>
+            <td>Low interaction risk unless conditions change.</td>
+            <td>Portions of the Liberia debate environment.</td>
+          </tr>
+          <tr>
+            <td><span class="phase-badge friction">Expressive Friction</span></td>
+            <td>Shared identity, loud chanting, directional clustering, visible out-group orientation.</td>
+            <td>Moderate; monitor convergence and egress.</td>
+            <td>Early/mid Guinea mobilization; some Liberia argumentation.</td>
+          </tr>
+          <tr>
+            <td><span class="phase-badge confrontation">Dynamic Confrontation</span></td>
+            <td>Directed verbal hostility, crowd compression, hostile proximity, targeted police separation.</td>
+            <td>High; trajectory and safe positioning become priorities.</td>
+            <td>Peak Guinea protest / counter-protest convergence.</td>
+          </tr>
+          <tr>
+            <td><span class="phase-badge violent">Violent Disorder / Riot</span></td>
+            <td>Sustained destructive violence, projectiles, barricades, attacks on people, property, or infrastructure.</td>
+            <td>Critical.</td>
+            <td>Not supported as the overall classification by the reviewed UNGA 81 evidence.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-title">Risk Architecture</span>
+    </div>
+    <div class="sub-section" style="margin-top:0;padding-top:0;">
+      <div class="sub-title">5.1 &nbsp;Field Interaction-Risk State</div>
+      <p>The 1&ndash;5 field state is a situational temperature. It is designed for rapid reassessment and should be recorded as a trajectory, not as a static label.</p>
+      <figure>
+        <img src="ooda-risk-framework-fig2-risk-ladder.png" alt="MNS Consulting 1 to 5 field interaction-risk ladder, from Routine through Guarded, Elevated, High, to Critical" width="1500" height="750" loading="lazy">
+        <figcaption>Figure 2. MNS Consulting 1&ndash;5 field interaction-risk ladder.</figcaption>
+      </figure>
+    </div>
+    <div class="sub-section">
+      <div class="sub-title">5.2 &nbsp;Formal 5&times;5 Operational Risk</div>
+      <p>The rapid field state should be paired with a conventional likelihood &times; impact assessment. This keeps immediate crowd temperature separate from consequences to the analyst, participants, bystanders, access routes, diplomatic and security operations, and public order.</p>
+      <div class="card-grid">
+        <div class="card-cell"><span class="label">Likelihood Indicators</span><p>Cross-group proximity, crowd compression, hostility, unpredictable movement or re-formation, and security-control gaps.</p></div>
+        <div class="card-cell"><span class="label">Impact Indicators</span><p>Analyst safety, participant or bystander harm, access disruption, diplomatic or security effects, and broader public-order consequences.</p></div>
+        <div class="card-cell"><span class="label">Risk Score</span><p>Likelihood &times; Impact. A high interaction state can coexist with a different formal risk score depending on consequence and exposure.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <span class="section-title">Decision Triggers and Analyst Actions</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th style="width:26%">Trigger</th><th>Analyst Response</th></tr></thead>
+        <tbody>
+          <tr><td>Counter-protest arrives</td><td>Reassess proximity, escape routes, and whether the collection position is becoming a convergence point.</td></tr>
+          <tr><td>Police reinforcement</td><td>Document posture change; determine whether separation, containment, extraction, or dispersal is underway.</td></tr>
+          <tr><td>Physical contact</td><td>Increase standoff; switch collection priority from messaging to interaction dynamics and safety.</td></tr>
+          <tr><td>Route change</td><td>Identify whether movement is dispersal, relocation, or deliberate movement toward a new target.</td></tr>
+          <tr><td>Crowd fragmentation</td><td>Track subgroups separately; do not assume event termination.</td></tr>
+          <tr><td>Secondary-location movement</td><td>Reassess political significance of destination and likelihood of re-formation.</td></tr>
+          <tr><td>Egress narrows</td><td>Reposition before crowd geometry forces the decision.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout slate">
+      <div class="callout-label">The Dispersal Rule</div>
+      <p>Never assume dispersal means termination. Distinguish dispersal, fragmentation, relocation, and re-formation. The Guinea case demonstrated that removal from one location did not end mobilization; related activity later re-formed around a politically significant secondary location.<sup><a href="#ref1">[1]</a></sup></p>
+    </div>
+  </section>
+
+  <section class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <span class="section-title">Lived Case Study: UNGA 81, New York City</span>
+    </div>
+    <p>UNGA 81 provided a concentrated comparative environment in which multiple diaspora and advocacy networks used the same diplomatic geography for very different political objectives. The field collection included Guinea, Liberia, Haiti, Bangladesh, North Korea-focused advocacy, and a Philippines / Pax Silica coalition.<sup><a href="#ref1">[1]</a></sup></p>
+
+    <div class="case-block">
+      <h3>7.1 &nbsp;Guinea: Polarized Confrontation and Re-formation</h3>
+      <ul>
+        <li><strong>Observe:</strong> sustained organized mobilization, recurring FNDC-associated imagery, red apparel, chants, political signs, extensive phone recording, counter-presence, restricted urban geometry, and visible NYPD presence.</li>
+        <li><strong>Orient:</strong> the event progressed from Demonstration/Protest through Expressive Friction into Dynamic Confrontation. The critical shift came from proximity, compression, and direct interaction between politically opposed actors, not merely from loud rhetoric.<sup><a href="#ref1">[1]</a></sup><sup><a href="#ref2">[2]</a></sup></li>
+        <li><strong>Decide:</strong> field priorities shifted from grievance collection to police posture, spillover potential, safe distance, and tracking movement during dispersal.</li>
+        <li><strong>Act and re-observe:</strong> field notes recorded a physical confrontation during dispersal, NYPD intervention and escort/removal activity, and later re-formation around the Waldorf Astoria / Guinea delegation area.<sup><a href="#ref1">[1]</a></sup></li>
+        <li><strong>Analytical lesson:</strong> polarization and movement trajectory were more informative than turnout. The overall evidence did not establish sustained riot-level behavior.</li>
+      </ul>
+    </div>
+
+    <div class="case-block">
+      <h3>7.2 &nbsp;Liberia: Political Deliberation Rather Than Civil Disorder</h3>
+      <ul>
+        <li><strong>Observe:</strong> prolonged face-to-face political debate, animated gestures, competing interpretations, but no comparable police separation line, barricade pressure, or sustained physical confrontation.</li>
+        <li><strong>Orient:</strong> Passive Assembly to Expressive Friction. The central intelligence requirement was narrative competition, not confrontation prediction.<sup><a href="#ref1">[1]</a></sup></li>
+        <li><strong>Analytical lesson:</strong> strong political disagreement can remain civic and discursive. Diaspora sentiment should not be treated as a single national position.</li>
+      </ul>
+    </div>
+
+    <div class="case-block">
+      <h3>7.3 &nbsp;Haiti, Bangladesh, North Korea, and Pax Silica</h3>
+      <p><strong>Haiti:</strong> Sovereignty / foreign-intervention grievance. The observed messaging challenged U.S. and UN involvement, illustrating that the international institution hosting a protest can itself be part of the grievance target.<sup><a href="#ref1">[1]</a></sup></p>
+      <p><strong>Bangladesh:</strong> Narrative plurality. Minority-rights advocacy and leadership-centered political currents appeared in the same broader protest environment. The correct unit of analysis is actor/network, not nationality alone.<sup><a href="#ref1">[1]</a></sup></p>
+      <p><strong>North Korea-focused advocacy:</strong> Target-specific external accountability. Severe human-rights and institutional messaging was present, but observed interaction risk was comparatively low. Message severity did not equal crowd risk.<sup><a href="#ref1">[1]</a></sup></p>
+      <p><strong>Pax Silica / Philippines:</strong> Coalition mobilization. Land, water, AI infrastructure, war, foreign investment, and sovereignty were connected under a shared mobilizing narrative. The key variable was network architecture rather than direct confrontation.<sup><a href="#ref1">[1]</a></sup></p>
+    </div>
+  </section>
+
+  <section class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <span class="section-title">Comparative Analysis of Documented Events</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Case</th><th>Core Grievance</th><th>Political Frame</th><th>Mobilization</th><th>Interaction Risk</th><th>Observed Phase</th></tr></thead>
+        <tbody>
+          <tr><td>Guinea</td><td>Transition legitimacy; detainee/disappearance; governance</td><td>Regime legitimacy / human rights</td><td>High</td><td>High at peak</td><td>Expressive Friction &rarr; Dynamic Confrontation</td></tr>
+          <tr><td>Liberia</td><td>Governance performance; accountability</td><td>Performance legitimacy</td><td>Moderate</td><td>Low&ndash;Moderate</td><td>Passive &rarr; Expressive Friction</td></tr>
+          <tr><td>Haiti</td><td>Foreign intervention / sovereignty</td><td>National sovereignty</td><td>Moderate</td><td>Low observed</td><td>Passive / Expressive</td></tr>
+          <tr><td>Bangladesh</td><td>Minority rights + political loyalty</td><td>Rights + partisan legitimacy</td><td>Moderate</td><td>Low observed</td><td>Passive / Expressive</td></tr>
+          <tr><td>North Korea advocacy</td><td>Human rights / regime accountability</td><td>External accountability</td><td>Low&ndash;Moderate</td><td>Low</td><td>Passive Assembly</td></tr>
+          <tr><td>Pax Silica / Philippines</td><td>Land, water, AI, militarization, sovereignty</td><td>Resource sovereignty</td><td>Moderate&ndash;High</td><td>Low&ndash;Moderate</td><td>Expressive Friction</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <span class="section-title">Four Functional Models of Political Events</span>
+    </div>
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="model-card-head">Model A: Polarized Confrontation<span class="case">Guinea</span></div>
+        <div class="model-card-body"><p>Two or more competing political constituencies occupy the same space. Primary concern: interaction risk.</p></div>
+      </div>
+      <div class="model-card">
+        <div class="model-card-head">Model B: Political Deliberation<span class="case">Liberia</span></div>
+        <div class="model-card-body"><p>Participants contest interpretations within a shared national political space. Primary concern: narrative competition.</p></div>
+      </div>
+      <div class="model-card">
+        <div class="model-card-head">Model C: Advocacy Demonstration<span class="case">North Korea-focused advocacy; portions of Bangladesh</span></div>
+        <div class="model-card-body"><p>Participants seek visibility for a specific grievance or demand. Primary concern: message, target, and evidence.</p></div>
+      </div>
+      <div class="model-card">
+        <div class="model-card-head">Model D: Coalition Mobilization<span class="case">Pax Silica / transnational advocacy</span></div>
+        <div class="model-card-body"><p>Multiple grievances are integrated into a shared mobilizing narrative. Primary concern: network architecture and issue convergence.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <span class="section-title">MNS Field Analyst Collection Card</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <tbody>
+          <tr><th style="width:16%">Event</th><td>Date/time/location; country/issue; actor/network.</td></tr>
+          <tr><th>Observe</th><td>Crowd size/density; slogans; movement; opposition; police posture; media/digital activity; egress.</td></tr>
+          <tr><th>Orient</th><td>Event type; crowd phase; grievance; target; demand; legitimacy frame; mobilization intensity; interaction risk.</td></tr>
+          <tr><th>Decide</th><td>Field state 1&ndash;5; 5&times;5 operational risk; collection priority; safety boundary; next trigger.</td></tr>
+          <tr><th>Act</th><td>Hold/reposition/withdraw; photo/video/audio; follow movement; document security changes; record dispersal; reassess.</td></tr>
+          <tr><th>Triggers</th><td>Counter-protest arrival; police reinforcement; physical contact; route change; leader/convoy arrival; dispersal order; crowd fragmentation; secondary-location movement.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="s11">
+    <div class="section-header">
+      <span class="section-num">11</span>
+      <span class="section-title">Evidence Discipline and After-Action Review</span>
+    </div>
+    <ul>
+      <li>Distinguish direct observation from inference and attributed claims. A sign, chant, or participant statement establishes what was communicated, not whether the claim is true.</li>
+      <li>Record time and trajectory. The value of field notes increases when they show how risk changes rather than simply how an event looked at one moment.</li>
+      <li>Preserve original files and note duplicates. Video is strongest for behavior and movement; still photography is strongest for message coding; handwritten notes preserve temporal judgments not recoverable after the fact.</li>
+      <li>Reassess after dispersal. Track whether groups terminate, fragment, relocate, or re-form around a new target.</li>
+      <li>Conduct an after-action comparison against the initial assessment. Identify what changed, which indicators mattered, which assumptions failed, and which field positions created or reduced risk.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="s12">
+    <div class="section-header">
+      <span class="section-num">12</span>
+      <span class="section-title">Conclusion</span>
+    </div>
+    <p>The field analyst&rsquo;s advantage comes from disciplined adaptation. Political protest environments are dynamic systems in which identity, grievance, space, counter-presence, police posture, digital amplification, and movement interact continuously. The UNGA 81 cases demonstrate that the most useful intelligence is often found in transitions: mobilization to convergence, disagreement to hostility, containment to dispersal, and dispersal to re-formation.</p>
+    <p>The OODA-Risk model provides a practical discipline for following those transitions without collapsing political intensity into violence or treating every crowd as a single actor. Used consistently, it produces safer collection, clearer evidentiary separation, more defensible risk assessments, and better comparative analysis across political events.</p>
+  </section>
+
+  <section class="section" id="refs">
+    <div class="section-header">
+      <span class="section-num">REF</span>
+      <span class="section-title">References</span>
+    </div>
+    <ol class="refs">
+      <li id="ref1"><span class="ref-num">[1]</span><span>Shakoor, M. N. (2026). M. Nuri Shakoor field notes from UNGA 81 protests. Unpublished contemporaneous field notes and evidence package, New York City.</span></li>
+      <li id="ref2"><span class="ref-num">[2]</span><span>Operational Analysis of Public Assemblies, Crowd Psychology, Civil Unrest, and Strategic Public Order Frameworks. (2026). MNS Consulting-provided analytical reference.</span></li>
+      <li id="ref3"><span class="ref-num">[3]</span><span>Air University. (n.d.). Cultural KSAs: Skill Development Using the OODA Loop. U.S. Air Force. <a href="https://www.airuniversity.af.edu/desktopmodules/articlecs/print.aspx?article=1777083&amp;moduleid=39216" target="_blank" rel="noopener">airuniversity.af.edu</a></span></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://portfolio.mnshakoor.com/">Portfolio Home</a>
+    <a href="https://mnshakoor.com">mnshakoor.com</a>
+    <a href="https://portal.iosi.institute">portal.iosi.institute</a>
+    <a href="ooda-risk-framework-high-risk-events-political-protests.pdf">Download PDF</a>
+  </div>
+  <div class="footer-brand">MNS Consulting</div>
+  <div class="footer-doc-id">Security Risk Management | Political Risk | Field Analysis</div>
+  <div class="footer-legal">Field doctrine derived from contemporaneous field notes, photographs, and video observation. Analytic claims are traced to the evidence layers described in Section 1. No fabricated sources, quotes, or data.</div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const p = h > 0 ? (window.scrollY / h) * 100 : 0;
+  document.getElementById('progress').style.width = p + '%';
+});
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.section').forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
