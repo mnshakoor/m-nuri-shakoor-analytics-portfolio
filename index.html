@@ -10,15 +10,16 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#0a0c10">
   <meta name="color-scheme" content="dark">
-  <link rel="canonical" href="https://portfolio.mshakoor.com/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://portfolio.mnshakoor.com/">
+  <link rel="icon" href="images/mns-consulting-gold-globe-icon.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="images/mns-consulting-gold-globe-icon.png">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="M. Nuri Shakoor Analytics Portfolio">
   <meta property="og:title" content="M. Nuri Shakoor | Global Security Analytics Portfolio">
   <meta property="og:description" content="Global security analysis, geopolitical risk intelligence, data visualization, OSINT, and applied analytic tools grounded in the Quanta Analytica Process.">
-  <meta property="og:url" content="https://portfolio.mshakoor.com/">
+  <meta property="og:url" content="https://portfolio.mnshakoor.com/">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary">
@@ -31,10 +32,10 @@
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://portfolio.mshakoor.com/#person",
+        "@id": "https://portfolio.mnshakoor.com/#person",
         "name": "M. Nuri Shakoor",
         "url": "https://mnshakoor.com",
-        "image": "https://portfolio.mnshakoor.com/images/pic2-m-nuri-shakoor-IMG-9557.jpg",
+        "image": "https://portfolio.mnshakoor.com/images/m-nuri-shakoor-1.jpg",
         "jobTitle": "Global Security Analyst and Geopolitical Risk Intelligence Consultant",
         "description": "Independent analyst producing global security assessments, geopolitical risk intelligence, data visualizations, and applied analytic tools.",
         "knowsAbout": [
@@ -62,25 +63,25 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://portfolio.mshakoor.com/#website",
-        "url": "https://portfolio.mshakoor.com/",
+        "@id": "https://portfolio.mnshakoor.com/#website",
+        "url": "https://portfolio.mnshakoor.com/",
         "name": "M. Nuri Shakoor Analytics Portfolio",
         "description": "A portfolio of global security analysis, geopolitical risk intelligence, data visualization, and applied analytic tools.",
         "inLanguage": "en-US",
-        "publisher": { "@id": "https://portfolio.mshakoor.com/#person" }
+        "publisher": { "@id": "https://portfolio.mnshakoor.com/#person" }
       },
       {
         "@type": "CollectionPage",
-        "@id": "https://portfolio.mshakoor.com/#portfolio",
-        "url": "https://portfolio.mshakoor.com/",
+        "@id": "https://portfolio.mnshakoor.com/#portfolio",
+        "url": "https://portfolio.mnshakoor.com/",
         "name": "M. Nuri Shakoor Global Security Analytics Portfolio",
-        "isPartOf": { "@id": "https://portfolio.mshakoor.com/#website" },
-        "about": { "@id": "https://portfolio.mshakoor.com/#person" },
+        "isPartOf": { "@id": "https://portfolio.mnshakoor.com/#website" },
+        "about": { "@id": "https://portfolio.mnshakoor.com/#person" },
         "inLanguage": "en-US"
       },
       {
         "@type": "ItemList",
-        "@id": "https://portfolio.mshakoor.com/#links",
+        "@id": "https://portfolio.mnshakoor.com/#links",
         "name": "Live consoles, dashboards, tools, and channels",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Africa Conflict Exposure Monitor", "url": "https://acem.arac-international.org/" },
@@ -100,7 +101,10 @@
           { "@type": "ListItem", "position": 15, "name": "Quanta ARAC Watchfloor", "url": "https://watchfloor.quanta-analytica.com/" },
           { "@type": "ListItem", "position": 16, "name": "Quanta AI", "url": "https://ai.quanta-analytica.com/" },
           { "@type": "ListItem", "position": 17, "name": "ARAC Intelligence Repository", "url": "https://arac-quanta-bi.floot.app/" },
-          { "@type": "ListItem", "position": 18, "name": "ARAC International Inc. Channels", "url": "https://linktr.ee/mnshakoor" }
+          { "@type": "ListItem", "position": 18, "name": "ARAC International Inc. Channels", "url": "https://linktr.ee/mnshakoor" },
+          { "@type": "ListItem", "position": 19, "name": "QAP Intelligence Workbench", "url": "https://workbench.quanta-analytica.com/" },
+          { "@type": "ListItem", "position": 20, "name": "Quanta Analytica CARVER Lab", "url": "https://carver.quanta-analytica.com/" },
+          { "@type": "ListItem", "position": 21, "name": "QAP-SAT Intelligence Workbench", "url": "https://sats.quanta-analytica.com/" }
         ]
       }
     ]
@@ -210,15 +214,29 @@
       letter-spacing: 0.02em;
     }
 
-    .brand-mark {
-      display: grid;
-      width: 2.2rem;
-      height: 2.2rem;
-      place-items: center;
+    .brand-identity {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo,
+    .brand-portrait {
+      width: 2.45rem;
+      height: 2.45rem;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--ink-raised);
+    }
+
+    .brand-logo {
       border: 1px solid var(--gold);
-      color: var(--gold-light);
-      font-family: var(--serif);
-      font-size: 0.86rem;
+    }
+
+    .brand-portrait {
+      border: 1px solid var(--line-strong);
+      object-position: center 22%;
     }
 
     .nav-links {
@@ -917,7 +935,10 @@
   <header class="site-header">
     <nav class="nav shell" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="M. Nuri Shakoor portfolio home">
-        <span class="brand-mark" aria-hidden="true">MNS</span>
+        <span class="brand-identity" aria-hidden="true">
+          <img class="brand-logo" src="images/mns-consulting-gold-globe-icon.png" alt="" width="96" height="96">
+          <img class="brand-portrait" src="images/m-nuri-shakoor-1.jpg" alt="" width="96" height="96">
+        </span>
         <span class="brand-text">M. Nuri Shakoor</span>
       </a>
 
@@ -1040,11 +1061,27 @@
             </a>
           </li>
           <li>
-            <a class="quicklink-card reveal" href="https://carver.quanta-analytica.com/" target="_blank" rel="noopener me">
-              <span class="quicklink-tag">Applied tool</span>
-              <h3>CARVER Assessment Workbench v4.0</h3>
-              <p>Evidence-linked CARVER target analysis with deterministic scoring, analyst-controlled AI proposals, a risk register, and an audit trail. Sign-in is limited to authorized users; the landing page explains the app and how to request access.</p>
+            <a class="quicklink-card reveal" href="https://workbench.quanta-analytica.com/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">QAP intelligence</span>
+              <h3>QAP Intelligence Workbench</h3>
+              <p>Structured QAP v2.0 intelligence production environment with analyst-controlled AI assistance across 14 assessment sections, RAPITIS and WSI source scoring, ACH, Key Assumptions Check, Five Whys, scenarios, indicators and warnings, report audit, and approval-gated export.</p>
               <span class="quicklink-open">Open the workbench</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://carver.quanta-analytica.com/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">CARVER / risk</span>
+              <h3>Quanta Analytica CARVER Lab</h3>
+              <p>Evidence-based, analyst-controlled CARVER vulnerability and risk assessment workbench for asset and DBT analysis, deterministic CARVER scoring, likelihood and impact analysis, risk registers, countermeasures, analytics, and auditable AI-assisted review.</p>
+              <span class="quicklink-open">Open the CARVER Lab</span>
+            </a>
+          </li>
+          <li>
+            <a class="quicklink-card reveal" href="https://sats.quanta-analytica.com/" target="_blank" rel="noopener me">
+              <span class="quicklink-tag">SAT workbench</span>
+              <h3>QAP-SAT Intelligence Workbench</h3>
+              <p>Multi-model QAP starter environment for evidence-file analysis, source-linked structured analytic techniques, AI-assisted report development, analyst review, and approval-gated export.</p>
+              <span class="quicklink-open">Open the SAT workbench</span>
             </a>
           </li>
           <li>
